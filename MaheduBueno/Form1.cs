@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
+
 
 namespace MaheduBueno
 {
@@ -15,6 +18,11 @@ namespace MaheduBueno
         public Form1()
         {
             InitializeComponent();
+        }
+        SqlConnection con = new SqlConnection("Data source=usuario"); 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
