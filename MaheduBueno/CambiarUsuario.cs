@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace MaheduBueno
 {
-    public partial class AdministrarUsuarioscs : Form
+    public partial class CambiarUsuario : Form
     {
-        public AdministrarUsuarioscs()
+        public CambiarUsuario()
         {
             InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
         {
 
         }

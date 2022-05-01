@@ -73,6 +73,16 @@ namespace MaheduBueno.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap basura {
+            get {
+                object obj = ResourceManager.GetObject("basura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boquillas {
             get {
                 object obj = ResourceManager.GetObject("boquillas", resourceCulture);
@@ -86,6 +96,16 @@ namespace MaheduBueno.Properties {
         internal static System.Drawing.Bitmap carrito {
             get {
                 object obj = ResourceManager.GetObject("carrito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap casita {
+            get {
+                object obj = ResourceManager.GetObject("casita", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
