@@ -3,8 +3,12 @@
   <Profiles />
   <Settings>
     <Setting Name="Valor" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)" />
-      <Value Profile="(Default)" />
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=localhost;user id=root;port=3308;database=mahedubueno&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=localhost;user id=root;port=3308;database=mahedubueno</Value>
     </Setting>
   </Settings>
 </SettingsFile>
