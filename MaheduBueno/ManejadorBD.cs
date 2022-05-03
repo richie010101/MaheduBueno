@@ -13,11 +13,13 @@ namespace MaheduBueno
 
         private String conexion = "server=localhost;port=3308;Database=mahedubueno;Uid=root;Pwd=;";
         private MySqlConnection mySqlConnection;
+        
 
 
         public ManejadorBD()
         {
             mySqlConnection = new MySqlConnection(conexion);
+            
         }
 
         public void leer(String User, String Contraseña)
@@ -29,14 +31,20 @@ namespace MaheduBueno
             mySqlCommand.CommandText = sql;
 
             MySqlDataReader reader = mySqlCommand.ExecuteReader();
-            if(reader.Read())
+            if (reader.Read())
             {
                 new MenuPrincipal().Show();
-                mySqlConnection.Close();
+                
 
             }
             else
-                
+            {
+            //    System.Windows.Forms.MessageBox.Show("usuario o contraseña incorrectos, verifique");
+            Form1 res = new Form1();
+            res.respuesta(Form1.ActiveForm);
+            }
+
+
 
             mySqlConnection.Close();
         }

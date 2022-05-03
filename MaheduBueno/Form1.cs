@@ -40,12 +40,26 @@ namespace MaheduBueno
 
 
             manejadorBD.leer(user, contra);
+            Respuesta.Text = "hola";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
 
+        }
+
+        public void respuesta(object sender)
+        {
+            Console.WriteLine("si llega");
+            Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+            //mostrar();
+            
+        }
+
+        public void mostrar(object sender)
+        {
+            Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
         }
     }
 }
