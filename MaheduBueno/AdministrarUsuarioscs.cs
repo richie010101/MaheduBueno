@@ -36,5 +36,12 @@ namespace MaheduBueno
         {
             new MenuAgregarUsuario().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+
+            menu.Show();
+        }
     }
 }

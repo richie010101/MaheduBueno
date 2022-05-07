@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Información = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BTNAGREGAR = new System.Windows.Forms.Button();
-            this.Información = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BTNEDITARSELECCION = new System.Windows.Forms.Button();
             this.BTNELIMINARSELECCION = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,6 +60,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(772, 272);
             this.dataGridView1.TabIndex = 21;
+            // 
+            // Información
+            // 
+            this.Información.HeaderText = "Información";
+            this.Información.MinimumWidth = 20;
+            this.Información.Name = "Información";
+            this.Información.ReadOnly = true;
+            this.Información.Width = 450;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
+            // 
+            // CantidadActual
+            // 
+            this.CantidadActual.HeaderText = "Cantidad Actual";
+            this.CantidadActual.MinimumWidth = 6;
+            this.CantidadActual.Name = "CantidadActual";
+            this.CantidadActual.ReadOnly = true;
+            this.CantidadActual.Width = 143;
             // 
             // button2
             // 
@@ -88,6 +112,7 @@
             this.button1.Size = new System.Drawing.Size(39, 33);
             this.button1.TabIndex = 18;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -144,30 +169,6 @@
             this.BTNAGREGAR.TabIndex = 22;
             this.BTNAGREGAR.Text = "Agregar nuevo";
             this.BTNAGREGAR.UseVisualStyleBackColor = true;
-            // 
-            // Información
-            // 
-            this.Información.HeaderText = "Información";
-            this.Información.MinimumWidth = 20;
-            this.Información.Name = "Información";
-            this.Información.ReadOnly = true;
-            this.Información.Width = 450;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 125;
-            // 
-            // CantidadActual
-            // 
-            this.CantidadActual.HeaderText = "Cantidad Actual";
-            this.CantidadActual.MinimumWidth = 6;
-            this.CantidadActual.Name = "CantidadActual";
-            this.CantidadActual.ReadOnly = true;
-            this.CantidadActual.Width = 143;
             // 
             // BTNEDITARSELECCION
             // 
