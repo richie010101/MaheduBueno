@@ -111,11 +111,10 @@ namespace MaheduBueno
             // 
             this.Respuesta.AutoSize = true;
             this.Respuesta.BackColor = System.Drawing.Color.Transparent;
-            this.Respuesta.Location = new System.Drawing.Point(143, 340);
+            this.Respuesta.Location = new System.Drawing.Point(49, 340);
             this.Respuesta.Name = "Respuesta";
-            this.Respuesta.Size = new System.Drawing.Size(16, 13);
+            this.Respuesta.Size = new System.Drawing.Size(0, 13);
             this.Respuesta.TabIndex = 6;
-            this.Respuesta.Text = "---";
             // 
             // Form1
             // 

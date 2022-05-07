@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,9 +39,45 @@ namespace MaheduBueno
             user = textBox1.Text;
             contra = textBox2.Text;
 
+            ManejadorBD.Conectar();
+            
 
-            manejadorBD.leer(user, contra);
-            Respuesta.Text = "hola";
+
+            String consulta = "SELECT * FROM mahedu.usuario where UserName= '" + user + "' and Contraseña='" + contra + "'";
+            SqlCommand cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+
+            adapter.Fill(dt);
+
+
+            try
+            {
+                if (dt.Rows[0][0].ToString() != null)
+                {
+                    new MenuPrincipal().Show();
+                    Program.form1.Hide();
+                }
+                else
+                {
+                    //    System.Windows.Forms.MessageBox.Show("usuario o contraseña incorrectos, verifique");
+                    Form1 res = new Form1();
+                    Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+                    
+                }
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+                Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+
+            }
+
+
+
+            //manejadorBD.leer(user, contra);
+           // Respuesta.Text = "hola";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,17 +86,5 @@ namespace MaheduBueno
 
         }
 
-        public void respuesta(object sender)
-        {
-            Console.WriteLine("si llega");
-            Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
-            //mostrar();
-            
-        }
-
-        public void mostrar(object sender)
-        {
-            Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
-        }
     }
 }

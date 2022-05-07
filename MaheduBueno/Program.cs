@@ -8,6 +8,8 @@ namespace MaheduBueno
 {
     static class Program
     {
+
+        public static Form1 form1;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
@@ -16,7 +18,7 @@ namespace MaheduBueno
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(form1 =new Form1());
         }
     }
 }
