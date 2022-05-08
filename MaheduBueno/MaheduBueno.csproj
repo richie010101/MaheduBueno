@@ -122,6 +122,12 @@
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="ErrorRecopilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorRecopilar.Designer.cs">
+      <DependentUpon>ErrorRecopilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,30 @@
     </Compile>
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox1.Designer.cs">
+      <DependentUpon>MessageBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox2.Designer.cs">
+      <DependentUpon>MessageBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox3.Designer.cs">
+      <DependentUpon>MessageBox3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBox4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBox4.Designer.cs">
+      <DependentUpon>MessageBox4.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,6 +194,9 @@
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ErrorRecopilar.resx">
+      <DependentUpon>ErrorRecopilar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +205,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox1.resx">
+      <DependentUpon>MessageBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox2.resx">
+      <DependentUpon>MessageBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox3.resx">
+      <DependentUpon>MessageBox3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBox4.resx">
+      <DependentUpon>MessageBox4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -63,14 +63,18 @@ namespace MaheduBueno
                 {
                     //    System.Windows.Forms.MessageBox.Show("usuario o contraseña incorrectos, verifique");
                     Form1 res = new Form1();
-                    Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
-                    
+                    //Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+                    // MessageBox.Show("Usuario o contraseña incorrectos, verifique");
+                    new MessageBox1().Show();
+
                 }
             }
             catch (Exception R)
             {
                 Console.WriteLine("error inesparado" + R);
-                Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+                //Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
+                //MessageBox.Show("Usuario o contraseña incorrectos, verifique");
+                new MessageBox1().Show();
 
             }
 
