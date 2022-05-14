@@ -46,6 +46,12 @@ namespace MaheduBueno
             BuscarProductos buscarProduct = new BuscarProductos();
 
             buscarProduct.Show();
+
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

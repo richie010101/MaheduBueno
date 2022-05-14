@@ -13,6 +13,7 @@ namespace MaheduBueno
 {
     public partial class BuscarProductos : Form
     {
+       
         public BuscarProductos()
         {
             InitializeComponent();
@@ -20,16 +21,15 @@ namespace MaheduBueno
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
+           MenuPrincipal menu = new MenuPrincipal();
 
             menu.Show();
         }
 
         private void BuscarProductos_Load(object sender, EventArgs e)
         {
-            
 
-
+               
 
         }
 
@@ -51,6 +51,8 @@ namespace MaheduBueno
 
                 dataGridView1.DataSource = data;
                 dataGridView1.DataMember = "producto";
+
+                
             }
             catch (Exception ex)
             {
