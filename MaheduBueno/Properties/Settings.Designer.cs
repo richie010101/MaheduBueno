@@ -26,10 +26,22 @@ namespace MaheduBueno.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;port=3308;database=mahedubueno")]
-        public string Valor {
+        [global::System.Configuration.DefaultSettingValueAttribute("SERVER=mahedu.database.windows.net;DATABASE=mahedu;USER ID=K-Dev;PASSWORD=NEBRLUR" +
+            "IMI.1")]
+        public string conexion {
             get {
-                return ((string)(this["Valor"]));
+                return ((string)(this["conexion"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mahedu.database.windows.net;Initial Catalog=Mahedu;Persist Security I" +
+            "nfo=True;User ID=K-Dev;Password=NEBRLURIMI.1")]
+        public string conexion1 {
+            get {
+                return ((string)(this["conexion1"]));
             }
         }
     }

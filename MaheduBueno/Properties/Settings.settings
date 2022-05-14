@@ -2,13 +2,21 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MaheduBueno.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Valor" Type="(Connection string)" Scope="Application">
+    <Setting Name="conexion" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;server=localhost;user id=root;port=3308;database=mahedubueno&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;SERVER=mahedu.database.windows.net;DATABASE=mahedu;USER ID=K-Dev;PASSWORD=NEBRLURIMI.1&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;user id=root;port=3308;database=mahedubueno</Value>
+      <Value Profile="(Default)">SERVER=mahedu.database.windows.net;DATABASE=mahedu;USER ID=K-Dev;PASSWORD=NEBRLURIMI.1</Value>
+    </Setting>
+    <Setting Name="conexion1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=mahedu.database.windows.net;Initial Catalog=Mahedu;Persist Security Info=True;User ID=K-Dev;Password=NEBRLURIMI.1&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=mahedu.database.windows.net;Initial Catalog=Mahedu;Persist Security Info=True;User ID=K-Dev;Password=NEBRLURIMI.1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -40,5 +40,12 @@ namespace MaheduBueno
             AdministrarUsuario.Show();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BuscarProductos buscarProduct = new BuscarProductos();
+
+            buscarProduct.Show();
+        }
     }
 }
