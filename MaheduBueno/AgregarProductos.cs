@@ -27,7 +27,7 @@ namespace MaheduBueno
 
         private void BTNAGREGAR_Click(object sender, EventArgs e)
         {
-
+            /*
             try
             {
                 SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1);
@@ -50,7 +50,7 @@ namespace MaheduBueno
             {
 
                 MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
-            }
+            }*/
         }
     }
     }

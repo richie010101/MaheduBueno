@@ -53,5 +53,22 @@ namespace MaheduBueno
         {
 
         }
+
+        private void AdministrarUsuarioscs_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
