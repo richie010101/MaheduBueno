@@ -188,6 +188,18 @@
       <DependentUpon>MaheduDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="ManejadorBD.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAgregarProducto.Designer.cs">
+      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +300,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAgregarProducto.resx">
+      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAgregarUsuario.resx">
       <DependentUpon>MenuAgregarUsuario.cs</DependentUpon>

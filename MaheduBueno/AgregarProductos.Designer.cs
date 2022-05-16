@@ -169,6 +169,7 @@
             this.BTNAGREGAR.TabIndex = 22;
             this.BTNAGREGAR.Text = "Agregar nuevo";
             this.BTNAGREGAR.UseVisualStyleBackColor = true;
+            this.BTNAGREGAR.Click += new System.EventHandler(this.BTNAGREGAR_Click);
             // 
             // BTNEDITARSELECCION
             // 

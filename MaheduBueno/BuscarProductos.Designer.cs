@@ -36,15 +36,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet = new MaheduBueno.MaheduDataSet();
             this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.productoTableAdapter = new MaheduBueno.MaheduDataSetTableAdapters.productoTableAdapter();
-            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -145,38 +145,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(895, 253);
             this.dataGridView1.TabIndex = 13;
             // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "producto";
-            this.productoBindingSource.DataSource = this.maheduDataSet;
-            // 
-            // maheduDataSet
-            // 
-            this.maheduDataSet.DataSetName = "MaheduDataSet";
-            this.maheduDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productoBindingSource1
-            // 
-            this.productoBindingSource1.DataMember = "producto";
-            this.productoBindingSource1.DataSource = this.maheduDataSet;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nombre",
-            "SKU"});
-            this.comboBox1.Location = new System.Drawing.Point(747, 206);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 24);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.Text = "Nombre";
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
             // sKUDataGridViewTextBoxColumn
             // 
             this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
@@ -212,6 +180,38 @@
             this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
             this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
             this.cantidadDataGridViewTextBoxColumn.Width = 210;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataMember = "producto";
+            this.productoBindingSource.DataSource = this.maheduDataSet;
+            // 
+            // maheduDataSet
+            // 
+            this.maheduDataSet.DataSetName = "MaheduDataSet";
+            this.maheduDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoBindingSource1
+            // 
+            this.productoBindingSource1.DataMember = "producto";
+            this.productoBindingSource1.DataSource = this.maheduDataSet;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nombre",
+            "SKU"});
+            this.comboBox1.Location = new System.Drawing.Point(747, 206);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(219, 24);
+            this.comboBox1.TabIndex = 14;
+            this.comboBox1.Text = "Nombre";
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
             // 
             // BuscarProductos
             // 
