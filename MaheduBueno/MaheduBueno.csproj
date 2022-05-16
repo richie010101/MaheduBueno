@@ -266,6 +266,7 @@
     <Compile Include="UsuarioAgregado.Designer.cs">
       <DependentUpon>UsuarioAgregado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.cs" />
     <EmbeddedResource Include="AdministrarUsuarioscs.resx">
       <DependentUpon>AdministrarUsuarioscs.cs</DependentUpon>
     </EmbeddedResource>

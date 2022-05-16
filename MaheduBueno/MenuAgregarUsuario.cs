@@ -27,10 +27,18 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
+            string nombre=NombreU.Text;
+            string apeP=ApellidoP.Text;
+            string apeM=ApellidoM.Text;
+            string contra=Contraseña.Text;
+            string tipoU=TipoUsuario.Text;
+
+
             try
             {
                 SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1);
-                String qery = "insert into Nombres, ApellidoP, ApellidoM, UserName, Contraseña, tipoUsuario_idtipoUsuario from mahedu.usuario where " + NombreU.Text + ApellidoP + ApellidoM.Text + ;
+                String qery = "INSERT INTO Usuario (Nombres, ApellidoP, ApellidoM, UserName, Contraseña, tipoUsuario_idtipoUsuario) VALUES('"+ nombre + "','"+ apeP + "','" + apeM + "','" + contra + "','" + tipoU +"')";
+                
                 Console.WriteLine(qery);
                 SqlDataAdapter ada = new SqlDataAdapter(qery, con);
 
@@ -38,11 +46,9 @@ namespace MaheduBueno
 
                 DataSet data = new DataSet();
 
-                ada.Fill(data, "producto");
+              
 
-                dataGridView1.DataSource = data;
-                dataGridView1.DataMember = "producto";
-
+             
 
             }
             catch (Exception ex)
