@@ -197,6 +197,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MaheduDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ManejadorBD.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -387,6 +392,17 @@
     </None>
     <None Include="MaheduDataSet2.xss">
       <DependentUpon>MaheduDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet3.xsc">
+      <DependentUpon>MaheduDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet3.xss">
+      <DependentUpon>MaheduDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
