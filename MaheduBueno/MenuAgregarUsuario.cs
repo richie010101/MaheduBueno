@@ -12,10 +12,13 @@ using System.Windows.Forms;
 namespace MaheduBueno
 {
     public partial class MenuAgregarUsuario : Form
+
     {
+        private ManejadorBD manejadorBD;
         public MenuAgregarUsuario()
         {
             InitializeComponent();
+            manejadorBD = new ManejadorBD();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,28 +30,45 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string nombre=NombreU.Text;
-            string apeP=ApellidoP.Text;
-            string apeM=ApellidoM.Text;
-            string user = userBox.Text;
-            string contra=Contraseña.Text;
-            string tipoU=TipoUsuario.Text;
+            int id=6;
+
+            if(comboBox1.SelectedItem == "SuperUsuario")
+            {
+                id = 4;
+            }
+            else if(comboBox1.SelectedItem == "Administrador")
+            {
+                id = 5;
+            }
+            else if (comboBox1.SelectedItem == "Vendedor")
+            {
+                id = 6;
+            }
 
 
             try
             {
-                SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1);
-                String qery = "INSERT INTO Usuario (Nombres, ApellidoP, ApellidoM, UserName, Contraseña, tipoUsuario_idtipoUsuario) VALUES('"+ nombre + "','"+ apeP + "','" + apeM + "','" + user + "','" + contra + "','" + tipoU +"')";
+                /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
+                ManejadorBD.Conectar();
                 
+               String qery = "INSERT INTO mahedu.usuario VALUES('"+ NombreU.Text + "','"+ ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text +  "'," + id + ", '"+ contraAd.Text + "')";
+               
+               Console.WriteLine("Corriste");
+
+               
                 Console.WriteLine(qery);
-                SqlDataAdapter ada = new SqlDataAdapter(qery, con);
+                /*
+               SqlDataAdapter ada = new SqlDataAdapter(qery, con);
 
                 con.Open();
 
                 DataSet data = new DataSet();
+                */
 
-              
-
+                SqlCommand cmd = new SqlCommand(qery,ManejadorBD.Conectar());
+                SqlDataAdapter r = new SqlDataAdapter(cmd);
+                DataTable s = new DataTable();
+                r.Fill(s);
              
 
             }
@@ -60,6 +80,23 @@ namespace MaheduBueno
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TipoUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuAgregarUsuario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet3.tipousuario' Puede moverla o quitarla según sea necesario.
+            this.tipousuarioTableAdapter.Fill(this.maheduDataSet3.tipousuario);
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
