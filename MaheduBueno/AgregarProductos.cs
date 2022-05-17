@@ -28,6 +28,9 @@ namespace MaheduBueno
         private void BTNAGREGAR_Click(object sender, EventArgs e)
         {
             agregarPanel.Visible = true;
+            addPanel3.Visible = false;
+            addPanel2.Visible = false;
+            Addpanel.Visible = false;
             /*
             try
             {
@@ -56,6 +59,8 @@ namespace MaheduBueno
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet3.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter.Fill(this.maheduDataSet3.producto);
             agregarPanel.Visible = false;
         }
 
@@ -67,12 +72,18 @@ namespace MaheduBueno
         private void button3_Click(object sender, EventArgs e)
         {
             Addpanel.Visible = true;
+            addPanel3.Visible = false;
+            addPanel2.Visible = false;
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            addPanel2.Visible = true;
+            Addpanel.Visible = false;
 
-        }
+
+        }                                  
 
         private void ProductoPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -102,6 +113,37 @@ namespace MaheduBueno
         private void agregarPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            addPanel3.Visible = true;
+            addPanel2.Visible = false;
         }
     }
     }
