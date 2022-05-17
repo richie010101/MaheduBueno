@@ -53,5 +53,11 @@ namespace MaheduBueno
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AgregarProductos r = new AgregarProductos();
+            r.Show();
+        }
     }
 }

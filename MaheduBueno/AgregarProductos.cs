@@ -27,6 +27,7 @@ namespace MaheduBueno
 
         private void BTNAGREGAR_Click(object sender, EventArgs e)
         {
+            agregarPanel.Visible = true;
             /*
             try
             {
@@ -51,6 +52,56 @@ namespace MaheduBueno
 
                 MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
             }*/
+        }
+
+        private void AgregarProductos_Load(object sender, EventArgs e)
+        {
+            agregarPanel.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            agregarPanel.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Addpanel.Visible = true;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductoPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     }

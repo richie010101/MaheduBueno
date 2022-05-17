@@ -48,6 +48,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.ApellidoM = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.userBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -161,7 +163,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(42, 347);
+            this.label6.Location = new System.Drawing.Point(42, 373);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 22);
             this.label6.TabIndex = 15;
@@ -173,7 +175,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(42, 389);
+            this.label7.Location = new System.Drawing.Point(42, 415);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(181, 22);
             this.label7.TabIndex = 16;
@@ -185,7 +187,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(42, 436);
+            this.label8.Location = new System.Drawing.Point(42, 462);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(134, 22);
             this.label8.TabIndex = 17;
@@ -208,7 +210,7 @@
             // 
             // Contraseña
             // 
-            this.Contraseña.Location = new System.Drawing.Point(240, 348);
+            this.Contraseña.Location = new System.Drawing.Point(240, 374);
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.Size = new System.Drawing.Size(373, 22);
             this.Contraseña.TabIndex = 20;
@@ -216,7 +218,7 @@
             // 
             // ConfirContra
             // 
-            this.ConfirContra.Location = new System.Drawing.Point(240, 389);
+            this.ConfirContra.Location = new System.Drawing.Point(240, 415);
             this.ConfirContra.Name = "ConfirContra";
             this.ConfirContra.Size = new System.Drawing.Size(373, 22);
             this.ConfirContra.TabIndex = 21;
@@ -224,7 +226,7 @@
             // 
             // TipoUsuario
             // 
-            this.TipoUsuario.Location = new System.Drawing.Point(240, 436);
+            this.TipoUsuario.Location = new System.Drawing.Point(240, 462);
             this.TipoUsuario.Name = "TipoUsuario";
             this.TipoUsuario.Size = new System.Drawing.Size(373, 22);
             this.TipoUsuario.TabIndex = 22;
@@ -232,9 +234,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(315, 474);
+            this.button3.Location = new System.Drawing.Point(315, 500);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 33);
+            this.button3.Size = new System.Drawing.Size(130, 42);
             this.button3.TabIndex = 23;
             this.button3.Text = "Guardar Usuario";
             this.button3.UseVisualStyleBackColor = true;
@@ -259,12 +261,34 @@
             this.ApellidoM.Size = new System.Drawing.Size(373, 22);
             this.ApellidoM.TabIndex = 25;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(41, 331);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(137, 22);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Nombre usuario";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // userBox
+            // 
+            this.userBox.Location = new System.Drawing.Point(240, 332);
+            this.userBox.Name = "userBox";
+            this.userBox.Size = new System.Drawing.Size(373, 22);
+            this.userBox.TabIndex = 27;
+            // 
             // MenuAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
-            this.ClientSize = new System.Drawing.Size(800, 519);
+            this.ClientSize = new System.Drawing.Size(800, 576);
+            this.Controls.Add(this.userBox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.ApellidoM);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
@@ -316,5 +340,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox ApellidoM;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox userBox;
     }
 }

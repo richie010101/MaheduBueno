@@ -30,6 +30,7 @@ namespace MaheduBueno
             string nombre=NombreU.Text;
             string apeP=ApellidoP.Text;
             string apeM=ApellidoM.Text;
+            string user = userBox.Text;
             string contra=Contraseña.Text;
             string tipoU=TipoUsuario.Text;
 
@@ -37,7 +38,7 @@ namespace MaheduBueno
             try
             {
                 SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1);
-                String qery = "INSERT INTO Usuario (Nombres, ApellidoP, ApellidoM, UserName, Contraseña, tipoUsuario_idtipoUsuario) VALUES('"+ nombre + "','"+ apeP + "','" + apeM + "','" + contra + "','" + tipoU +"')";
+                String qery = "INSERT INTO Usuario (Nombres, ApellidoP, ApellidoM, UserName, Contraseña, tipoUsuario_idtipoUsuario) VALUES('"+ nombre + "','"+ apeP + "','" + apeM + "','" + user + "','" + contra + "','" + tipoU +"')";
                 
                 Console.WriteLine(qery);
                 SqlDataAdapter ada = new SqlDataAdapter(qery, con);
@@ -56,6 +57,11 @@ namespace MaheduBueno
 
                 MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
             }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
