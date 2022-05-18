@@ -49,7 +49,8 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            CambiarUsuario editUsuario = new CambiarUsuario();
+            editUsuario.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
