@@ -87,6 +87,7 @@
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -240,7 +241,6 @@
             // agregarPanel
             // 
             this.agregarPanel.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.agregarPanel.Controls.Add(this.addPanel2);
             this.agregarPanel.Controls.Add(this.addPanel3);
             this.agregarPanel.Controls.Add(this.button5);
             this.agregarPanel.Controls.Add(this.Addpanel);
@@ -266,7 +266,7 @@
             this.addPanel2.Controls.Add(this.label8);
             this.addPanel2.Controls.Add(this.button6);
             this.addPanel2.Controls.Add(this.button9);
-            this.addPanel2.Location = new System.Drawing.Point(0, 43);
+            this.addPanel2.Location = new System.Drawing.Point(0, 2);
             this.addPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.addPanel2.Name = "addPanel2";
             this.addPanel2.Size = new System.Drawing.Size(223, 328);
@@ -367,6 +367,7 @@
             // addPanel3
             // 
             this.addPanel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addPanel3.Controls.Add(this.addPanel2);
             this.addPanel3.Controls.Add(this.button10);
             this.addPanel3.Controls.Add(this.buttonGuardar);
             this.addPanel3.Controls.Add(this.textBox7);
@@ -424,6 +425,7 @@
             // 
             // CantidadMateriaPrima
             // 
+            this.CantidadMateriaPrima.DecimalPlaces = 3;
             this.CantidadMateriaPrima.Increment = new decimal(new int[] {
             1,
             0,
@@ -693,12 +695,23 @@
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Location = new System.Drawing.Point(142, 121);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(223, 328);
+            this.panel1.TabIndex = 25;
+            this.panel1.Visible = false;
+            // 
             // AgregarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(604, 449);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.agregarPanel);
             this.Controls.Add(this.BTNELIMINARSELECCION);
             this.Controls.Add(this.BTNEDITARSELECCION);
@@ -797,5 +810,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panel1;
     }
 }
