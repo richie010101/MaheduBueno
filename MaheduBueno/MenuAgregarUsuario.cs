@@ -91,8 +91,9 @@ namespace MaheduBueno
 
         private void MenuAgregarUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet3.tipousuario' Puede moverla o quitarla según sea necesario.
-            this.tipousuarioTableAdapter.Fill(this.maheduDataSet3.tipousuario);
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet6.tipousuario' Puede moverla o quitarla según sea necesario.
+            this.tipousuarioTableAdapter.Fill(this.maheduDataSet6.tipousuario);
+
 
         }
 

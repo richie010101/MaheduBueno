@@ -202,6 +202,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MaheduDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ManejadorBD.cs" />
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -403,6 +423,50 @@
     </None>
     <None Include="MaheduDataSet3.xss">
       <DependentUpon>MaheduDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet4.xsc">
+      <DependentUpon>MaheduDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet4.xss">
+      <DependentUpon>MaheduDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet5.xsc">
+      <DependentUpon>MaheduDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet5.xss">
+      <DependentUpon>MaheduDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet6.xsc">
+      <DependentUpon>MaheduDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet6.xss">
+      <DependentUpon>MaheduDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet7.xsc">
+      <DependentUpon>MaheduDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet7.xss">
+      <DependentUpon>MaheduDataSet7.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -59,9 +59,15 @@ namespace MaheduBueno
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet3.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter.Fill(this.maheduDataSet3.producto);
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet7.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter1.Fill(this.maheduDataSet7.producto);
+
+            addPanel3.Visible = false;
+            addPanel2.Visible = false;
             agregarPanel.Visible = false;
+                               
+            Addpanel.Visible = false;
+
         }
 
         private void button5_Click(object sender, EventArgs e)

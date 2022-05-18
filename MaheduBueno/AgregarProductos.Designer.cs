@@ -79,9 +79,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.maheduDataSet3 = new MaheduBueno.MaheduDataSet3();
+            this.maheduDataSet7 = new MaheduBueno.MaheduDataSet7();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter = new MaheduBueno.MaheduDataSet3TableAdapters.productoTableAdapter();
+            this.productoTableAdapter1 = new MaheduBueno.MaheduDataSet7TableAdapters.productoTableAdapter();
             this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadMateriaPrima)).BeginInit();
             this.Addpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -649,19 +649,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // maheduDataSet3
+            // maheduDataSet7
             // 
-            this.maheduDataSet3.DataSetName = "MaheduDataSet3";
-            this.maheduDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.maheduDataSet7.DataSetName = "MaheduDataSet7";
+            this.maheduDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productoBindingSource
             // 
             this.productoBindingSource.DataMember = "producto";
-            this.productoBindingSource.DataSource = this.maheduDataSet3;
+            this.productoBindingSource.DataSource = this.maheduDataSet7;
             // 
-            // productoTableAdapter
+            // productoTableAdapter1
             // 
-            this.productoTableAdapter.ClearBeforeFill = true;
+            this.productoTableAdapter1.ClearBeforeFill = true;
             // 
             // sKUDataGridViewTextBoxColumn
             // 
@@ -729,7 +729,7 @@
             this.Addpanel.ResumeLayout(false);
             this.Addpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -788,9 +788,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button buttonGuardar;
-        private MaheduDataSet3 maheduDataSet3;
-        private System.Windows.Forms.BindingSource productoBindingSource;
         private MaheduDataSet3TableAdapters.productoTableAdapter productoTableAdapter;
+        private MaheduDataSet7 maheduDataSet7;
+        private System.Windows.Forms.BindingSource productoBindingSource;
+        private MaheduDataSet7TableAdapters.productoTableAdapter productoTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn sKUDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
