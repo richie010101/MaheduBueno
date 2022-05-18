@@ -36,6 +36,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maheduDataSet2 = new MaheduBueno.MaheduDataSet2();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -43,9 +45,8 @@
             this.maheduDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet1 = new MaheduBueno.MaheduDataSet1();
             this.maheduDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.maheduDataSet2 = new MaheduBueno.MaheduDataSet2();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new MaheduBueno.MaheduDataSet2TableAdapters.usuarioTableAdapter();
+            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -134,6 +135,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUsuario,
             this.nombresDataGridViewTextBoxColumn,
             this.apellidoPDataGridViewTextBoxColumn,
             this.apellidoMDataGridViewTextBoxColumn});
@@ -145,6 +147,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(665, 203);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.maheduDataSet2;
+            // 
+            // maheduDataSet2
+            // 
+            this.maheduDataSet2.DataSetName = "MaheduDataSet2";
+            this.maheduDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button4
             // 
@@ -201,19 +213,18 @@
             this.maheduDataSet1BindingSource.DataSource = this.maheduDataSet1;
             this.maheduDataSet1BindingSource.Position = 0;
             // 
-            // maheduDataSet2
-            // 
-            this.maheduDataSet2.DataSetName = "MaheduDataSet2";
-            this.maheduDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.maheduDataSet2;
-            // 
             // usuarioTableAdapter
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.DataPropertyName = "idUsuario";
+            this.idUsuario.HeaderText = "idUsuario";
+            this.idUsuario.MinimumWidth = 6;
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Width = 125;
             // 
             // nombresDataGridViewTextBoxColumn
             // 
@@ -261,12 +272,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +302,7 @@
         private MaheduDataSet2 maheduDataSet2;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private MaheduDataSet2TableAdapters.usuarioTableAdapter usuarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMDataGridViewTextBoxColumn;

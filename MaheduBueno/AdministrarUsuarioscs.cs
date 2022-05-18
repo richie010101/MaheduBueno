@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace MaheduBueno
 {
     public partial class AdministrarUsuarioscs : Form
     {
+        private ManejadorBD manejadorBD;
         public AdministrarUsuarioscs()
         {
             InitializeComponent();
+            manejadorBD = new ManejadorBD();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,6 +54,34 @@ namespace MaheduBueno
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
+
+            try
+            {
+                ManejadorBD.Conectar();
+
+                
+               String qery = "DELETE FROM mahedu.usuario WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+
+                Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
+
+
+                Console.WriteLine(qery);
+                new MessageBox2().Show();
+
+                SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                SqlDataAdapter r = new SqlDataAdapter(cmd);
+                DataTable s = new DataTable();
+                r.Fill(s);
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+            }
+
 
         }
 
