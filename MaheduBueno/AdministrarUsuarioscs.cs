@@ -55,34 +55,8 @@ namespace MaheduBueno
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-
-            try
-            {
-                ManejadorBD.Conectar();
-
-                
-               String qery = "DELETE FROM mahedu.usuario WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
-
-                Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
-
-
-                Console.WriteLine(qery);
-                new MessageBox2().Show();
-
-                SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
-                SqlDataAdapter r = new SqlDataAdapter(cmd);
-                DataTable s = new DataTable();
-                r.Fill(s);
-                
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
-            }
-
+           panel2.Visible = true;
+           
 
         }
 
@@ -99,6 +73,71 @@ namespace MaheduBueno
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void confirmar_Click(object sender, EventArgs e)
+        {
+            String qery2 = "SELECT * FROM mahedu.usuario where ContraseñaAdmin='" + textBox1.Text + "'";
+
+            SqlCommand cmd2 = new SqlCommand(qery2, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd2);
+
+            DataTable dt = new DataTable();
+
+            adapter.Fill(dt);
+
+
+            try
+            {
+                if (dt.Rows[0][0].ToString() != null)
+                {
+                    MessageBox.Show("Contraseña correcta");
+                    try
+                    {
+                        ManejadorBD.Conectar();
+
+
+                        String qery = "DELETE FROM mahedu.usuario WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+
+                        Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
+
+
+                        Console.WriteLine(qery);
+                        new MessageBox2().Show();
+
+                        SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                        SqlDataAdapter r = new SqlDataAdapter(cmd);
+                        DataTable s = new DataTable();
+                        r.Fill(s);
+
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                    }
+
+                }
+                else
+                {
+                   // MessageBox.Show("Contraseña incorrecta");
+                }
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+                MessageBox.Show("Contraseña incorrecta");
+
+            }
+
+            
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

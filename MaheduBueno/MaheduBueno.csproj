@@ -116,6 +116,12 @@
     <Compile Include="Ayuda2.Designer.cs">
       <DependentUpon>Ayuda2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Borrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrado.Designer.cs">
+      <DependentUpon>Borrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ayuda2.resx">
       <DependentUpon>Ayuda2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrado.resx">
+      <DependentUpon>Borrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarProductos.resx">
       <DependentUpon>BuscarProductos.cs</DependentUpon>
