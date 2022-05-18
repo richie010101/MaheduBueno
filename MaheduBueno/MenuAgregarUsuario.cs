@@ -30,52 +30,79 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id=6;
 
-            if(comboBox1.SelectedItem == "SuperUsuario")
+            if (NombreU.Text == "")
             {
-                id = 4;
-            }
-            else if(comboBox1.SelectedItem == "Administrador")
-            {
-                id = 5;
-            }
-            else if (comboBox1.SelectedItem == "Vendedor")
-            {
-                id = 6;
+                MessageBox.Show("El nombre no puede estar vacío");
             }
 
-
-            try
+            if(ApellidoP.Text == "")
             {
-                /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
-                ManejadorBD.Conectar();
-                
-               String qery = "INSERT INTO mahedu.usuario VALUES('"+ NombreU.Text + "','"+ ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text +  "'," + id + ", '"+ contraAd.Text + "')";
-               
-               Console.WriteLine("Corriste");
-
-               
-                Console.WriteLine(qery);
-                /*
-               SqlDataAdapter ada = new SqlDataAdapter(qery, con);
-
-                con.Open();
-
-                DataSet data = new DataSet();
-                */
-
-                SqlCommand cmd = new SqlCommand(qery,ManejadorBD.Conectar());
-                SqlDataAdapter r = new SqlDataAdapter(cmd);
-                DataTable s = new DataTable();
-                r.Fill(s);
-             
-
+                MessageBox.Show("El apellido paterno no debe de estar vacío");
             }
-            catch (Exception ex)
+            if (ApellidoM.Text == "")
             {
+                MessageBox.Show("El apellido materno no debe de estar vacío");
+            }
 
-                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+            if(Contraseña.Text == "")
+            {
+                MessageBox.Show("La contraseña no debe de estar vacía");
+            }
+            else
+            {
+                int id = 6;
+
+                if (comboBox1.SelectedItem == "SuperUsuario")
+                {
+                    id = 4;
+                }
+                else if (comboBox1.SelectedItem == "Administrador")
+                {
+                    id = 5;
+                }
+                else if (comboBox1.SelectedItem == "Vendedor")
+                {
+                    id = 6;
+                }
+
+
+                try
+                {
+                    /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
+                    ManejadorBD.Conectar();
+
+                    String qery = "INSERT INTO mahedu.usuario VALUES('" + NombreU.Text + "','" + ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text + "'," + id + ", '" + contraAd.Text + "')";
+
+                    Console.WriteLine("Corriste");
+
+
+                    Console.WriteLine(qery);
+                    /*
+                   SqlDataAdapter ada = new SqlDataAdapter(qery, con);
+
+                    con.Open();
+
+                    DataSet data = new DataSet();
+                    */
+
+                    SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                    SqlDataAdapter r = new SqlDataAdapter(cmd);
+                    DataTable s = new DataTable();
+                    r.Fill(s);
+
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                }
+
+                Felicitaciones UsuarioAgregado = new Felicitaciones();
+
+                UsuarioAgregado.Show();
+
             }
         }
 

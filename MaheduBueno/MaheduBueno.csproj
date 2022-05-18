@@ -176,6 +176,12 @@
     <Compile Include="EstadisticasError.Designer.cs">
       <DependentUpon>EstadisticasError.cs</DependentUpon>
     </Compile>
+    <Compile Include="Felicitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Felicitaciones.Designer.cs">
+      <DependentUpon>Felicitaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EstadisticasError.resx">
       <DependentUpon>EstadisticasError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Felicitaciones.resx">
+      <DependentUpon>Felicitaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
