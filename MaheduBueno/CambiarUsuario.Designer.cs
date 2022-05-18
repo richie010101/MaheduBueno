@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +42,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.maheduDataSet8 = new MaheduBueno.MaheduDataSet8();
+            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipousuarioTableAdapter = new MaheduBueno.MaheduDataSet8TableAdapters.tipousuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -109,11 +116,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(99, 227);
+            this.label3.Location = new System.Drawing.Point(71, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 25);
+            this.label3.Size = new System.Drawing.Size(161, 25);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Apellido:";
+            this.label3.Text = "Apellido Paterno:";
             // 
             // label4
             // 
@@ -171,11 +178,11 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(100, 281);
+            this.label7.Location = new System.Drawing.Point(71, 283);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 25);
+            this.label7.Size = new System.Drawing.Size(165, 25);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Apellido:";
+            this.label7.Text = "Apellido Materno:";
             // 
             // textBox3
             // 
@@ -185,12 +192,37 @@
             this.textBox3.Size = new System.Drawing.Size(422, 30);
             this.textBox3.TabIndex = 17;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.tipousuarioBindingSource;
+            this.comboBox1.DisplayMember = "tipoUsuario";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(252, 353);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 18;
+            // 
+            // maheduDataSet8
+            // 
+            this.maheduDataSet8.DataSetName = "MaheduDataSet8";
+            this.maheduDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipousuarioBindingSource
+            // 
+            this.tipousuarioBindingSource.DataMember = "tipousuario";
+            this.tipousuarioBindingSource.DataSource = this.maheduDataSet8;
+            // 
+            // tipousuarioTableAdapter
+            // 
+            this.tipousuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // CambiarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(800, 482);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -206,8 +238,11 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "CambiarUsuario";
             this.Text = "CambiarUsuario";
+            this.Load += new System.EventHandler(this.CambiarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +263,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private MaheduDataSet8 maheduDataSet8;
+        private System.Windows.Forms.BindingSource tipousuarioBindingSource;
+        private MaheduDataSet8TableAdapters.tipousuarioTableAdapter tipousuarioTableAdapter;
     }
 }

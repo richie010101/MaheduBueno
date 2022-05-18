@@ -28,5 +28,12 @@ namespace MaheduBueno
 
             menu.Show();
         }
+
+        private void CambiarUsuario_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet8.tipousuario' Puede moverla o quitarla según sea necesario.
+            this.tipousuarioTableAdapter.Fill(this.maheduDataSet8.tipousuario);
+
+        }
     }
 }
