@@ -126,5 +126,10 @@ namespace MaheduBueno
                 textBox1.Text = "";
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -146,6 +146,12 @@
     <Compile Include="Configuracion.Designer.cs">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Confirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Confirmar.Designer.cs">
+      <DependentUpon>Confirmar.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContraIncorrecta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MaheduDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MaheduDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,6 +254,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="ManejadorBD.cs" />
     <Compile Include="Menu.cs">
@@ -309,6 +330,12 @@
       <DependentUpon>UsuarioAgregado.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs" />
+    <Compile Include="Ventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdministrarUsuarioscs.resx">
       <DependentUpon>AdministrarUsuarioscs.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Confirmar.resx">
+      <DependentUpon>Confirmar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContraIncorrecta.resx">
       <DependentUpon>ContraIncorrecta.cs</DependentUpon>
@@ -403,6 +433,9 @@
     <EmbeddedResource Include="UsuarioAgregado.resx">
       <DependentUpon>UsuarioAgregado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="MaheduDataSet.xsc">
       <DependentUpon>MaheduDataSet.xsd</DependentUpon>
     </None>
@@ -424,6 +457,28 @@
     </None>
     <None Include="MaheduDataSet1.xss">
       <DependentUpon>MaheduDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet10.xsc">
+      <DependentUpon>MaheduDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet10.xss">
+      <DependentUpon>MaheduDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet11.xsc">
+      <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet11.xss">
+      <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
     </None>
     <None Include="MaheduDataSet2.xsc">
       <DependentUpon>MaheduDataSet2.xsd</DependentUpon>
@@ -501,6 +556,17 @@
     </None>
     <None Include="MaheduDataSet8.xss">
       <DependentUpon>MaheduDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet9.xsc">
+      <DependentUpon>MaheduDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet9.xss">
+      <DependentUpon>MaheduDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

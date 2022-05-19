@@ -24,6 +24,7 @@ namespace MaheduBueno
            MenuPrincipal menu = new MenuPrincipal();
 
             menu.Show();
+            this.Close();
         }
 
         private void BuscarProductos_Load(object sender, EventArgs e)

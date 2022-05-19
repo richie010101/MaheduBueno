@@ -10,21 +10,28 @@ using System.Windows.Forms;
 
 namespace MaheduBueno
 {
-    public partial class Felicitaciones : Form
+    public partial class Confirmar : Form
     {
-        public Felicitaciones()
+        public Confirmar()
         {
             InitializeComponent();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Felicitaciones_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
+            this.Close();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

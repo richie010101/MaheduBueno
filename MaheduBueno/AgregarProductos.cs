@@ -23,6 +23,7 @@ namespace MaheduBueno
             MenuPrincipal menu = new MenuPrincipal();
 
             menu.Show();
+            this.Close();
         }
 
         private void BTNAGREGAR_Click(object sender, EventArgs e)

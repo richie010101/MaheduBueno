@@ -38,6 +38,7 @@ namespace MaheduBueno
             AdministrarUsuarioscs AdministrarUsuario = new AdministrarUsuarioscs();
 
             AdministrarUsuario.Show();
+            this.Close();
 
         }
 
@@ -46,6 +47,7 @@ namespace MaheduBueno
             BuscarProductos buscarProduct = new BuscarProductos();
 
             buscarProduct.Show();
+            this.Close();
 
         }
 
@@ -58,6 +60,14 @@ namespace MaheduBueno
         {
             AgregarProductos r = new AgregarProductos();
             r.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Ventas r = new Ventas();
+            r.Show();
+            this.Close();
         }
     }
 }

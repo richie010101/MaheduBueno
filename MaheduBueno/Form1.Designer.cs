@@ -51,6 +51,7 @@ namespace MaheduBueno
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -94,6 +95,7 @@ namespace MaheduBueno
             this.textBox2.Location = new System.Drawing.Point(52, 318);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(204, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Contraseña";
