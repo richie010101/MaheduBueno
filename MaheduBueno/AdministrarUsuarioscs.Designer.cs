@@ -35,6 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.confirmar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,13 +54,27 @@
             this.maheduDataSet1 = new MaheduBueno.MaheduDataSet1();
             this.maheduDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new MaheduBueno.MaheduDataSet2TableAdapters.usuarioTableAdapter();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.confirmar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tipoUsuario = new System.Windows.Forms.ComboBox();
+            this.ApellidoM = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.ApellidoP = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.maheduDataSet9 = new MaheduBueno.MaheduDataSet9();
+            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipousuarioTableAdapter = new MaheduBueno.MaheduDataSet9TableAdapters.tipousuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).BeginInit();
@@ -64,7 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1BindingSource)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -135,6 +157,49 @@
             this.panel1.Size = new System.Drawing.Size(671, 232);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.confirmar);
+            this.panel2.Location = new System.Drawing.Point(380, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(255, 246);
+            this.panel2.TabIndex = 1;
+            this.panel2.Visible = false;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(17, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(223, 108);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Ingrese la contraseña para confirmar la eliminación del usuario";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(76, 141);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // confirmar
+            // 
+            this.confirmar.Location = new System.Drawing.Point(85, 189);
+            this.confirmar.Name = "confirmar";
+            this.confirmar.Size = new System.Drawing.Size(75, 23);
+            this.confirmar.TabIndex = 0;
+            this.confirmar.Text = "Confirmar";
+            this.confirmar.UseVisualStyleBackColor = true;
+            this.confirmar.Click += new System.EventHandler(this.confirmar_Click);
             // 
             // dataGridView1
             // 
@@ -256,48 +321,182 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // panel2
+            // panel3
             // 
-            this.panel2.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.confirmar);
-            this.panel2.Location = new System.Drawing.Point(380, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(255, 246);
-            this.panel2.TabIndex = 1;
-            this.panel2.Visible = false;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel3.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.tipoUsuario);
+            this.panel3.Controls.Add(this.ApellidoM);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.ApellidoP);
+            this.panel3.Controls.Add(this.nombre);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Location = new System.Drawing.Point(194, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(654, 403);
+            this.panel3.TabIndex = 9;
+            this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // confirmar
+            // tipoUsuario
             // 
-            this.confirmar.Location = new System.Drawing.Point(85, 189);
-            this.confirmar.Name = "confirmar";
-            this.confirmar.Size = new System.Drawing.Size(75, 23);
-            this.confirmar.TabIndex = 0;
-            this.confirmar.Text = "Confirmar";
-            this.confirmar.UseVisualStyleBackColor = true;
-            this.confirmar.Click += new System.EventHandler(this.confirmar_Click);
+            this.tipoUsuario.DataSource = this.tipousuarioBindingSource;
+            this.tipoUsuario.DisplayMember = "tipoUsuario";
+            this.tipoUsuario.FormattingEnabled = true;
+            this.tipoUsuario.Location = new System.Drawing.Point(194, 300);
+            this.tipoUsuario.Name = "tipoUsuario";
+            this.tipoUsuario.Size = new System.Drawing.Size(121, 24);
+            this.tipoUsuario.TabIndex = 30;
+            this.tipoUsuario.ValueMember = "tipoUsuario";
             // 
-            // textBox1
+            // ApellidoM
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApellidoM.Location = new System.Drawing.Point(194, 223);
+            this.ApellidoM.Name = "ApellidoM";
+            this.ApellidoM.Size = new System.Drawing.Size(422, 30);
+            this.ApellidoM.TabIndex = 29;
             // 
-            // label3
+            // label7
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(223, 108);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ingrese la contraseña para confirmar la eliminación del usuario";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(14, 226);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(165, 25);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Apellido Materno:";
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(230, 344);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(218, 37);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "Guardar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // ApellidoP
+            // 
+            this.ApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApellidoP.Location = new System.Drawing.Point(194, 169);
+            this.ApellidoP.Name = "ApellidoP";
+            this.ApellidoP.Size = new System.Drawing.Size(422, 30);
+            this.ApellidoP.TabIndex = 26;
+            // 
+            // nombre
+            // 
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(194, 113);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(422, 30);
+            this.nombre.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(26, 296);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Tipo de usuario:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(18, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 25);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Apellido Paterno:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(53, 116);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(87, 25);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Nombre:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(165, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(353, 32);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Cambiar tipo de usuario:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::MaheduBueno.Properties.Resources.potencializa;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(155, 72);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::MaheduBueno.Properties.Resources.logo;
+            this.pictureBox4.Location = new System.Drawing.Point(528, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(123, 82);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(303, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 25);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "label9";
+            // 
+            // maheduDataSet9
+            // 
+            this.maheduDataSet9.DataSetName = "MaheduDataSet9";
+            this.maheduDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipousuarioBindingSource
+            // 
+            this.tipousuarioBindingSource.DataMember = "tipousuario";
+            this.tipousuarioBindingSource.DataSource = this.maheduDataSet9;
+            // 
+            // tipousuarioTableAdapter
+            // 
+            this.tipousuarioTableAdapter.ClearBeforeFill = true;
             // 
             // AdministrarUsuarioscs
             // 
@@ -305,6 +504,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(850, 462);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
@@ -320,6 +520,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet2)).EndInit();
@@ -327,8 +529,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet1BindingSource)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +567,22 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button confirmar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox tipoUsuario;
+        private System.Windows.Forms.TextBox ApellidoM;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox ApellidoP;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label9;
+        private MaheduDataSet9 maheduDataSet9;
+        private System.Windows.Forms.BindingSource tipousuarioBindingSource;
+        private MaheduDataSet9TableAdapters.tipousuarioTableAdapter tipousuarioTableAdapter;
     }
 }

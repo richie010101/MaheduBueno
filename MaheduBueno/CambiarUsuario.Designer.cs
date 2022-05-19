@@ -36,20 +36,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.ApellidoP = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.maheduDataSet8 = new MaheduBueno.MaheduDataSet8();
+            this.ApellidoM = new System.Windows.Forms.TextBox();
+            this.tipoUsuario = new System.Windows.Forms.ComboBox();
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maheduDataSet8 = new MaheduBueno.MaheduDataSet8();
             this.tipousuarioTableAdapter = new MaheduBueno.MaheduDataSet8TableAdapters.tipousuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -134,21 +134,21 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Tipo de usuario:";
             // 
-            // textBox1
+            // nombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(252, 170);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(422, 30);
-            this.textBox1.TabIndex = 11;
+            this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(252, 170);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(422, 30);
+            this.nombre.TabIndex = 11;
             // 
-            // textBox2
+            // ApellidoP
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(252, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(422, 30);
-            this.textBox2.TabIndex = 12;
+            this.ApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApellidoP.Location = new System.Drawing.Point(252, 224);
+            this.ApellidoP.Name = "ApellidoP";
+            this.ApellidoP.Size = new System.Drawing.Size(422, 30);
+            this.ApellidoP.TabIndex = 12;
             // 
             // button3
             // 
@@ -184,33 +184,33 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Apellido Materno:";
             // 
-            // textBox3
+            // ApellidoM
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(252, 278);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(422, 30);
-            this.textBox3.TabIndex = 17;
+            this.ApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApellidoM.Location = new System.Drawing.Point(252, 278);
+            this.ApellidoM.Name = "ApellidoM";
+            this.ApellidoM.Size = new System.Drawing.Size(422, 30);
+            this.ApellidoM.TabIndex = 17;
             // 
-            // comboBox1
+            // tipoUsuario
             // 
-            this.comboBox1.DataSource = this.tipousuarioBindingSource;
-            this.comboBox1.DisplayMember = "tipoUsuario";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(252, 353);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 18;
-            // 
-            // maheduDataSet8
-            // 
-            this.maheduDataSet8.DataSetName = "MaheduDataSet8";
-            this.maheduDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tipoUsuario.DataSource = this.tipousuarioBindingSource;
+            this.tipoUsuario.DisplayMember = "tipoUsuario";
+            this.tipoUsuario.FormattingEnabled = true;
+            this.tipoUsuario.Location = new System.Drawing.Point(252, 353);
+            this.tipoUsuario.Name = "tipoUsuario";
+            this.tipoUsuario.Size = new System.Drawing.Size(121, 24);
+            this.tipoUsuario.TabIndex = 18;
             // 
             // tipousuarioBindingSource
             // 
             this.tipousuarioBindingSource.DataMember = "tipousuario";
             this.tipousuarioBindingSource.DataSource = this.maheduDataSet8;
+            // 
+            // maheduDataSet8
+            // 
+            this.maheduDataSet8.DataSetName = "MaheduDataSet8";
+            this.maheduDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tipousuarioTableAdapter
             // 
@@ -222,13 +222,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(800, 482);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tipoUsuario);
+            this.Controls.Add(this.ApellidoM);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ApellidoP);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -241,8 +241,8 @@
             this.Load += new System.EventHandler(this.CambiarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,13 +257,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.TextBox ApellidoP;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox ApellidoM;
+        private System.Windows.Forms.ComboBox tipoUsuario;
         private MaheduDataSet8 maheduDataSet8;
         private System.Windows.Forms.BindingSource tipousuarioBindingSource;
         private MaheduDataSet8TableAdapters.tipousuarioTableAdapter tipousuarioTableAdapter;

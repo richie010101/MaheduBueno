@@ -49,8 +49,7 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
-            CambiarUsuario editUsuario = new CambiarUsuario();
-            editUsuario.Show();
+            panel3.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -62,6 +61,8 @@ namespace MaheduBueno
 
         private void AdministrarUsuarioscs_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet9.tipousuario' Puede moverla o quitarla según sea necesario.
+            this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
 
@@ -133,7 +134,7 @@ namespace MaheduBueno
 
             }
 
-            
+            panel2.Visible = false;
 
         }
 
@@ -146,5 +147,45 @@ namespace MaheduBueno
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+                    try
+                    {
+                        ManejadorBD.Conectar();
+
+
+                        String qery = "UPDATE mahedu.usuario SET Nombres='" + nombre.Text +",ApellidoP='" +ApellidoP.Text+", ApellidoM ='"+ApellidoM.Text+", tipoUsuario_idtipoUsuario ='"+tipoUsuario.SelectedItem+" WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+
+                       // Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
+
+
+                        Console.WriteLine(qery);
+                       // new MessageBox2().Show();
+
+                        SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                        SqlDataAdapter r = new SqlDataAdapter(cmd);
+                        DataTable s = new DataTable();
+                        r.Fill(s);
+
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                    }
+
+
+            panel3.Visible = false;
+
+        }
     }
-}
+    }
+
