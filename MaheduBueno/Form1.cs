@@ -43,6 +43,8 @@ namespace MaheduBueno
             user = textBox1.Text;
             contra = textBox2.Text;
 
+            
+           /*
             ManejadorBD.Conectar();
             
 
@@ -85,7 +87,11 @@ namespace MaheduBueno
 
 
             //manejadorBD.leer(user, contra);
-           // Respuesta.Text = "hola";
+            // Respuesta.Text = "hola";
+                */                                 
+
+            new MenuPrincipal().Show();
+            Program.form1.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -31,6 +31,7 @@ namespace MaheduBueno
             addPanel3.Visible = false;
             addPanel2.Visible = false;
             Addpanel.Visible = false;
+            addPrima.Visible = false;
             /*
             try
             {
@@ -65,7 +66,8 @@ namespace MaheduBueno
             addPanel3.Visible = false;
             addPanel2.Visible = false;
             agregarPanel.Visible = false;
-                               
+            addPrima.Visible = false;
+
             Addpanel.Visible = false;
 
         }
@@ -150,6 +152,91 @@ namespace MaheduBueno
         {
             addPanel3.Visible = true;
             addPanel2.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            addPrima.Visible = true;
+            textDescripPrima.Text = "";
+            textNombrePrima.Text = "";
+            textSKUPrima.Text = "";
+            CantidadPrima.Value = 0;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textDescripPrima.Text = "";
+            textNombrePrima.Text= "";
+            textSKUPrima.Text = "";
+            CantidadPrima.Value = 0;
+            addPrima.Visible = false;
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+            if(textNombrePrima.Text!="")
+            {
+                if(textSKUPrima.Text!="")
+                {
+                     if(CantidadMateriaPrima.Value>=0)
+                    {
+                        Console.WriteLine(CantidadPrima.Value);
+                        
+                        try
+                        {
+                            
+
+                            String qery = "INSERT INTO mahedu.materiaprima VALUES('" + textSKUPrima.Text + "','" + textNombrePrima.Text + "','" + textDescripPrima.Text + "'," + CantidadMateriaPrima.Value.ToString() + ")";
+
+                            Console.WriteLine("Corriste");
+
+
+                            Console.WriteLine(qery);
+
+                              
+
+                            SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
+                            command.ExecuteNonQuery();
+                            command.Connection.Close();
+                            agregarPanel.Visible = false;
+
+                            MessageBox.Show("guardado correctamente");
+
+                            addPrima.Visible = false;
+
+
+                        }
+                        catch (Exception ex)
+                        {
+
+                            MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                        }
+                      
+
+
+                    }
+                     else
+                    {
+                        MessageBox.Show("no es posible poner cantidad negativas a la materia prima, verifique");
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("agrega SKU a tu materia prima");
+                }
+            }
+            else
+            {
+                MessageBox.Show("agrega nombre a tu materia prima");
+            }
+
+
+
+
         }
     }
     }
