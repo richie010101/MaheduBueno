@@ -18,13 +18,17 @@ namespace MaheduBueno
     public partial class Form1 : Form
     {
         private ManejadorBD manejadorBD;
+        bool click1;
+        bool click2;
         public Form1()
         {
             InitializeComponent();
 
            
             manejadorBD = new ManejadorBD();
-       }
+            click1 = false;
+            click2 = false;
+        }
         
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -90,5 +94,31 @@ namespace MaheduBueno
 
         }
 
+        private void textBox2_CursorChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            if(!click1)
+            {
+                textBox2.PasswordChar = '*';
+                textBox2.Text = "";
+                click1 = true;
+                textBox2.ForeColor = Color.Black;
+            }
+        
+
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            if (!click2)
+            {
+                textBox1.ForeColor = Color.Black;
+                textBox1.Text = "";
+            }
+        }
     }
 }

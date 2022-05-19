@@ -78,23 +78,27 @@ namespace MaheduBueno
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox1.Location = new System.Drawing.Point(52, 275);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(204, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Usuario";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textBox2.Location = new System.Drawing.Point(52, 318);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(204, 20);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Contraseña";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.CursorChanged += new System.EventHandler(this.textBox2_CursorChanged);
             // 
             // button1
             // 
