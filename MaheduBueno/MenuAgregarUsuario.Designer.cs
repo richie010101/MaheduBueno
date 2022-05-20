@@ -212,7 +212,6 @@
             this.NombreU.Name = "NombreU";
             this.NombreU.Size = new System.Drawing.Size(373, 22);
             this.NombreU.TabIndex = 18;
-            this.NombreU.Text = "Mariana";
             // 
             // ApellidoP
             // 

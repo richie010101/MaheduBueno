@@ -49,6 +49,11 @@ namespace MaheduBueno
             {
                 MessageBox.Show("La contraseña no debe de estar vacía");
             }
+
+            if(Contraseña.Text != ConfirContra.Text)
+            {
+                MessageBox.Show("Las contraseñas no coinciden");
+            }
             else
             {
                 int id = 6;
@@ -103,6 +108,9 @@ namespace MaheduBueno
 
                 UsuarioAgregado.Show();
 
+              MenuAgregarUsuario  MenuAgregar = new MenuAgregarUsuario();
+
+                this.Close();
             }
         }
 

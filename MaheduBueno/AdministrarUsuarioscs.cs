@@ -32,7 +32,7 @@ namespace MaheduBueno
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace MaheduBueno
 
         private void button4_Click(object sender, EventArgs e)
         {
-           panel2.Visible = true;
-           
+            panel2.Visible = true;
+
 
         }
 
@@ -125,7 +125,7 @@ namespace MaheduBueno
                 }
                 else
                 {
-                   // MessageBox.Show("Contraseña incorrecta");
+                    // MessageBox.Show("Contraseña incorrecta");
                 }
             }
             catch (Exception R)
@@ -156,55 +156,79 @@ namespace MaheduBueno
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
-                    try
+
+            try
+            {
+                ManejadorBD.Conectar();
+
+
+                if (nombre.Text == "")
+                {
+                    MessageBox.Show("El nombre no puede estar vacío");
+                }
+
+                if (ApellidoP.Text == "")
+                {
+                    MessageBox.Show("El apellido paterno no debe de estar vacío");
+                }
+                if (ApellidoM.Text == "")
+                {
+                    MessageBox.Show("El apellido materno no debe de estar vacío");
+                }
+                else
+                {
+                    int id = 6;
+
+                    if (tipoUsuario.SelectedItem.ToString() == "SuperUsuario")
                     {
-                        ManejadorBD.Conectar();
-                int id = 6;
-
-                if (tipoUsuario.SelectedItem.ToString() == "SuperUsuario")
-                {
-                    id = 4;
-                }
-                else if (tipoUsuario.SelectedItem.ToString() == "Administrador")
-                {
-                    id = 5;
-                }
-                else if (tipoUsuario.SelectedItem.ToString() == "Vendedor")
-                {
-                    id = 6;
-                }
-
-                String qery = "UPDATE mahedu.usuario SET Nombres='" + nombre.Text + "', ApellidoP='" + ApellidoP.Text + "', ApellidoM ='" + ApellidoM.Text + "', tipoUsuario_idtipoUsuario ='" + id +"' WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
-                        Console.WriteLine(qery);
-                       // Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
-
-
-                        Console.WriteLine(qery);
-                       // new MessageBox2().Show();
-
-                        SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
-                        SqlDataAdapter r = new SqlDataAdapter(cmd);
-                        DataTable s = new DataTable();
-                        r.Fill(s);
-
-
+                        id = 4;
                     }
-                    catch (Exception ex)
+                    else if (tipoUsuario.SelectedItem.ToString() == "Administrador")
                     {
-
-                        MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                        id = 5;
                     }
+                    else if (tipoUsuario.SelectedItem.ToString() == "Vendedor")
+                    {
+                        id = 6;
+                    }
+
+                    String qery = "UPDATE mahedu.usuario SET Nombres='" + nombre.Text + "', ApellidoP='" + ApellidoP.Text + "', ApellidoM ='" + ApellidoM.Text + "', tipoUsuario_idtipoUsuario ='" + id + "' WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+                    Console.WriteLine(qery);
+                    // Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
+
+
+                    Console.WriteLine(qery);
+                    // new MessageBox2().Show();
+
+                    SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                    SqlDataAdapter r = new SqlDataAdapter(cmd);
+                    DataTable s = new DataTable();
+                    r.Fill(s);
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+            }
+
 
 
             panel3.Visible = false;
+
 
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet9.tipousuario' Puede moverla o quitarla según sea necesario.
             this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
-
         }
     }
-    }
+}
+
+    
+    
 
