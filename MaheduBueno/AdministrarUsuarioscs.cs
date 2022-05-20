@@ -160,10 +160,23 @@ namespace MaheduBueno
                     try
                     {
                         ManejadorBD.Conectar();
+                int id = 6;
 
+                if (tipoUsuario.SelectedItem.ToString() == "SuperUsuario")
+                {
+                    id = 4;
+                }
+                else if (tipoUsuario.SelectedItem.ToString() == "Administrador")
+                {
+                    id = 5;
+                }
+                else if (tipoUsuario.SelectedItem.ToString() == "Vendedor")
+                {
+                    id = 6;
+                }
 
-                        String qery = "UPDATE mahedu.usuario SET Nombres='" + nombre.Text +",ApellidoP='" +ApellidoP.Text+", ApellidoM ='"+ApellidoM.Text+", tipoUsuario_idtipoUsuario ='"+tipoUsuario.SelectedItem+" WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
-
+                String qery = "UPDATE mahedu.usuario SET Nombres='" + nombre.Text + "', ApellidoP='" + ApellidoP.Text + "', ApellidoM ='" + ApellidoM.Text + "', tipoUsuario_idtipoUsuario ='" + id +"' WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+                        Console.WriteLine(qery);
                        // Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
 
 
@@ -185,6 +198,11 @@ namespace MaheduBueno
 
 
             panel3.Visible = false;
+
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet9.tipousuario' Puede moverla o quitarla según sea necesario.
+            this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
 
         }
     }
