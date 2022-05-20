@@ -16,6 +16,15 @@ namespace MaheduBueno
         {
             InitializeComponent();
         }
+
+        public Confirmar(String label, String btn)
+        {
+            InitializeComponent();
+
+            label1.Text = label;
+
+            button2.Text = btn;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +41,11 @@ namespace MaheduBueno
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void Confirmar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

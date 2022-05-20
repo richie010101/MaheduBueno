@@ -14,9 +14,16 @@ namespace MaheduBueno
     public partial class Ventas : Form
     {
         int tota=0;
+        String user;
         public Ventas()
         {
             InitializeComponent();
+        }
+        public Ventas(String id)
+        {
+            InitializeComponent();
+            user = id;
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -73,7 +80,81 @@ namespace MaheduBueno
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            
+            try
+            {
+
+                Confirmar r = new Confirmar("Confirmar la venta", "Confirmar");
+
+
+                DialogResult dg = r.ShowDialog();
+                if (dg.ToString() == "OK")
+                {
+                    ManejadorBD.Conectar();
+
+
+                    //Saca el id venta actual
+                    String consulta1 = "SELECT count(*) FROM mahedu.venta";
+                    SqlCommand cmd1 = new SqlCommand(consulta1, ManejadorBD.Conectar());
+                    SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+
+                    DataTable dt1 = new DataTable();
+
+                    adapter1.Fill(dt1);
+
+                    int id_venta = Convert.ToInt32(dt1.Rows[0][0]) + 2;
+                    Console.WriteLine("siuuu"+id_venta);
+
+                    //registra la venta con la fecha y el vendedor
+
+                    ManejadorBD.Conectar();
+                    String consulta = "insert into mahedu.venta values(" + user + ", '" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "');";
+                    SqlCommand cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+
+                    adapter.Fill(dt);
+
+
+
+
+                    //registra cada producto con su venta
+                    for (int fila = 0; fila < dataGridView2.RowCount; fila++)
+                    {
+                        ManejadorBD.Conectar();
+                        String consulta2 = "insert into mahedu.producto_has_venta values (" + Convert.ToInt32(dataGridView2.Rows[fila].Cells[3].Value) + ", " + id_venta + ", " + Convert.ToInt32(dataGridView2.Rows[fila].Cells[1].Value) + ");";
+                        SqlCommand cmd2 = new SqlCommand(consulta2, ManejadorBD.Conectar());
+                        SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+                        
+                        DataTable dt0 = new DataTable();
+
+                        adapter2.Fill(dt0);
+
+                        Console.WriteLine(consulta2);
+
+                        ManejadorBD.Conectar();
+                        //Le resta los productos vendidos a la tabla productos
+                        String query = "UPDATE mahedu.producto SET Cantidad = mahedu.producto.Cantidad - "+ Convert.ToInt32(dataGridView2.Rows[fila].Cells[1].Value) + "where idProducto = "+Convert.ToInt32(dataGridView2.Rows[fila].Cells[3].Value)+";";
+                        SqlCommand cm = new SqlCommand(query, ManejadorBD.Conectar());
+                        SqlDataAdapter adap = new SqlDataAdapter(cm);
+                        Console.WriteLine(query);
+                        DataTable dataT = new DataTable();
+
+                        adap.Fill(dataT);
+                    }
+
+                }
+
+               
+
+                
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
 
 
@@ -92,12 +173,12 @@ namespace MaheduBueno
                 String nombre = this.dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 int precio = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[2].Value);
                 int cantidad = Convert.ToInt32(numericUpDown1.Value);
-
+                int _ID = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[3].Value);
 
                 if (cantidad > 0)
                 {
                     tota = 0;
-                    dataGridView2.Rows.Add(nombre, cantidad, precio);
+                    dataGridView2.Rows.Add(nombre, cantidad, precio, _ID);
                     for (int i = 0; i < dataGridView2.RowCount; i++)
                     { 
                         tota = tota + Convert.ToInt32(dataGridView2.Rows[i].Cells[2].Value) * Convert.ToInt32(dataGridView2.Rows[i].Cells[1].Value);
@@ -148,6 +229,24 @@ namespace MaheduBueno
         private void dataGridView2_ColumnRemoved(object sender, DataGridViewColumnEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Confirmar r = new Confirmar("Seguro que quieres cancelar la compra?", "Confirmar");
+
+
+            DialogResult dg = r.ShowDialog();
+            if (dg.ToString() == "OK") {
+
+                dataGridView2.Rows.Clear();
+                
+            }
         }
     }
 }

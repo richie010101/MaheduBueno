@@ -81,7 +81,9 @@ namespace MaheduBueno
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "Confirmar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmar";
+            this.Load += new System.EventHandler(this.Confirmar_Load);
             this.ResumeLayout(false);
 
         }

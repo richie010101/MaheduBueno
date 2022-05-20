@@ -589,10 +589,12 @@
     <Content Include="Imagenes\casita.jpeg" />
     <Content Include="Imagenes\estadisticas.png" />
     <Content Include="Imagenes\fondo.png" />
+    <Content Include="Imagenes\f.png" />
     <Content Include="Imagenes\fondo2.png" />
     <Content Include="Imagenes\help.png" />
     <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\potencializa.png" />
+    <None Include="Resources\f.png" />
     <None Include="Resources\help.png" />
     <None Include="Resources\basura.jpeg" />
     <None Include="Resources\casita.jpeg" />

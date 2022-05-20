@@ -14,9 +14,10 @@ using System.Windows.Forms;
 
 namespace MaheduBueno
 {
-
+    
     public partial class Form1 : Form
     {
+        String id_user;
         private ManejadorBD manejadorBD;
         bool click1;
         bool click2;
@@ -44,7 +45,7 @@ namespace MaheduBueno
             contra = textBox2.Text;
 
             
-           /*
+           
             ManejadorBD.Conectar();
             
 
@@ -62,7 +63,10 @@ namespace MaheduBueno
             {
                 if (dt.Rows[0][0].ToString() != null)
                 {
-                    new MenuPrincipal().Show();
+                    id_user = dt.Rows[0][0].ToString();
+                    Console.WriteLine("h"+id_user);
+                    MenuPrincipal menuP = new MenuPrincipal(id_user);
+                    menuP.Show();
                     Program.form1.Hide();
                 }
                 else
@@ -88,10 +92,10 @@ namespace MaheduBueno
 
             //manejadorBD.leer(user, contra);
             // Respuesta.Text = "hola";
-                */                                 
+                                              
 
-            new MenuPrincipal().Show();
-            Program.form1.Hide();
+           /* new MenuPrincipal().Show();
+            Program.form1.Hide();*/
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
