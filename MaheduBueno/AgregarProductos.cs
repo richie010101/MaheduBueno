@@ -16,6 +16,7 @@ namespace MaheduBueno
     {
 
         Producto nuevo;
+
         public AgregarProductos()
         {
             InitializeComponent();
@@ -87,6 +88,7 @@ namespace MaheduBueno
             addPrima.Visible = false;
             PanelAgregado.Visible = false;
 
+            panelEdicion.Visible = false;
             Addpanel.Visible = false;
 
         }
@@ -329,6 +331,59 @@ namespace MaheduBueno
         }
 
         private void PanelAgregado_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BTNEDITARSELECCION_Click(object sender, EventArgs e)
+        {
+            panelEdicion.Visible = true;
+        }
+
+        private void editarCantMateria_Click(object sender, EventArgs e)
+        {
+            
+
+
+                                      
+            String consulta = "SELECT * FROM mahedu.materiaprima";
+            SqlCommand cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+
+            adapter.Fill(dt);
+
+
+            try
+            {
+                int i;
+                for (i=0;i<dt.Rows.Count;i++)
+                {
+                    comboBoxMateriaPrima.Items.Add(dt.Rows[i][1].ToString());
+                }
+                addPanel3.Visible = true;
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+
+        }
+
+        private void EditarDetalles_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void agregaMedidas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
         {
 
         }

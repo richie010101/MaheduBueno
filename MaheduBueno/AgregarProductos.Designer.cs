@@ -108,6 +108,18 @@
             this.costounidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelEdicion = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
+            this.agregaMedidas = new System.Windows.Forms.Button();
+            this.editarCantMateria = new System.Windows.Forms.Button();
+            this.EditarDetalles = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).BeginInit();
@@ -130,6 +142,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).BeginInit();
+            this.panelEdicion.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -148,6 +162,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 154);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(579, 221);
@@ -267,6 +282,7 @@
             this.BTNEDITARSELECCION.TabIndex = 23;
             this.BTNEDITARSELECCION.Text = "Editar selección";
             this.BTNEDITARSELECCION.UseVisualStyleBackColor = true;
+            this.BTNEDITARSELECCION.Click += new System.EventHandler(this.BTNEDITARSELECCION_Click);
             // 
             // BTNELIMINARSELECCION
             // 
@@ -306,7 +322,7 @@
             this.addPanel3.Controls.Add(this.comboBoxMateriaPrima);
             this.addPanel3.Controls.Add(this.label13);
             this.addPanel3.Controls.Add(this.label12);
-            this.addPanel3.Location = new System.Drawing.Point(9, 98);
+            this.addPanel3.Location = new System.Drawing.Point(2, 45);
             this.addPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.addPanel3.Name = "addPanel3";
             this.addPanel3.Size = new System.Drawing.Size(223, 328);
@@ -823,7 +839,7 @@
             this.PanelAgregado.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo21;
             this.PanelAgregado.Controls.Add(this.label11);
             this.PanelAgregado.Controls.Add(this.button17);
-            this.PanelAgregado.Location = new System.Drawing.Point(28, 11);
+            this.PanelAgregado.Location = new System.Drawing.Point(144, 18);
             this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2);
             this.PanelAgregado.Name = "PanelAgregado";
             this.PanelAgregado.Size = new System.Drawing.Size(348, 134);
@@ -926,13 +942,145 @@
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
+            // panelEdicion
+            // 
+            this.panelEdicion.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelEdicion.Controls.Add(this.addPanel3);
+            this.panelEdicion.Controls.Add(this.EditarDetalles);
+            this.panelEdicion.Controls.Add(this.button14);
+            this.panelEdicion.Controls.Add(this.agregaMedidas);
+            this.panelEdicion.Controls.Add(this.editarCantMateria);
+            this.panelEdicion.Location = new System.Drawing.Point(190, 37);
+            this.panelEdicion.Margin = new System.Windows.Forms.Padding(2);
+            this.panelEdicion.Name = "panelEdicion";
+            this.panelEdicion.Size = new System.Drawing.Size(225, 375);
+            this.panelEdicion.TabIndex = 27;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Red;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Location = new System.Drawing.Point(10, 10);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(28, 30);
+            this.button14.TabIndex = 2;
+            this.button14.Text = "X";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // agregaMedidas
+            // 
+            this.agregaMedidas.Location = new System.Drawing.Point(58, 272);
+            this.agregaMedidas.Margin = new System.Windows.Forms.Padding(2);
+            this.agregaMedidas.Name = "agregaMedidas";
+            this.agregaMedidas.Size = new System.Drawing.Size(123, 66);
+            this.agregaMedidas.TabIndex = 1;
+            this.agregaMedidas.Text = "Agregar Medidas";
+            this.agregaMedidas.UseVisualStyleBackColor = true;
+            this.agregaMedidas.Click += new System.EventHandler(this.agregaMedidas_Click);
+            // 
+            // editarCantMateria
+            // 
+            this.editarCantMateria.Location = new System.Drawing.Point(58, 173);
+            this.editarCantMateria.Margin = new System.Windows.Forms.Padding(2);
+            this.editarCantMateria.Name = "editarCantMateria";
+            this.editarCantMateria.Size = new System.Drawing.Size(123, 66);
+            this.editarCantMateria.TabIndex = 0;
+            this.editarCantMateria.Text = "Agregar Materia a Usar";
+            this.editarCantMateria.UseVisualStyleBackColor = true;
+            this.editarCantMateria.Click += new System.EventHandler(this.editarCantMateria_Click);
+            // 
+            // EditarDetalles
+            // 
+            this.EditarDetalles.Location = new System.Drawing.Point(58, 63);
+            this.EditarDetalles.Margin = new System.Windows.Forms.Padding(2);
+            this.EditarDetalles.Name = "EditarDetalles";
+            this.EditarDetalles.Size = new System.Drawing.Size(123, 66);
+            this.EditarDetalles.TabIndex = 3;
+            this.EditarDetalles.Text = "Editar detalles";
+            this.EditarDetalles.UseVisualStyleBackColor = true;
+            this.EditarDetalles.Click += new System.EventHandler(this.EditarDetalles_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.button15);
+            this.panel1.Controls.Add(this.button16);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.button18);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Location = new System.Drawing.Point(398, 11);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(223, 328);
+            this.panel1.TabIndex = 28;
+            this.panel1.Visible = false;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(130, 270);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(91, 25);
+            this.button15.TabIndex = 20;
+            this.button15.Text = "Cancelar";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(19, 268);
+            this.button16.Margin = new System.Windows.Forms.Padding(2);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(107, 28);
+            this.button16.TabIndex = 19;
+            this.button16.Text = "Guardar Cambios";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(14, 111);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(182, 87);
+            this.textBox2.TabIndex = 18;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(52, 63);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(94, 28);
+            this.button18.TabIndex = 17;
+            this.button18.Text = "Agregar";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(15, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(181, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(76, 12);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(47, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Medidas";
+            // 
             // AgregarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(604, 449);
-            this.Controls.Add(this.addPanel3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.Addpanel);
             this.Controls.Add(this.PanelAgregado);
             this.Controls.Add(this.agregarPanel);
@@ -978,6 +1126,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).EndInit();
+            this.panelEdicion.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1065,5 +1216,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn costounidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Panel panelEdicion;
+        private System.Windows.Forms.Button EditarDetalles;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button agregaMedidas;
+        private System.Windows.Forms.Button editarCantMateria;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label24;
     }
 }
