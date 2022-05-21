@@ -140,6 +140,7 @@
     <Compile Include="Camposllenos.Designer.cs">
       <DependentUpon>Camposllenos.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases\Producto.cs" />
     <Compile Include="Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +226,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="MaheduDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -489,6 +500,28 @@
     <None Include="MaheduDataSet11.xss">
       <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
     </None>
+    <None Include="MaheduDataSet12.xsc">
+      <DependentUpon>MaheduDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet12.xss">
+      <DependentUpon>MaheduDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet13.xsc">
+      <DependentUpon>MaheduDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet13.xss">
+      <DependentUpon>MaheduDataSet13.xsd</DependentUpon>
+    </None>
     <None Include="MaheduDataSet2.xsc">
       <DependentUpon>MaheduDataSet2.xsd</DependentUpon>
     </None>
@@ -602,6 +635,7 @@
     <Content Include="Imagenes\help.png" />
     <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\potencializa.png" />
+    <None Include="Resources\fondo21.png" />
     <None Include="Resources\fondo3.jpeg" />
     <None Include="Resources\help.png" />
     <None Include="Resources\basura.jpeg" />

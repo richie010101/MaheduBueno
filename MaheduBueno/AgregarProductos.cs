@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaheduBueno.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace MaheduBueno
 {
     public partial class AgregarProductos : Form
     {
+
+        Producto nuevo;
         public AgregarProductos()
         {
             InitializeComponent();
+            nuevo = new Producto();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,13 +65,27 @@ namespace MaheduBueno
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet13.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter3.Fill(this.maheduDataSet13.producto);
+            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet12.producto' Puede moverla o quitarla según sea necesario.
+            this.productoTableAdapter2.Fill(this.maheduDataSet12.producto);
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet7.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter1.Fill(this.maheduDataSet7.producto);
+
+
+
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 40;
+            dataGridView1.Columns[3].Width = 200;
+            dataGridView1.Columns[4].Width = 60;
+            dataGridView1.Columns[5].Width = 60;
+            dataGridView1.Columns[6].Width = 60;
 
             addPanel3.Visible = false;
             addPanel2.Visible = false;
             agregarPanel.Visible = false;
             addPrima.Visible = false;
+            PanelAgregado.Visible = false;
 
             Addpanel.Visible = false;
 
@@ -88,8 +106,25 @@ namespace MaheduBueno
 
         private void button7_Click(object sender, EventArgs e)
         {
+            nuevo.Nombre = textNombrePoducto.Text;
+            nuevo.Sku = textSKUproducto.Text;
+            nuevo.Precio = (float)precio.Value;
+            nuevo.Costo = (float)costo.Value;
+            nuevo.Cantidad = (int)CantidadProducto.Value;
+
+            textNombrePoducto.Text = "";
+            textSKUproducto.Text="";
+            precio.Value=0;
+            costo.Value=0;
+            CantidadProducto.Value=0;
+
             addPanel2.Visible = true;
             Addpanel.Visible = false;
+
+            Console.WriteLine(nuevo.Cantidad + nuevo.Sku + nuevo.Precio + nuevo.Costo + nuevo.Nombre);
+
+
+
 
 
         }                                  
@@ -151,11 +186,59 @@ namespace MaheduBueno
 
         private void button9_Click(object sender, EventArgs e)
         {
-            addPanel3.Visible = true;
+            nuevo.Descripcion = textDescripcionProducto.Text;
+            nuevo.CantidadMax = (int)CantidadMaxProducto.Value;
+            nuevo.CantidadMin = (int)cantidadMinProducto.Value;
+
+            CantidadMaxProducto.Value=0;
+            cantidadMinProducto.Value=0;
+            textDescripcionProducto.Text = "";
+
+
+            try
+            {
+
+
+                String qery = "INSERT INTO mahedu.producto VALUES('"+ nuevo.Sku + "','" + nuevo.Nombre + "','"+ nuevo.Descripcion + "'," + 
+                                                                   nuevo.Costo+","+ nuevo.Cantidad+"," + nuevo.Precio +"," + nuevo.CantidadMin+"," +nuevo.CantidadMax +")";
+
+                Console.WriteLine("Corriste");
+
+
+                Console.WriteLine(qery);
+
+
+
+                SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+                agregarPanel.Visible = false;
+                addPrima.Visible = false;
+                PanelAgregado.Visible = true;
+                
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+            }
+
+
+
+
+
+
+            /*
+               addPanel3.Visible = true;
+               addPanel2.Visible = false;    */
+
+            PanelAgregado.Visible = true;
             addPanel2.Visible = false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)                                            
         {
             addPrima.Visible = true;
             textDescripPrima.Text = "";
@@ -237,6 +320,16 @@ namespace MaheduBueno
 
 
 
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        }
+
+        private void PanelAgregado_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }
