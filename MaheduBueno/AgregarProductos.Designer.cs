@@ -30,6 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costounidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.maheduDataSet13 = new MaheduBueno.MaheduDataSet13();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet7 = new MaheduBueno.MaheduDataSet7();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,17 +52,6 @@
             this.BTNEDITARSELECCION = new System.Windows.Forms.Button();
             this.BTNELIMINARSELECCION = new System.Windows.Forms.Button();
             this.agregarPanel = new System.Windows.Forms.Panel();
-            this.addPanel3 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.buttonGuardar = new System.Windows.Forms.Button();
-            this.textCantidadPrimaAgregada = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.CantidadMateriaPrima = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboBoxMateriaPrima = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -69,8 +67,29 @@
             this.label20 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.addPanel3 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.textCantidadPrimaAgregada = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.CantidadMateriaPrima = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBoxMateriaPrima = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.Addpanel = new System.Windows.Forms.Panel();
             this.costo = new System.Windows.Forms.NumericUpDown();
+            this.addPanel2 = new System.Windows.Forms.Panel();
+            this.CantidadMaxProducto = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cantidadMinProducto = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textDescripcionProducto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.precio = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.textSKUproducto = new System.Windows.Forms.TextBox();
@@ -82,37 +101,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.addPanel2 = new System.Windows.Forms.Panel();
-            this.CantidadMaxProducto = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cantidadMinProducto = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textDescripcionProducto = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.productoTableAdapter1 = new MaheduBueno.MaheduDataSet7TableAdapters.productoTableAdapter();
             this.PanelAgregado = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
             this.maheduDataSet12 = new MaheduBueno.MaheduDataSet12();
             this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter2 = new MaheduBueno.MaheduDataSet12TableAdapters.productoTableAdapter();
-            this.maheduDataSet13 = new MaheduBueno.MaheduDataSet13();
-            this.productoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.productoTableAdapter3 = new MaheduBueno.MaheduDataSet13TableAdapters.productoTableAdapter();
-            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costounidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelEdicion = new System.Windows.Forms.Panel();
+            this.EditarDetalles = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.agregaMedidas = new System.Windows.Forms.Button();
             this.editarCantMateria = new System.Windows.Forms.Button();
-            this.EditarDetalles = new System.Windows.Forms.Button();
             this.panelMedidas = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -120,29 +121,28 @@
             this.button18 = new System.Windows.Forms.Button();
             this.comboBoxMedidas = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.agregarPanel.SuspendLayout();
-            this.addPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadMateriaPrima)).BeginInit();
             this.addPrima.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadPrima)).BeginInit();
+            this.addPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadMateriaPrima)).BeginInit();
             this.Addpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.costo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).BeginInit();
             this.addPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadMaxProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadMinProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.precio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).BeginInit();
             this.PanelAgregado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).BeginInit();
             this.panelEdicion.SuspendLayout();
             this.panelMedidas.SuspendLayout();
             this.SuspendLayout();
@@ -168,6 +168,65 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(579, 221);
             this.dataGridView1.TabIndex = 21;
+            // 
+            // idProductoDataGridViewTextBoxColumn
+            // 
+            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto";
+            this.idProductoDataGridViewTextBoxColumn.HeaderText = "idProducto";
+            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
+            this.idProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sKUDataGridViewTextBoxColumn
+            // 
+            this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
+            this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
+            this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
+            this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costounidadDataGridViewTextBoxColumn
+            // 
+            this.costounidadDataGridViewTextBoxColumn.DataPropertyName = "Costo/unidad";
+            this.costounidadDataGridViewTextBoxColumn.HeaderText = "Costo/unidad";
+            this.costounidadDataGridViewTextBoxColumn.Name = "costounidadDataGridViewTextBoxColumn";
+            this.costounidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productoBindingSource2
+            // 
+            this.productoBindingSource2.DataMember = "producto";
+            this.productoBindingSource2.DataSource = this.maheduDataSet13;
+            // 
+            // maheduDataSet13
+            // 
+            this.maheduDataSet13.DataSetName = "MaheduDataSet13";
+            this.maheduDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productoBindingSource
             // 
@@ -309,124 +368,6 @@
             this.agregarPanel.Size = new System.Drawing.Size(225, 375);
             this.agregarPanel.TabIndex = 2;
             this.agregarPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.agregarPanel_Paint);
-            // 
-            // addPanel3
-            // 
-            this.addPanel3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.addPanel3.Controls.Add(this.label21);
-            this.addPanel3.Controls.Add(this.button10);
-            this.addPanel3.Controls.Add(this.buttonGuardar);
-            this.addPanel3.Controls.Add(this.textCantidadPrimaAgregada);
-            this.addPanel3.Controls.Add(this.button11);
-            this.addPanel3.Controls.Add(this.CantidadMateriaPrima);
-            this.addPanel3.Controls.Add(this.label15);
-            this.addPanel3.Controls.Add(this.label14);
-            this.addPanel3.Controls.Add(this.comboBoxMateriaPrima);
-            this.addPanel3.Controls.Add(this.label13);
-            this.addPanel3.Controls.Add(this.label12);
-            this.addPanel3.Location = new System.Drawing.Point(11, 425);
-            this.addPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.addPanel3.Name = "addPanel3";
-            this.addPanel3.Size = new System.Drawing.Size(223, 328);
-            this.addPanel3.TabIndex = 20;
-            this.addPanel3.Visible = false;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(130, 270);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(91, 25);
-            this.button10.TabIndex = 20;
-            this.button10.Text = "Cancelar";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Location = new System.Drawing.Point(19, 268);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(107, 28);
-            this.buttonGuardar.TabIndex = 19;
-            this.buttonGuardar.Text = "Guardar ";
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
-            // 
-            // textCantidadPrimaAgregada
-            // 
-            this.textCantidadPrimaAgregada.Location = new System.Drawing.Point(19, 174);
-            this.textCantidadPrimaAgregada.Multiline = true;
-            this.textCantidadPrimaAgregada.Name = "textCantidadPrimaAgregada";
-            this.textCantidadPrimaAgregada.Size = new System.Drawing.Size(182, 87);
-            this.textCantidadPrimaAgregada.TabIndex = 18;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(72, 137);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(94, 28);
-            this.button11.TabIndex = 17;
-            this.button11.Text = "Agregar";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // CantidadMateriaPrima
-            // 
-            this.CantidadMateriaPrima.DecimalPlaces = 3;
-            this.CantidadMateriaPrima.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.CantidadMateriaPrima.Location = new System.Drawing.Point(114, 112);
-            this.CantidadMateriaPrima.Name = "CantidadMateriaPrima";
-            this.CantidadMateriaPrima.Size = new System.Drawing.Size(87, 20);
-            this.CantidadMateriaPrima.TabIndex = 16;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(18, 114);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 13);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Cantidad que usa";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 61);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Materia prima ";
-            // 
-            // comboBoxMateriaPrima
-            // 
-            this.comboBoxMateriaPrima.FormattingEnabled = true;
-            this.comboBoxMateriaPrima.Location = new System.Drawing.Point(21, 77);
-            this.comboBoxMateriaPrima.Name = "comboBoxMateriaPrima";
-            this.comboBoxMateriaPrima.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxMateriaPrima.TabIndex = 2;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 28);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(183, 26);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "si el producto, no utliza materia prima,\r\n de click en siguiente";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(76, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Materia prima ";
             // 
             // button5
             // 
@@ -594,6 +535,133 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // addPanel3
+            // 
+            this.addPanel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addPanel3.Controls.Add(this.label21);
+            this.addPanel3.Controls.Add(this.button10);
+            this.addPanel3.Controls.Add(this.buttonGuardar);
+            this.addPanel3.Controls.Add(this.textCantidadPrimaAgregada);
+            this.addPanel3.Controls.Add(this.button11);
+            this.addPanel3.Controls.Add(this.CantidadMateriaPrima);
+            this.addPanel3.Controls.Add(this.label15);
+            this.addPanel3.Controls.Add(this.label14);
+            this.addPanel3.Controls.Add(this.comboBoxMateriaPrima);
+            this.addPanel3.Controls.Add(this.label13);
+            this.addPanel3.Controls.Add(this.label12);
+            this.addPanel3.Location = new System.Drawing.Point(20, 47);
+            this.addPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.addPanel3.Name = "addPanel3";
+            this.addPanel3.Size = new System.Drawing.Size(223, 328);
+            this.addPanel3.TabIndex = 20;
+            this.addPanel3.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(202, 114);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(15, 13);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "m";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(130, 270);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(91, 25);
+            this.button10.TabIndex = 20;
+            this.button10.Text = "Cancelar";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Location = new System.Drawing.Point(19, 268);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(107, 28);
+            this.buttonGuardar.TabIndex = 19;
+            this.buttonGuardar.Text = "Guardar ";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
+            // textCantidadPrimaAgregada
+            // 
+            this.textCantidadPrimaAgregada.Location = new System.Drawing.Point(19, 174);
+            this.textCantidadPrimaAgregada.Multiline = true;
+            this.textCantidadPrimaAgregada.Name = "textCantidadPrimaAgregada";
+            this.textCantidadPrimaAgregada.Size = new System.Drawing.Size(182, 87);
+            this.textCantidadPrimaAgregada.TabIndex = 18;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(72, 137);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(94, 28);
+            this.button11.TabIndex = 17;
+            this.button11.Text = "Agregar";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // CantidadMateriaPrima
+            // 
+            this.CantidadMateriaPrima.DecimalPlaces = 3;
+            this.CantidadMateriaPrima.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
+            this.CantidadMateriaPrima.Location = new System.Drawing.Point(114, 112);
+            this.CantidadMateriaPrima.Name = "CantidadMateriaPrima";
+            this.CantidadMateriaPrima.Size = new System.Drawing.Size(87, 20);
+            this.CantidadMateriaPrima.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 114);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 13);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Cantidad que usa";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(18, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Materia prima ";
+            // 
+            // comboBoxMateriaPrima
+            // 
+            this.comboBoxMateriaPrima.FormattingEnabled = true;
+            this.comboBoxMateriaPrima.Location = new System.Drawing.Point(21, 77);
+            this.comboBoxMateriaPrima.Name = "comboBoxMateriaPrima";
+            this.comboBoxMateriaPrima.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxMateriaPrima.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(183, 26);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "si el producto, no utliza materia prima,\r\n de click en siguiente";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(76, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Materia prima ";
+            // 
             // Addpanel
             // 
             this.Addpanel.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -630,6 +698,97 @@
             this.costo.Name = "costo";
             this.costo.Size = new System.Drawing.Size(206, 20);
             this.costo.TabIndex = 17;
+            // 
+            // addPanel2
+            // 
+            this.addPanel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.addPanel2.Controls.Add(this.CantidadMaxProducto);
+            this.addPanel2.Controls.Add(this.label10);
+            this.addPanel2.Controls.Add(this.cantidadMinProducto);
+            this.addPanel2.Controls.Add(this.label9);
+            this.addPanel2.Controls.Add(this.textDescripcionProducto);
+            this.addPanel2.Controls.Add(this.label8);
+            this.addPanel2.Controls.Add(this.button6);
+            this.addPanel2.Controls.Add(this.button9);
+            this.addPanel2.Location = new System.Drawing.Point(2, 2);
+            this.addPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.addPanel2.Name = "addPanel2";
+            this.addPanel2.Size = new System.Drawing.Size(223, 328);
+            this.addPanel2.TabIndex = 16;
+            this.addPanel2.Visible = false;
+            this.addPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel2_Paint);
+            // 
+            // CantidadMaxProducto
+            // 
+            this.CantidadMaxProducto.Location = new System.Drawing.Point(16, 172);
+            this.CantidadMaxProducto.Name = "CantidadMaxProducto";
+            this.CantidadMaxProducto.Size = new System.Drawing.Size(176, 20);
+            this.CantidadMaxProducto.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 13);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Cantidad Maxima";
+            // 
+            // cantidadMinProducto
+            // 
+            this.cantidadMinProducto.Location = new System.Drawing.Point(16, 112);
+            this.cantidadMinProducto.Name = "cantidadMinProducto";
+            this.cantidadMinProducto.Size = new System.Drawing.Size(176, 20);
+            this.cantidadMinProducto.TabIndex = 15;
+            this.cantidadMinProducto.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 96);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Cantidad Minima ";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // textDescripcionProducto
+            // 
+            this.textDescripcionProducto.Location = new System.Drawing.Point(16, 30);
+            this.textDescripcionProducto.Multiline = true;
+            this.textDescripcionProducto.Name = "textDescripcionProducto";
+            this.textDescripcionProducto.Size = new System.Drawing.Size(182, 54);
+            this.textDescripcionProducto.TabIndex = 12;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(63, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Descripcion";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(127, 270);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(91, 25);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Cancelar";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(16, 268);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(94, 28);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "Guardar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // precio
             // 
@@ -742,97 +901,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // addPanel2
-            // 
-            this.addPanel2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.addPanel2.Controls.Add(this.CantidadMaxProducto);
-            this.addPanel2.Controls.Add(this.label10);
-            this.addPanel2.Controls.Add(this.cantidadMinProducto);
-            this.addPanel2.Controls.Add(this.label9);
-            this.addPanel2.Controls.Add(this.textDescripcionProducto);
-            this.addPanel2.Controls.Add(this.label8);
-            this.addPanel2.Controls.Add(this.button6);
-            this.addPanel2.Controls.Add(this.button9);
-            this.addPanel2.Location = new System.Drawing.Point(2, 2);
-            this.addPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.addPanel2.Name = "addPanel2";
-            this.addPanel2.Size = new System.Drawing.Size(223, 328);
-            this.addPanel2.TabIndex = 16;
-            this.addPanel2.Visible = false;
-            this.addPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel2_Paint);
-            // 
-            // CantidadMaxProducto
-            // 
-            this.CantidadMaxProducto.Location = new System.Drawing.Point(16, 172);
-            this.CantidadMaxProducto.Name = "CantidadMaxProducto";
-            this.CantidadMaxProducto.Size = new System.Drawing.Size(176, 20);
-            this.CantidadMaxProducto.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 156);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 13);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Cantidad Maxima";
-            // 
-            // cantidadMinProducto
-            // 
-            this.cantidadMinProducto.Location = new System.Drawing.Point(16, 112);
-            this.cantidadMinProducto.Name = "cantidadMinProducto";
-            this.cantidadMinProducto.Size = new System.Drawing.Size(176, 20);
-            this.cantidadMinProducto.TabIndex = 15;
-            this.cantidadMinProducto.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 96);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Cantidad Minima ";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // textDescripcionProducto
-            // 
-            this.textDescripcionProducto.Location = new System.Drawing.Point(16, 30);
-            this.textDescripcionProducto.Multiline = true;
-            this.textDescripcionProducto.Name = "textDescripcionProducto";
-            this.textDescripcionProducto.Size = new System.Drawing.Size(182, 54);
-            this.textDescripcionProducto.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 13);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Descripcion";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(127, 270);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 25);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Cancelar";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(16, 268);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(94, 28);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Guardar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // productoTableAdapter1
             // 
             this.productoTableAdapter1.ClearBeforeFill = true;
@@ -850,6 +918,18 @@
             this.PanelAgregado.TabIndex = 26;
             this.PanelAgregado.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelAgregado_Paint);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.Location = new System.Drawing.Point(56, 55);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(313, 25);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "GUARDADO CORRECTAMENTE\r\n";
+            // 
             // button17
             // 
             this.button17.BackColor = System.Drawing.Color.Red;
@@ -862,18 +942,6 @@
             this.button17.Text = "X";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Location = new System.Drawing.Point(56, 55);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(313, 25);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "GUARDADO CORRECTAMENTE\r\n";
             // 
             // maheduDataSet12
             // 
@@ -889,68 +957,9 @@
             // 
             this.productoTableAdapter2.ClearBeforeFill = true;
             // 
-            // maheduDataSet13
-            // 
-            this.maheduDataSet13.DataSetName = "MaheduDataSet13";
-            this.maheduDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productoBindingSource2
-            // 
-            this.productoBindingSource2.DataMember = "producto";
-            this.productoBindingSource2.DataSource = this.maheduDataSet13;
-            // 
             // productoTableAdapter3
             // 
             this.productoTableAdapter3.ClearBeforeFill = true;
-            // 
-            // idProductoDataGridViewTextBoxColumn
-            // 
-            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto";
-            this.idProductoDataGridViewTextBoxColumn.HeaderText = "idProducto";
-            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
-            this.idProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sKUDataGridViewTextBoxColumn
-            // 
-            this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
-            this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
-            this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
-            this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costounidadDataGridViewTextBoxColumn
-            // 
-            this.costounidadDataGridViewTextBoxColumn.DataPropertyName = "Costo/unidad";
-            this.costounidadDataGridViewTextBoxColumn.HeaderText = "Costo/unidad";
-            this.costounidadDataGridViewTextBoxColumn.Name = "costounidadDataGridViewTextBoxColumn";
-            this.costounidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // panelEdicion
             // 
@@ -964,6 +973,17 @@
             this.panelEdicion.Name = "panelEdicion";
             this.panelEdicion.Size = new System.Drawing.Size(225, 375);
             this.panelEdicion.TabIndex = 27;
+            // 
+            // EditarDetalles
+            // 
+            this.EditarDetalles.Location = new System.Drawing.Point(58, 63);
+            this.EditarDetalles.Margin = new System.Windows.Forms.Padding(2);
+            this.EditarDetalles.Name = "EditarDetalles";
+            this.EditarDetalles.Size = new System.Drawing.Size(123, 66);
+            this.EditarDetalles.TabIndex = 3;
+            this.EditarDetalles.Text = "Editar detalles";
+            this.EditarDetalles.UseVisualStyleBackColor = true;
+            this.EditarDetalles.Click += new System.EventHandler(this.EditarDetalles_Click);
             // 
             // button14
             // 
@@ -998,17 +1018,6 @@
             this.editarCantMateria.Text = "Agregar Materia a Usar";
             this.editarCantMateria.UseVisualStyleBackColor = true;
             this.editarCantMateria.Click += new System.EventHandler(this.editarCantMateria_Click);
-            // 
-            // EditarDetalles
-            // 
-            this.EditarDetalles.Location = new System.Drawing.Point(58, 63);
-            this.EditarDetalles.Margin = new System.Windows.Forms.Padding(2);
-            this.EditarDetalles.Name = "EditarDetalles";
-            this.EditarDetalles.Size = new System.Drawing.Size(123, 66);
-            this.EditarDetalles.TabIndex = 3;
-            this.EditarDetalles.Text = "Editar detalles";
-            this.EditarDetalles.UseVisualStyleBackColor = true;
-            this.EditarDetalles.Click += new System.EventHandler(this.EditarDetalles_Click);
             // 
             // panelMedidas
             // 
@@ -1082,15 +1091,6 @@
             this.label24.TabIndex = 0;
             this.label24.Text = "Medidas";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(202, 114);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(15, 13);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "m";
-            // 
             // AgregarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1119,32 +1119,32 @@
             this.Text = "AgregarProductos";
             this.Load += new System.EventHandler(this.AgregarProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.agregarPanel.ResumeLayout(false);
-            this.addPanel3.ResumeLayout(false);
-            this.addPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadMateriaPrima)).EndInit();
             this.addPrima.ResumeLayout(false);
             this.addPrima.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadPrima)).EndInit();
+            this.addPanel3.ResumeLayout(false);
+            this.addPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadMateriaPrima)).EndInit();
             this.Addpanel.ResumeLayout(false);
             this.Addpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.costo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.precio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).EndInit();
             this.addPanel2.ResumeLayout(false);
             this.addPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadMaxProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadMinProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.precio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).EndInit();
             this.PanelAgregado.ResumeLayout(false);
             this.PanelAgregado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).EndInit();
             this.panelEdicion.ResumeLayout(false);
             this.panelMedidas.ResumeLayout(false);
             this.panelMedidas.PerformLayout();
