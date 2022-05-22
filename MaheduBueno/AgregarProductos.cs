@@ -16,11 +16,20 @@ namespace MaheduBueno
     {
 
         Producto nuevo;
+        int idProducto;
+        List<int> idMaterias;
+        List<float> cantidades;
+        SqlCommand cmd;
+        DataTable dt;
+        DataTable medidas;
 
         public AgregarProductos()
         {
             InitializeComponent();
             nuevo = new Producto();
+            cantidades = new List<float>();
+            idMaterias = new List<int>();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +47,7 @@ namespace MaheduBueno
             addPanel2.Visible = false;
             Addpanel.Visible = false;
             addPrima.Visible = false;
+
             /*
             try
             {
@@ -90,6 +100,7 @@ namespace MaheduBueno
 
             panelEdicion.Visible = false;
             Addpanel.Visible = false;
+            panelMedidas.Visible = false;
 
         }
 
@@ -347,10 +358,10 @@ namespace MaheduBueno
 
                                       
             String consulta = "SELECT * FROM mahedu.materiaprima";
-            SqlCommand cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-            DataTable dt = new DataTable();
+            dt = new DataTable();
 
             adapter.Fill(dt);
 
@@ -381,10 +392,85 @@ namespace MaheduBueno
         private void agregaMedidas_Click(object sender, EventArgs e)
         {
 
+            String consulta = "SELECT * FROM mahedu.medida";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            dt = new DataTable();
+
+            adapter.Fill(medidas);
+
+
+            try
+            {
+                int i;
+                for (i = 0; i < dt.Rows.Count; i++)
+                {
+                   comboBoxMedidas.Items.Add(dt.Rows[i][1].ToString());
+                }
+                panelMedidas.Visible = true;
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textCantidadPrimaAgregada.Text = "\n" +textCantidadPrimaAgregada.Text + comboBoxMateriaPrima.SelectedItem + "......................" + CantidadMateriaPrima.Value + "m";
+
+
+            idProducto = (int)dataGridView1.CurrentCell.Value;
+            Console.WriteLine(idProducto);
+
+
+            cantidades.Add((float)CantidadMateriaPrima.Value);
+            CantidadMateriaPrima.Value = 0;
+
+            int i;
+
+            for(i=0;i<dt.Rows.Count;i++)
+            {
+                   if(comboBoxMateriaPrima.SelectedItem.ToString().Equals(dt.Rows[i][1].ToString()))
+                {
+                    idMaterias.Add(int.Parse(dt.Rows[i][0].ToString()));
+                    comboBoxMateriaPrima.SelectedItem = null;
+                    break;
+                }
+            }
+
+
+
+
+        }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+
+            int i;
+
+            for(i=0;i<idMaterias.Count;i++)
+            {
+                String qery = "INSERT INTO mahedu.producto_has_materiaprima values (" + idProducto + "," + idMaterias[i] + "," + cantidades[i] + ")";
+
+
+
+                SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+                agregarPanel.Visible = false;
+                addPrima.Visible = false;
+                PanelAgregado.Visible = true;
+                panelEdicion.Visible = false;
+                textCantidadPrimaAgregada.Text = "";
+            }
 
         }
     }
