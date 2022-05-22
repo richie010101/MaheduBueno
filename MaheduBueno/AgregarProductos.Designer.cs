@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.productoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.maheduDataSet13 = new MaheduBueno.MaheduDataSet13();
+            
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet7 = new MaheduBueno.MaheduDataSet7();
             this.button2 = new System.Windows.Forms.Button();
@@ -98,10 +98,9 @@
             this.PanelAgregado = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
-            this.maheduDataSet12 = new MaheduBueno.MaheduDataSet12();
+            
             this.productoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.productoTableAdapter2 = new MaheduBueno.MaheduDataSet12TableAdapters.productoTableAdapter();
-            this.productoTableAdapter3 = new MaheduBueno.MaheduDataSet13TableAdapters.productoTableAdapter();
+            
             this.panelEdicion = new System.Windows.Forms.Panel();
             this.EditarDetalles = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -116,7 +115,7 @@
             this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -134,7 +133,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.precio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).BeginInit();
             this.PanelAgregado.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).BeginInit();
             this.panelEdicion.SuspendLayout();
             this.panelMedidas.SuspendLayout();
@@ -155,12 +154,11 @@
             // productoBindingSource2
             // 
             this.productoBindingSource2.DataMember = "producto";
-            this.productoBindingSource2.DataSource = this.maheduDataSet13;
+            
             // 
             // maheduDataSet13
             // 
-            this.maheduDataSet13.DataSetName = "MaheduDataSet13";
-            this.maheduDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // productoBindingSource
             // 
@@ -842,7 +840,7 @@
             // PanelAgregado
             // 
             this.PanelAgregado.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.PanelAgregado.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo21;
+            
             this.PanelAgregado.Controls.Add(this.label11);
             this.PanelAgregado.Controls.Add(this.button17);
             this.PanelAgregado.Location = new System.Drawing.Point(144, 18);
@@ -879,21 +877,20 @@
             // 
             // maheduDataSet12
             // 
-            this.maheduDataSet12.DataSetName = "MaheduDataSet12";
-            this.maheduDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // productoBindingSource1
             // 
             this.productoBindingSource1.DataMember = "producto";
-            this.productoBindingSource1.DataSource = this.maheduDataSet12;
+            
             // 
             // productoTableAdapter2
             // 
-            this.productoTableAdapter2.ClearBeforeFill = true;
+            
             // 
             // productoTableAdapter3
             // 
-            this.productoTableAdapter3.ClearBeforeFill = true;
+            
             // 
             // panelEdicion
             // 
@@ -1054,7 +1051,7 @@
             this.Load += new System.EventHandler(this.AgregarProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet13)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1077,7 +1074,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CantidadProducto)).EndInit();
             this.PanelAgregado.ResumeLayout(false);
             this.PanelAgregado.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource1)).EndInit();
             this.panelEdicion.ResumeLayout(false);
             this.panelMedidas.ResumeLayout(false);
@@ -1156,12 +1153,11 @@
         private System.Windows.Forms.Panel PanelAgregado;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label11;
-        private MaheduDataSet12 maheduDataSet12;
+        
         private System.Windows.Forms.BindingSource productoBindingSource1;
-        private MaheduDataSet12TableAdapters.productoTableAdapter productoTableAdapter2;
-        private MaheduDataSet13 maheduDataSet13;
+        
         private System.Windows.Forms.BindingSource productoBindingSource2;
-        private MaheduDataSet13TableAdapters.productoTableAdapter productoTableAdapter3;
+        
         private System.Windows.Forms.Panel panelEdicion;
         private System.Windows.Forms.Button EditarDetalles;
         private System.Windows.Forms.Button button14;

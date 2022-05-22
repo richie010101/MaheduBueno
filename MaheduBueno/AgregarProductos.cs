@@ -1,4 +1,4 @@
-﻿using MaheduBueno.clases;
+﻿using MaheduBueno.clases2;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,10 +76,7 @@ namespace MaheduBueno
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet13.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter3.Fill(this.maheduDataSet13.producto);
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet12.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter2.Fill(this.maheduDataSet12.producto);
+
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet7.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter1.Fill(this.maheduDataSet7.producto);
 
