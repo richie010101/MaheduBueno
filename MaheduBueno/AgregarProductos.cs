@@ -32,6 +32,7 @@ namespace MaheduBueno
             nuevo = new Producto();
             cantidades = new List<float>();
             idMaterias = new List<int>();
+            
 
             Productos = new List<Producto>();
         }
@@ -46,6 +47,7 @@ namespace MaheduBueno
 
         private void BTNAGREGAR_Click(object sender, EventArgs e)
         {
+            cerrar_ventanas();
             agregarPanel.Visible = true;
             addPanel3.Visible = false;
             addPanel2.Visible = false;
@@ -81,69 +83,8 @@ namespace MaheduBueno
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
 
+            actualizar();
 
-            InfoProducto.Visible = false;
-            dataGridView1.MultiSelect = false;
-
-
-            String consulta = "SELECT * FROM mahedu.producto";
-            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-            productosN = new DataTable();
-
-            adapter.Fill(productosN);
-
-            dataGridView1.Columns[0].Width = 40;
-            dataGridView1.Columns[1].Width = 40;
-            dataGridView1.Columns[3].Width = 200;
-            dataGridView1.Columns[4].Width = 60;
-            dataGridView1.Columns[5].Width = 60;
-            dataGridView1.Columns[6].Width = 60;
-
-
-            try
-            {
-                int i;
-                for (i = 0; i < productosN.Rows.Count; i++)
-                {
-                    Producto nuevoP = new Producto();
-                    dataGridView1.Rows.Add();
-                    dataGridView1[0, i].Value = productosN.Rows[i][0].ToString();
-                    nuevoP.Id = int.Parse(productosN.Rows[i][0].ToString());
-
-                    dataGridView1[1, i].Value = productosN.Rows[i][1].ToString();
-                    nuevoP.Sku = productosN.Rows[i][1].ToString();
-
-                    dataGridView1[2, i].Value = productosN.Rows[i][2].ToString();
-                    nuevoP.Nombre = productosN.Rows[i][2].ToString();
-
-                    dataGridView1[3, i].Value = productosN.Rows[i][3].ToString();
-                    nuevoP.Descripcion = productosN.Rows[i][3].ToString();
-
-                    dataGridView1[4, i].Value = productosN.Rows[i][6].ToString();
-                    nuevoP.Precio =float.Parse (productosN.Rows[i][6].ToString());
-
-                    dataGridView1[5, i].Value = productosN.Rows[i][4].ToString();
-                    nuevoP.Costo = float.Parse(productosN.Rows[i][4].ToString());
-
-                    dataGridView1[6, i].Value = productosN.Rows[i][5].ToString();
-                    nuevoP.Cantidad = int.Parse(productosN.Rows[i][5].ToString());
-
-                    nuevoP.CantidadMin = int.Parse(productosN.Rows[i][7].ToString());
-                    nuevoP.CantidadMax = int.Parse(productosN.Rows[i][8].ToString());
-
-                    Productos.Add(nuevoP);
-
-                    
-                }
-                addPanel3.Visible = true;
-            }
-            catch (Exception R)
-            {
-                Console.WriteLine("error inesparado" + R);
-
-            }
 
 
 
@@ -157,7 +98,9 @@ namespace MaheduBueno
 
             panelEdicion.Visible = false;
             Addpanel.Visible = false;
-            
+            InfoProducto.Visible = false;
+            dataGridView1.MultiSelect = false;
+
 
         }
 
@@ -301,6 +244,7 @@ namespace MaheduBueno
 
             PanelAgregado.Visible = true;
             addPanel2.Visible = false;
+            actualizar();
         }
 
         private void button4_Click(object sender, EventArgs e)                                            
@@ -320,6 +264,8 @@ namespace MaheduBueno
             textSKUPrima.Text = "";
             CantidadPrima.Value = 0;
             addPrima.Visible = false;
+
+            cerrar_ventanas();
 
         }
 
@@ -383,7 +329,7 @@ namespace MaheduBueno
                 MessageBox.Show("agrega nombre a tu materia prima");
             }
 
-
+            actualizar();
 
 
         }
@@ -391,6 +337,9 @@ namespace MaheduBueno
         private void button17_Click(object sender, EventArgs e)
         {
             PanelAgregado.Visible = false;
+
+            cerrar_ventanas();
+
         }
 
         private void PanelAgregado_Paint(object sender, PaintEventArgs e)
@@ -400,6 +349,7 @@ namespace MaheduBueno
 
         private void BTNEDITARSELECCION_Click(object sender, EventArgs e)
         {
+            cerrar_ventanas();
             panelEdicion.Visible = true;
         }
 
@@ -494,7 +444,7 @@ namespace MaheduBueno
 
         private void button15_Click(object sender, EventArgs e)
         {
-
+            cerrar_ventanas();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -547,7 +497,7 @@ namespace MaheduBueno
                 panelEdicion.Visible = false;
                 textCantidadPrimaAgregada.Text = "";
             }
-
+            actualizar();
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -567,9 +517,21 @@ namespace MaheduBueno
 
         }
 
+
+
+        private void cerrar_ventanas()
+        {
+            panelEdicion.Visible = false;
+            agregarPanel.Visible = false;
+            panelSurtir.Visible = false;
+            addPanel3.Visible = false;
+            InfoProducto.Visible = false;
+
+        }
+
         private void button16_Click(object sender, EventArgs e)
         {
-
+            
             
             Productos[productoEditando].Nombre = detallesNombre.Text;
             Productos[productoEditando].Sku = detallesSKU.Text;
@@ -595,8 +557,129 @@ namespace MaheduBueno
             PanelAgregado.Visible = true;
             panelEdicion.Visible = false;
 
+            actualizar();
 
+
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            cerrar_ventanas();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            cerrar_ventanas();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            cerrar_ventanas();
+            
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            textDescripcionProducto.Text = "";
+            cantidadMinProducto.Value = 0;
+            CantidadMaxProducto.Value = 0;
+            cerrar_ventanas();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textNombrePoducto.Text = "";      
+            textSKUproducto.Text = "";
+            CantidadProducto.Value = 0;
+            precio.Value = 0;
+            costo.Value = 0;
+
+            cerrar_ventanas();
+           
+        }
+
+        public void actualizar()
+        {
+            dataGridView1.Rows.Clear();
+
+
+
+            String consulta = "SELECT * FROM mahedu.producto";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            productosN = new DataTable();
+
+
+
+            adapter.Fill(productosN);
+
+            dataGridView1.Columns[0].Width = 40;
+            dataGridView1.Columns[1].Width = 40;
+            dataGridView1.Columns[3].Width = 200;
+            dataGridView1.Columns[4].Width = 60;
+            dataGridView1.Columns[5].Width = 60;
+            dataGridView1.Columns[6].Width = 60;
+
+
+            try
+            {
+                int i;
+                for (i = 0; i < productosN.Rows.Count; i++)
+                {
+                    Producto nuevoP = new Producto();
+                    dataGridView1.Rows.Add();
+                    dataGridView1[0, i].Value = productosN.Rows[i][0].ToString();
+                    nuevoP.Id = int.Parse(productosN.Rows[i][0].ToString());
+
+                    dataGridView1[1, i].Value = productosN.Rows[i][1].ToString();
+                    nuevoP.Sku = productosN.Rows[i][1].ToString();
+
+                    dataGridView1[2, i].Value = productosN.Rows[i][2].ToString();
+                    nuevoP.Nombre = productosN.Rows[i][2].ToString();
+
+                    dataGridView1[3, i].Value = productosN.Rows[i][3].ToString();
+                    nuevoP.Descripcion = productosN.Rows[i][3].ToString();
+
+                    dataGridView1[4, i].Value = productosN.Rows[i][6].ToString();
+                    nuevoP.Precio = float.Parse(productosN.Rows[i][6].ToString());
+
+                    dataGridView1[5, i].Value = productosN.Rows[i][4].ToString();
+                    nuevoP.Costo = float.Parse(productosN.Rows[i][4].ToString());
+
+                    dataGridView1[6, i].Value = productosN.Rows[i][5].ToString();
+                    nuevoP.Cantidad = int.Parse(productosN.Rows[i][5].ToString());
+
+                    nuevoP.CantidadMin = int.Parse(productosN.Rows[i][7].ToString());
+                    nuevoP.CantidadMax = int.Parse(productosN.Rows[i][8].ToString());
+
+                    Productos.Add(nuevoP);
+
+
+                }
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+
+
+
+            actualizar();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
         }
     }
     }
 
+                                                                                                                                                
