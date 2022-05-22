@@ -17,11 +17,14 @@ namespace MaheduBueno
 
         Producto nuevo;
         int idProducto;
+        int productoEditando;
         List<int> idMaterias;
         List<float> cantidades;
+        List<Producto> Productos;
         SqlCommand cmd;
         DataTable dt;
         DataTable medidas;
+        DataTable productosN;
 
         public AgregarProductos()
         {
@@ -30,6 +33,7 @@ namespace MaheduBueno
             cantidades = new List<float>();
             idMaterias = new List<int>();
 
+            Productos = new List<Producto>();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -77,10 +81,18 @@ namespace MaheduBueno
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
 
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet7.producto' Puede moverla o quitarla según sea necesario.
-            this.productoTableAdapter1.Fill(this.maheduDataSet7.producto);
+
+            InfoProducto.Visible = false;
+            dataGridView1.MultiSelect = false;
 
 
+            String consulta = "SELECT * FROM mahedu.producto";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            productosN = new DataTable();
+
+            adapter.Fill(productosN);
 
             dataGridView1.Columns[0].Width = 40;
             dataGridView1.Columns[1].Width = 40;
@@ -88,6 +100,54 @@ namespace MaheduBueno
             dataGridView1.Columns[4].Width = 60;
             dataGridView1.Columns[5].Width = 60;
             dataGridView1.Columns[6].Width = 60;
+
+
+            try
+            {
+                int i;
+                for (i = 0; i < productosN.Rows.Count; i++)
+                {
+                    Producto nuevoP = new Producto();
+                    dataGridView1.Rows.Add();
+                    dataGridView1[0, i].Value = productosN.Rows[i][0].ToString();
+                    nuevoP.Id = int.Parse(productosN.Rows[i][0].ToString());
+
+                    dataGridView1[1, i].Value = productosN.Rows[i][1].ToString();
+                    nuevoP.Sku = productosN.Rows[i][1].ToString();
+
+                    dataGridView1[2, i].Value = productosN.Rows[i][2].ToString();
+                    nuevoP.Nombre = productosN.Rows[i][2].ToString();
+
+                    dataGridView1[3, i].Value = productosN.Rows[i][3].ToString();
+                    nuevoP.Descripcion = productosN.Rows[i][3].ToString();
+
+                    dataGridView1[4, i].Value = productosN.Rows[i][6].ToString();
+                    nuevoP.Precio =float.Parse (productosN.Rows[i][6].ToString());
+
+                    dataGridView1[5, i].Value = productosN.Rows[i][4].ToString();
+                    nuevoP.Costo = float.Parse(productosN.Rows[i][4].ToString());
+
+                    dataGridView1[6, i].Value = productosN.Rows[i][5].ToString();
+                    nuevoP.Cantidad = int.Parse(productosN.Rows[i][5].ToString());
+
+                    nuevoP.CantidadMin = int.Parse(productosN.Rows[i][7].ToString());
+                    nuevoP.CantidadMax = int.Parse(productosN.Rows[i][8].ToString());
+
+                    Productos.Add(nuevoP);
+
+                    
+                }
+                addPanel3.Visible = true;
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+
+
+
+
 
             addPanel3.Visible = false;
             addPanel2.Visible = false;
@@ -97,7 +157,7 @@ namespace MaheduBueno
 
             panelEdicion.Visible = false;
             Addpanel.Visible = false;
-            panelMedidas.Visible = false;
+            
 
         }
 
@@ -132,11 +192,6 @@ namespace MaheduBueno
             Addpanel.Visible = false;
 
             Console.WriteLine(nuevo.Cantidad + nuevo.Sku + nuevo.Precio + nuevo.Costo + nuevo.Nombre);
-
-
-
-
-
         }                                  
 
         private void ProductoPanel_Paint(object sender, PaintEventArgs e)
@@ -382,10 +437,33 @@ namespace MaheduBueno
 
         private void EditarDetalles_Click(object sender, EventArgs e)
         {
-           
+            int elegido = int.Parse(dataGridView1.CurrentCell.Value.ToString());
+
+            int i;
+
+            for(i=0; i<1000;i++)
+            {
+                if(Productos[i].Id==elegido)
+                {
+                    detallesNombre.Text = Productos[i].Nombre;
+                    detallesSKU.Text= Productos[i].Sku;
+                    detallesPrecio.Value= (decimal)Productos[i].Precio;
+                    detallesCosto.Value= (decimal)Productos[i].Costo;  
+                    detallesCantMax.Value= Productos[i].CantidadMax;
+                    detallesCantMin.Value= Productos[i].CantidadMin;
+                    detallesDesc.Text= Productos[i].Descripcion;
+                    productoEditando = i;
+                    break;
+
+                }
+            }
+
+
+            InfoProducto.Visible = true;
+
 
         }
-
+          /*
         private void agregaMedidas_Click(object sender, EventArgs e)
         {
 
@@ -412,7 +490,7 @@ namespace MaheduBueno
                 Console.WriteLine("error inesparado" + R);
 
             }
-        }
+        }            */
 
         private void button15_Click(object sender, EventArgs e)
         {
@@ -421,10 +499,10 @@ namespace MaheduBueno
 
         private void button11_Click(object sender, EventArgs e)
         {
-            textCantidadPrimaAgregada.Text = "\n" +textCantidadPrimaAgregada.Text + comboBoxMateriaPrima.SelectedItem + "......................" + CantidadMateriaPrima.Value + "m";
+            textCantidadPrimaAgregada.Text = textCantidadPrimaAgregada.Text + "\n" + comboBoxMateriaPrima.SelectedItem + "......................" + CantidadMateriaPrima.Value + "m";
 
 
-            idProducto = (int)dataGridView1.CurrentCell.Value;
+            idProducto = int.Parse(dataGridView1.CurrentCell.Value.ToString());
             Console.WriteLine(idProducto);
 
 
@@ -465,9 +543,58 @@ namespace MaheduBueno
                 agregarPanel.Visible = false;
                 addPrima.Visible = false;
                 PanelAgregado.Visible = true;
+                addPanel3.Visible = false;
                 panelEdicion.Visible = false;
                 textCantidadPrimaAgregada.Text = "";
             }
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            panelEdicion.Visible = false;
+            addPanel3.Visible = false;
+            InfoProducto.Visible = false;
+        }
+
+        private void InfoProducto_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+            
+            Productos[productoEditando].Nombre = detallesNombre.Text;
+            Productos[productoEditando].Sku = detallesSKU.Text;
+            Productos[productoEditando].Descripcion = detallesDesc.Text;
+            Productos[productoEditando].Costo = (float)detallesCosto.Value;
+            Productos[productoEditando].Precio = (float)detallesPrecio.Value;
+            Productos[productoEditando].CantidadMax = (int)detallesCantMax.Value;
+            Productos[productoEditando].CantidadMin = (int)detallesCantMin.Value;
+
+
+
+           String sql= "Update mahedu.producto SET Nombre='" + Productos[productoEditando].Nombre + "',SKU='" + Productos[productoEditando].Sku +
+                       "',Descripcion='" + Productos[productoEditando].Descripcion + "', [Costo/unidad]=" + Productos[productoEditando].Costo+ " ,[Precio]=" + Productos[productoEditando].Precio
+                        + ",CantidadMinima= " + Productos[productoEditando].CantidadMin + ",CantidadMaxRecom=" +  Productos[productoEditando].CantidadMax + 
+                        " WHERE idProducto=" + Productos[productoEditando].Id;
+
+            SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+            command.ExecuteNonQuery();
+            command.Connection.Close();
+
+
+            InfoProducto.Visible = false;
+            PanelAgregado.Visible = true;
+            panelEdicion.Visible = false;
+
 
         }
     }

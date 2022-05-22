@@ -8,6 +8,18 @@ namespace MaheduBueno.clases2
 {
     class Producto
     {
+
+
+
+        private int id;
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
+
         private String sku;
         public String Sku
         {

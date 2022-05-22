@@ -16,5 +16,10 @@ namespace MaheduBueno
         {
             InitializeComponent();
         }
+
+        private void Estadisticas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

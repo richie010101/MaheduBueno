@@ -183,6 +183,12 @@
     <Compile Include="ErrorVentaAlerta.Designer.cs">
       <DependentUpon>ErrorVentaAlerta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas.Designer.cs">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="EstadisticasError.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MaheduDataSet121.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaheduDataSet121.xsd</DependentUpon>
     </Compile>
     <Compile Include="MaheduDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -382,6 +393,9 @@
     <EmbeddedResource Include="ErrorVentaAlerta.resx">
       <DependentUpon>ErrorVentaAlerta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas.resx">
+      <DependentUpon>Estadisticas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EstadisticasError.resx">
       <DependentUpon>EstadisticasError.cs</DependentUpon>
     </EmbeddedResource>
@@ -480,6 +494,17 @@
     </None>
     <None Include="MaheduDataSet11.xss">
       <DependentUpon>MaheduDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet121.xsc">
+      <DependentUpon>MaheduDataSet121.xsd</DependentUpon>
+    </None>
+    <None Include="MaheduDataSet121.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaheduDataSet121.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MaheduDataSet121.xss">
+      <DependentUpon>MaheduDataSet121.xsd</DependentUpon>
     </None>
     <None Include="MaheduDataSet2.xsc">
       <DependentUpon>MaheduDataSet2.xsd</DependentUpon>
@@ -595,6 +620,8 @@
     <Content Include="Imagenes\help.png" />
     <Content Include="Imagenes\logo.png" />
     <Content Include="Imagenes\potencializa.png" />
+    <None Include="Resources\fondo23.png" />
+    <None Include="Resources\fondo22.png" />
     <None Include="Resources\f.png" />
     <None Include="Resources\help.png" />
     <None Include="Resources\basura.jpeg" />

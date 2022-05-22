@@ -163,9 +163,9 @@ namespace MaheduBueno.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fondo3 {
+        internal static System.Drawing.Bitmap fondo22 {
             get {
-                object obj = ResourceManager.GetObject("fondo3", resourceCulture);
+                object obj = ResourceManager.GetObject("fondo22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
