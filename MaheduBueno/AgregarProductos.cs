@@ -387,31 +387,37 @@ namespace MaheduBueno
 
         private void EditarDetalles_Click(object sender, EventArgs e)
         {
-            int elegido = int.Parse(dataGridView1.CurrentCell.Value.ToString());
-
-            int i;
-
-            for(i=0; i<1000;i++)
-            {
-                if(Productos[i].Id==elegido)
-                {
-                    detallesNombre.Text = Productos[i].Nombre;
-                    detallesSKU.Text= Productos[i].Sku;
-                    detallesPrecio.Value= (decimal)Productos[i].Precio;
-                    detallesCosto.Value= (decimal)Productos[i].Costo;  
-                    detallesCantMax.Value= Productos[i].CantidadMax;
-                    detallesCantMin.Value= Productos[i].CantidadMin;
-                    detallesDesc.Text= Productos[i].Descripcion;
-                    productoEditando = i;
-                    break;
-
-                }
-            }
+            recuperarEleccion(); 
 
 
             InfoProducto.Visible = true;
 
 
+        }
+
+        private void recuperarEleccion()
+        {
+            int elegido = int.Parse(dataGridView1.CurrentCell.Value.ToString());
+
+            int i = 0;
+
+            while (i < Productos.Count)
+            {
+                if (Productos[i].Id == elegido)
+                {
+                    detallesNombre.Text = Productos[i].Nombre;
+                    detallesSKU.Text = Productos[i].Sku;
+                    detallesPrecio.Value = (decimal)(float)Productos[i].Precio;
+                    detallesCosto.Value = (decimal)(float)Productos[i].Costo;
+                    detallesCantMax.Value = Productos[i].CantidadMax;
+                    detallesCantMin.Value = Productos[i].CantidadMin;
+                    detallesDesc.Text = Productos[i].Descripcion;
+                    productoEditando = i;
+                    break;
+
+                }
+                i++;
+            }
         }
           /*
         private void agregaMedidas_Click(object sender, EventArgs e)
@@ -514,7 +520,42 @@ namespace MaheduBueno
 
         private void button18_Click(object sender, EventArgs e)
         {
+        
+            cerrar_ventanas();
+            materia_Producto.Rows.Clear();
 
+
+
+            String consulta = "select mahedu.producto.Nombre as producto , mahedu.materiaprima.Nombre as materia, mahedu.producto_has_materiaprima.cantidadUtilizada as cantidad from mahedu.producto inner join " +
+                "mahedu.producto_has_materiaprima on(mahedu.producto.idProducto= mahedu.producto_has_materiaprima.Producto_idProducto)" +
+                "inner join mahedu.materiaprima on(mahedu.producto_has_materiaprima.MateriaPrima_IdMateria= mahedu.materiaprima.IdMateria) where mahedu.producto.idProducto="+Productos[productoEditando].Id;
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable r = new DataTable();
+
+            adapter.Fill(r);
+
+            try
+            {
+                int i;
+                for (i = 0; i < r.Rows.Count; i++)
+                {
+
+                    materia_Producto.Rows.Add();
+                    materia_Producto[0, i].Value = r.Rows[i][0].ToString();
+                    materia_Producto[1, i].Value = r.Rows[i][1].ToString();
+                    materia_Producto[2, i].Value = r.Rows[i][2].ToString();
+                }
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+
+            panelPrima.Visible = true;
         }
 
 
@@ -544,9 +585,10 @@ namespace MaheduBueno
 
 
            String sql= "Update mahedu.producto SET Nombre='" + Productos[productoEditando].Nombre + "',SKU='" + Productos[productoEditando].Sku +
-                       "',Descripcion='" + Productos[productoEditando].Descripcion + "', [Costo/unidad]=" + Productos[productoEditando].Costo+ " ,[Precio]=" + Productos[productoEditando].Precio
-                        + ",CantidadMinima= " + Productos[productoEditando].CantidadMin + ",CantidadMaxRecom=" +  Productos[productoEditando].CantidadMax + 
+                       "',Descripcion='" + Productos[productoEditando].Descripcion + "', [Costo/unidad]=" + Productos[productoEditando].Costo+ " ,[Precio]=" + Productos[productoEditando].Precio +
+                       ",CantidadMinima= " + Productos[productoEditando].CantidadMin + ",CantidadMaxRecom=" +  Productos[productoEditando].CantidadMax + 
                         " WHERE idProducto=" + Productos[productoEditando].Id;
+            Console.WriteLine(sql);
 
             SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
             command.ExecuteNonQuery();
@@ -678,6 +720,49 @@ namespace MaheduBueno
         private void button22_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+        }
+
+        private void button20_Click_1(object sender, EventArgs e)
+        {
+            cerrar_ventanas();
+            cantidadSurtir.Value = 0;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                recuperarEleccion();
+                int agregado = (int)cantidadSurtir.Value;
+                Productos[productoEditando].Cantidad += agregado;
+
+                String sql = "Update mahedu.producto SET cantidad="+ Productos[productoEditando].Cantidad+" WHERE idProducto=" + Productos[productoEditando].Id;
+                Console.WriteLine(sql);
+
+                SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+
+                PanelAgregado.Visible = true;
+                panelEdicion.Visible = false;
+                panelSurtir.Visible = false;
+
+                actualizar();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ayuda dios mio: "+ex);
+            }        
+        }
+
+        private void agregaMedidas_Click(object sender, EventArgs e)
+        {
+            panelSurtir.Visible = true;
+        }
+
+        private void button22_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
     }
