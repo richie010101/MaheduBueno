@@ -12,11 +12,21 @@ namespace MaheduBueno
 {
     public partial class MenuPrincipal : Form
     {
+        String id_user;
+
+        public MenuPrincipal(String id_user)
+        {
+            InitializeComponent();
+            this.id_user = id_user;
+        }
+
         public MenuPrincipal()
         {
             InitializeComponent();
          
         }
+
+       
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -65,7 +75,8 @@ namespace MaheduBueno
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Ventas r = new Ventas();
+            Console.WriteLine("tis "+id_user);
+            Ventas r = new Ventas(id_user);
             r.Show();
             this.Close();
         }

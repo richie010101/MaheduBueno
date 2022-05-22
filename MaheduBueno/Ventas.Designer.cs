@@ -32,9 +32,6 @@ namespace MaheduBueno
             this.components = new System.ComponentModel.Container();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet11 = new MaheduBueno.MaheduDataSet11();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,15 +43,20 @@ namespace MaheduBueno
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoTableAdapter = new MaheduBueno.MaheduDataSet11TableAdapters.productoTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.errorcantidad = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet11)).BeginInit();
@@ -86,7 +88,9 @@ namespace MaheduBueno
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDataGridViewTextBoxColumn,
             this.sKUDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn});
+            this.precioDataGridViewTextBoxColumn,
+            this.ID,
+            this.dataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.productoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(11, 216);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
@@ -100,27 +104,6 @@ namespace MaheduBueno
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sKUDataGridViewTextBoxColumn
-            // 
-            this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
-            this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
-            this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
-            this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productoBindingSource
             // 
@@ -154,6 +137,7 @@ namespace MaheduBueno
             this.label2.Size = new System.Drawing.Size(188, 28);
             this.label2.TabIndex = 18;
             this.label2.Text = "Ricardo Tinoco";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -231,7 +215,8 @@ namespace MaheduBueno
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
             this.Cantidad,
-            this.Precio});
+            this.Precio,
+            this._ID});
             this.dataGridView2.Location = new System.Drawing.Point(505, 213);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
@@ -240,11 +225,58 @@ namespace MaheduBueno
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(270, 177);
+            this.dataGridView2.Size = new System.Drawing.Size(273, 177);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             this.dataGridView2.ColumnRemoved += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView2_ColumnRemoved);
             this.dataGridView2.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView2_RowsRemoved);
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(673, 395);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 43);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Confirmar Compra";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(548, 395);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 43);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "Cancelar Compra";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // errorcantidad
+            // 
+            this.errorcantidad.AutoSize = true;
+            this.errorcantidad.BackColor = System.Drawing.Color.Transparent;
+            this.errorcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorcantidad.ForeColor = System.Drawing.Color.Red;
+            this.errorcantidad.Location = new System.Drawing.Point(511, 156);
+            this.errorcantidad.Name = "errorcantidad";
+            this.errorcantidad.Size = new System.Drawing.Size(251, 15);
+            this.errorcantidad.TabIndex = 28;
+            this.errorcantidad.Text = "Ingresa una cantidad para el producto";
+            this.errorcantidad.Visible = false;
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Total.Location = new System.Drawing.Point(390, 369);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(56, 21);
+            this.Total.TabIndex = 30;
+            this.Total.Text = "Total: ";
             // 
             // Nombre
             // 
@@ -269,60 +301,49 @@ namespace MaheduBueno
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
             // 
-            // productoTableAdapter
+            // _ID
             // 
-            this.productoTableAdapter.ClearBeforeFill = true;
+            this._ID.HeaderText = "ID";
+            this._ID.Name = "_ID";
+            this._ID.ReadOnly = true;
+            this._ID.Visible = false;
             // 
-            // button2
+            // nombreDataGridViewTextBoxColumn
             // 
-            this.button2.Location = new System.Drawing.Point(673, 395);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 43);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Confirmar Compra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // button3
+            // sKUDataGridViewTextBoxColumn
             // 
-            this.button3.Location = new System.Drawing.Point(548, 395);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 43);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Cancelar Compra";
-            this.button3.UseVisualStyleBackColor = true;
+            this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
+            this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
+            this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
+            this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // errorcantidad
+            // precioDataGridViewTextBoxColumn
             // 
-            this.errorcantidad.AutoSize = true;
-            this.errorcantidad.BackColor = System.Drawing.Color.Transparent;
-            this.errorcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorcantidad.ForeColor = System.Drawing.Color.Red;
-            this.errorcantidad.Location = new System.Drawing.Point(511, 156);
-            this.errorcantidad.Name = "errorcantidad";
-            this.errorcantidad.Size = new System.Drawing.Size(251, 15);
-            this.errorcantidad.TabIndex = 28;
-            this.errorcantidad.Text = "Ingresa una cantidad para el producto";
-            this.errorcantidad.Visible = false;
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // label4
+            // ID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "label4";
+            this.ID.DataPropertyName = "idProducto";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
-            // Total
+            // dataGridViewTextBoxColumn1
             // 
-            this.Total.AutoSize = true;
-            this.Total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(390, 369);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(56, 21);
-            this.Total.TabIndex = 30;
-            this.Total.Text = "Total: ";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // Ventas
             // 
@@ -331,7 +352,6 @@ namespace MaheduBueno
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Total);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.errorcantidad);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -347,7 +367,9 @@ namespace MaheduBueno
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Ventas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
@@ -377,16 +399,18 @@ namespace MaheduBueno
         private MaheduDataSet11 maheduDataSet11;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private MaheduDataSet11TableAdapters.productoTableAdapter productoTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sKUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label errorcantidad;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sKUDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

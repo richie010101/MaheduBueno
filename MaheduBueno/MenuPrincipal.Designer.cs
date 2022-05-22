@@ -52,7 +52,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(565, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(115, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,7 +64,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
             this.pictureBox2.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,7 +106,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(388, 298);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 96);
             this.button1.TabIndex = 4;
@@ -119,7 +119,7 @@
             this.button2.BackgroundImage = global::MaheduBueno.Properties.Resources.carrito;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(272, 138);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(129, 98);
             this.button2.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.button3.BackgroundImage = global::MaheduBueno.Properties.Resources.estadisticas;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(470, 138);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 98);
             this.button3.TabIndex = 6;
@@ -143,7 +143,7 @@
             this.button4.BackgroundImage = global::MaheduBueno.Properties.Resources.lupa;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Location = new System.Drawing.Point(112, 141);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(102, 94);
             this.button4.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.button5.BackgroundImage = global::MaheduBueno.Properties.Resources.corneta;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Location = new System.Drawing.Point(179, 298);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(111, 98);
             this.button5.TabIndex = 8;
@@ -227,7 +227,7 @@
             // 
             this.button6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(565, 91);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(115, 20);
             this.button6.TabIndex = 14;
@@ -238,6 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(688, 436);
             this.Controls.Add(this.button6);
@@ -255,7 +256,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuPrincipal";
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
