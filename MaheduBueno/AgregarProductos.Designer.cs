@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sKUDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costounidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet13 = new MaheduBueno.MaheduDataSet13();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -149,17 +142,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProductoDataGridViewTextBoxColumn,
-            this.sKUDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.descripcionDataGridViewTextBoxColumn,
-            this.costounidadDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.productoBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(9, 154);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -168,55 +151,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(579, 221);
             this.dataGridView1.TabIndex = 21;
-            // 
-            // idProductoDataGridViewTextBoxColumn
-            // 
-            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "idProducto";
-            this.idProductoDataGridViewTextBoxColumn.HeaderText = "idProducto";
-            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
-            this.idProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sKUDataGridViewTextBoxColumn
-            // 
-            this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
-            this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
-            this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
-            this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costounidadDataGridViewTextBoxColumn
-            // 
-            this.costounidadDataGridViewTextBoxColumn.DataPropertyName = "Costo/unidad";
-            this.costounidadDataGridViewTextBoxColumn.HeaderText = "Costo/unidad";
-            this.costounidadDataGridViewTextBoxColumn.Name = "costounidadDataGridViewTextBoxColumn";
-            this.costounidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productoBindingSource2
             // 
@@ -1228,13 +1162,6 @@
         private MaheduDataSet13 maheduDataSet13;
         private System.Windows.Forms.BindingSource productoBindingSource2;
         private MaheduDataSet13TableAdapters.productoTableAdapter productoTableAdapter3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sKUDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costounidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panelEdicion;
         private System.Windows.Forms.Button EditarDetalles;
         private System.Windows.Forms.Button button14;
