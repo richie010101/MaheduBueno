@@ -284,7 +284,8 @@ namespace MaheduBueno
                         {
                             
 
-                            String qery = "INSERT INTO mahedu.materiaprima VALUES('" + textSKUPrima.Text + "','" + textNombrePrima.Text + "','" + textDescripPrima.Text + "'," + CantidadMateriaPrima.Value.ToString() + ")";
+                            String qery = "INSERT INTO mahedu.materiaprima VALUES('" + textSKUPrima.Text + "','" + textNombrePrima.Text + "','" + textDescripPrima.Text + "'," + CantidadPrima.Value + ")";
+                            Console.WriteLine(CantidadMateriaPrima.Value);
 
                             Console.WriteLine("Corriste");
 
@@ -786,6 +787,54 @@ namespace MaheduBueno
             {
                 Console.WriteLine("Error: "+ex);
             }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            String consulta = "SELECT * FROM mahedu.materiaprima";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable r = new DataTable();
+
+            adapter.Fill(r);
+
+            try
+            {
+                int i;
+                for (i = 0; i < r.Rows.Count; i++)
+                {
+                    tablaPrima.Rows.Add();
+                    tablaPrima[0, i].Value = r.Rows[i][0].ToString();
+                    tablaPrima[1, i].Value = r.Rows[i][1].ToString();
+                    tablaPrima[2, i].Value = r.Rows[i][2].ToString();
+                    tablaPrima[3, i].Value = r.Rows[i][3].ToString();
+                    tablaPrima[4, i].Value = r.Rows[i][4].ToString();
+                }
+
+                panel1.Visible = true;
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+        }
+
+        private void tablaPrima_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            panelPrima.Visible = false;
         }
     }
     }
