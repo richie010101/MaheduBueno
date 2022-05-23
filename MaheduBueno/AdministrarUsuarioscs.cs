@@ -107,7 +107,10 @@ namespace MaheduBueno
 
 
                         Console.WriteLine(qery);
-                        new MessageBox2().Show();
+                        //new MessageBox2().Show();
+                        MessageBox2 borrado = new MessageBox2();
+
+                        DialogResult dg = borrado.ShowDialog();
 
                         SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
                         SqlDataAdapter r = new SqlDataAdapter(cmd);

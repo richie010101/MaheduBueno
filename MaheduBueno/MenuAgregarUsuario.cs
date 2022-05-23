@@ -33,85 +33,121 @@ namespace MaheduBueno
 
             if (NombreU.Text == "")
             {
-                MessageBox.Show("El nombre no puede estar vacío");
-            }
+                Nombre1cs nombre = new Nombre1cs();
 
-            if(ApellidoP.Text == "")
-            {
-                MessageBox.Show("El apellido paterno no debe de estar vacío");
-            }
-            if (ApellidoM.Text == "")
-            {
-                MessageBox.Show("El apellido materno no debe de estar vacío");
-            }
-
-            if(Contraseña.Text == "")
-            {
-                MessageBox.Show("La contraseña no debe de estar vacía");
-            }
-
-            if(Contraseña.Text != ConfirContra.Text)
-            {
-                MessageBox.Show("Las contraseñas no coinciden");
+                DialogResult dg = nombre.ShowDialog();
+                //MessageBox.Show("El nombre no puede estar vacío");
             }
             else
             {
-                int id = 6;
 
-                if (comboBox1.SelectedItem == "SuperUsuario")
+                if (ApellidoP.Text == "")
                 {
-                    id = 4;
+                    Nombre2 nombrep = new Nombre2();
+
+                    DialogResult dg = nombrep.ShowDialog();
+                    //MessageBox.Show("El apellido paterno no debe de estar vacío");
                 }
-                else if (comboBox1.SelectedItem == "Administrador")
+                else
                 {
-                    id = 5;
+                    if (ApellidoM.Text == "")
+                    {
+                        Nombre3 nombrem = new Nombre3();
+
+                        DialogResult dg = nombrem.ShowDialog();
+                        //MessageBox.Show("El apellido materno no debe de estar vacío");
+                    }
+                    else
+                    {
+                        if (Contraseña.Text == "")
+                        {
+                            Nombre4 cc = new Nombre4();
+
+                            DialogResult dg = cc.ShowDialog();
+                            //MessageBox.Show("La contraseña no debe de estar vacía");
+                        }
+                        else
+                        {
+                            if (Contraseña.Text != ConfirContra.Text)
+                            {
+                                Nombre5 nc = new Nombre5();
+
+                                DialogResult dg = nc.ShowDialog();
+
+                                //MessageBox.Show("Las contraseñas no coinciden");
+                            }
+
+                            else
+                            {
+                                int id = 6;
+
+                                if (comboBox1.SelectedItem == "SuperUsuario")
+                                {
+                                    id = 4;
+                                }
+                                else if (comboBox1.SelectedItem == "Administrador")
+                                {
+                                    id = 5;
+                                }
+                                else if (comboBox1.SelectedItem == "Vendedor")
+                                {
+                                    id = 6;
+                                }
+
+
+                                try
+                                {
+                                    /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
+                                    ManejadorBD.Conectar();
+
+                                    String qery = "INSERT INTO mahedu.usuario VALUES('" + NombreU.Text + "','" + ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text + "'," + id + ", '" + contraAd.Text + "')";
+
+                                    Console.WriteLine("Corriste");
+
+
+                                    Console.WriteLine(qery);
+                                    /*
+                                   SqlDataAdapter ada = new SqlDataAdapter(qery, con);
+
+                                    con.Open();
+
+                                    DataSet data = new DataSet();
+                                    */
+
+                                    SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                                    SqlDataAdapter r = new SqlDataAdapter(cmd);
+                                    DataTable s = new DataTable();
+                                    r.Fill(s);
+
+
+                                }
+                                catch (Exception ex)
+                                {
+
+                                    MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                                }
+
+                                Felicitaciones agre = new Felicitaciones();
+
+                                DialogResult dg = agre.ShowDialog();
+
+
+
+                                MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+
+                                this.Close();
+                            }
+
+                       
+                        }
+
+                    
+                    }
+
                 }
-                else if (comboBox1.SelectedItem == "Vendedor")
-                {
-                    id = 6;
-                }
-
-
-                try
-                {
-                    /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
-                    ManejadorBD.Conectar();
-
-                    String qery = "INSERT INTO mahedu.usuario VALUES('" + NombreU.Text + "','" + ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text + "'," + id + ", '" + contraAd.Text + "')";
-
-                    Console.WriteLine("Corriste");
-
-
-                    Console.WriteLine(qery);
-                    /*
-                   SqlDataAdapter ada = new SqlDataAdapter(qery, con);
-
-                    con.Open();
-
-                    DataSet data = new DataSet();
-                    */
-
-                    SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
-                    SqlDataAdapter r = new SqlDataAdapter(cmd);
-                    DataTable s = new DataTable();
-                    r.Fill(s);
-
-
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
-                }
-
-                Felicitaciones UsuarioAgregado = new Felicitaciones();
-
-                UsuarioAgregado.Show();
-
-              MenuAgregarUsuario  MenuAgregar = new MenuAgregarUsuario();
-
-                this.Close();
             }
+
+            
         }
 
         private void label10_Click(object sender, EventArgs e)

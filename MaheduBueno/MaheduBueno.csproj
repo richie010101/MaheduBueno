@@ -327,6 +327,36 @@
     <Compile Include="MessageBox5.Designer.cs">
       <DependentUpon>MessageBox5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nombre1cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nombre1cs.Designer.cs">
+      <DependentUpon>Nombre1cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nombre2.Designer.cs">
+      <DependentUpon>Nombre2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nombre3.Designer.cs">
+      <DependentUpon>Nombre3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nombre4.Designer.cs">
+      <DependentUpon>Nombre4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nombre5.Designer.cs">
+      <DependentUpon>Nombre5.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -431,6 +461,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBox5.resx">
       <DependentUpon>MessageBox5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre1cs.resx">
+      <DependentUpon>Nombre1cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre2.resx">
+      <DependentUpon>Nombre2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre3.resx">
+      <DependentUpon>Nombre3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre4.resx">
+      <DependentUpon>Nombre4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nombre5.resx">
+      <DependentUpon>Nombre5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoProducto.resx">
       <DependentUpon>NoProducto.cs</DependentUpon>
