@@ -1402,6 +1402,7 @@
             this.button21.TabIndex = 23;
             this.button21.Text = "Borrar relaciones";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
             // 
             // button22
             // 

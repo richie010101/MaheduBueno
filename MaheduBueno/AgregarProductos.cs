@@ -762,7 +762,30 @@ namespace MaheduBueno
 
         private void button22_Click_1(object sender, EventArgs e)
         {
+            panelPrima.Visible = false;
+            cerrar_ventanas();
+        }
 
+        private void button21_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                String sql = "DELETE FROM mahedu.producto_has_materiaprima WHERE producto_idproducto=" + Productos[productoEditando].Id;
+
+                SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+
+                PanelAgregado.Visible = true;
+                panelEdicion.Visible = false;
+                panelSurtir.Visible = false;
+
+                actualizar();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: "+ex);
+            }
         }
     }
     }
