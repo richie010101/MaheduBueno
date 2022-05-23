@@ -126,35 +126,42 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
+            this.panelSurtir = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cantidadSurtir = new System.Windows.Forms.NumericUpDown();
+            this.label36 = new System.Windows.Forms.Label();
             this.EditarDetalles = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.agregaMedidas = new System.Windows.Forms.Button();
             this.editarCantMateria = new System.Windows.Forms.Button();
             this.productoTableAdapter2 = new MaheduBueno.MaheduDataSet12TableAdapters.productoTableAdapter();
             this.panelPrima = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
             this.materia_Producto = new System.Windows.Forms.DataGridView();
-            this.label36 = new System.Windows.Forms.Label();
-            this.panelSurtir = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.cantidadSurtir = new System.Windows.Forms.NumericUpDown();
             this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button26 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.tablaPrima = new System.Windows.Forms.DataGridView();
-            this.button26 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surtirPrima = new System.Windows.Forms.Panel();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.nuevaPrima = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).BeginInit();
@@ -183,12 +190,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.detallesPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesCantMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesCantMin)).BeginInit();
-            this.panelPrima.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).BeginInit();
             this.panelSurtir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadSurtir)).BeginInit();
+            this.panelPrima.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).BeginInit();
+            this.surtirPrima.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -1002,14 +1011,13 @@
             // panelEdicion
             // 
             this.panelEdicion.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelEdicion.Controls.Add(this.InfoProducto);
             this.panelEdicion.Controls.Add(this.panelSurtir);
             this.panelEdicion.Controls.Add(this.addPanel3);
             this.panelEdicion.Controls.Add(this.EditarDetalles);
             this.panelEdicion.Controls.Add(this.button14);
             this.panelEdicion.Controls.Add(this.agregaMedidas);
             this.panelEdicion.Controls.Add(this.editarCantMateria);
-            this.panelEdicion.Location = new System.Drawing.Point(1459, 85);
+            this.panelEdicion.Location = new System.Drawing.Point(1380, 44);
             this.panelEdicion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelEdicion.Name = "panelEdicion";
             this.panelEdicion.Size = new System.Drawing.Size(300, 494);
@@ -1037,7 +1045,7 @@
             this.InfoProducto.Controls.Add(this.button15);
             this.InfoProducto.Controls.Add(this.button16);
             this.InfoProducto.Controls.Add(this.label26);
-            this.InfoProducto.Location = new System.Drawing.Point(5, 41);
+            this.InfoProducto.Location = new System.Drawing.Point(0, 1);
             this.InfoProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.InfoProducto.Name = "InfoProducto";
             this.InfoProducto.Size = new System.Drawing.Size(297, 452);
@@ -1227,6 +1235,71 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "informacion";
             // 
+            // panelSurtir
+            // 
+            this.panelSurtir.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelSurtir.Controls.Add(this.InfoProducto);
+            this.panelSurtir.Controls.Add(this.button20);
+            this.panelSurtir.Controls.Add(this.button19);
+            this.panelSurtir.Controls.Add(this.label29);
+            this.panelSurtir.Controls.Add(this.cantidadSurtir);
+            this.panelSurtir.Controls.Add(this.label36);
+            this.panelSurtir.Location = new System.Drawing.Point(5, 39);
+            this.panelSurtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSurtir.Name = "panelSurtir";
+            this.panelSurtir.Size = new System.Drawing.Size(297, 452);
+            this.panelSurtir.TabIndex = 29;
+            this.panelSurtir.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(158, 198);
+            this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(121, 31);
+            this.button20.TabIndex = 28;
+            this.button20.Text = "Cancelar";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click_1);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(27, 197);
+            this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(125, 34);
+            this.button19.TabIndex = 27;
+            this.button19.Text = "Guardar";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(26, 99);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(64, 17);
+            this.label29.TabIndex = 26;
+            this.label29.Text = "Cantidad";
+            // 
+            // cantidadSurtir
+            // 
+            this.cantidadSurtir.Location = new System.Drawing.Point(29, 118);
+            this.cantidadSurtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cantidadSurtir.Name = "cantidadSurtir";
+            this.cantidadSurtir.Size = new System.Drawing.Size(241, 22);
+            this.cantidadSurtir.TabIndex = 20;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(117, 11);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(42, 17);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Surtir";
+            // 
             // EditarDetalles
             // 
             this.EditarDetalles.Location = new System.Drawing.Point(77, 78);
@@ -1290,6 +1363,30 @@
             this.panelPrima.TabIndex = 31;
             this.panelPrima.Visible = false;
             // 
+            // button22
+            // 
+            this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button22.Location = new System.Drawing.Point(205, 267);
+            this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(124, 31);
+            this.button22.TabIndex = 24;
+            this.button22.Text = "Cerrar";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click_1);
+            // 
+            // button21
+            // 
+            this.button21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button21.Location = new System.Drawing.Point(30, 267);
+            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(169, 31);
+            this.button21.TabIndex = 23;
+            this.button21.Text = "Borrar relaciones";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click_1);
+            // 
             // materia_Producto
             // 
             this.materia_Producto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1304,70 +1401,6 @@
             this.materia_Producto.RowHeadersWidth = 51;
             this.materia_Producto.Size = new System.Drawing.Size(429, 195);
             this.materia_Producto.TabIndex = 1;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(117, 11);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(42, 17);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Surtir";
-            // 
-            // panelSurtir
-            // 
-            this.panelSurtir.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelSurtir.Controls.Add(this.button20);
-            this.panelSurtir.Controls.Add(this.button19);
-            this.panelSurtir.Controls.Add(this.label29);
-            this.panelSurtir.Controls.Add(this.cantidadSurtir);
-            this.panelSurtir.Controls.Add(this.label36);
-            this.panelSurtir.Location = new System.Drawing.Point(5, 39);
-            this.panelSurtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelSurtir.Name = "panelSurtir";
-            this.panelSurtir.Size = new System.Drawing.Size(297, 452);
-            this.panelSurtir.TabIndex = 29;
-            this.panelSurtir.Visible = false;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(158, 198);
-            this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(121, 31);
-            this.button20.TabIndex = 28;
-            this.button20.Text = "Cancelar";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click_1);
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(27, 197);
-            this.button19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(125, 34);
-            this.button19.TabIndex = 27;
-            this.button19.Text = "Guardar";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(26, 99);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(64, 17);
-            this.label29.TabIndex = 26;
-            this.label29.Text = "Cantidad";
-            // 
-            // cantidadSurtir
-            // 
-            this.cantidadSurtir.Location = new System.Drawing.Point(29, 118);
-            this.cantidadSurtir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cantidadSurtir.Name = "cantidadSurtir";
-            this.cantidadSurtir.Size = new System.Drawing.Size(241, 22);
-            this.cantidadSurtir.TabIndex = 20;
             // 
             // producto
             // 
@@ -1393,30 +1426,6 @@
             this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
-            // button21
-            // 
-            this.button21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(30, 267);
-            this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(169, 31);
-            this.button21.TabIndex = 23;
-            this.button21.Text = "Borrar relaciones";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click_1);
-            // 
-            // button22
-            // 
-            this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(205, 267);
-            this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(124, 31);
-            this.button22.TabIndex = 24;
-            this.button22.Text = "Cerrar";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click_1);
-            // 
             // button23
             // 
             this.button23.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1432,6 +1441,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.Controls.Add(this.surtirPrima);
             this.panel1.Controls.Add(this.button26);
             this.panel1.Controls.Add(this.button24);
             this.panel1.Controls.Add(this.button25);
@@ -1442,6 +1452,17 @@
             this.panel1.Size = new System.Drawing.Size(621, 452);
             this.panel1.TabIndex = 32;
             this.panel1.Visible = false;
+            // 
+            // button26
+            // 
+            this.button26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button26.Location = new System.Drawing.Point(188, 267);
+            this.button26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button26.Name = "button26";
+            this.button26.Size = new System.Drawing.Size(127, 31);
+            this.button26.TabIndex = 25;
+            this.button26.Text = "Eliminar";
+            this.button26.UseVisualStyleBackColor = true;
             // 
             // button24
             // 
@@ -1485,17 +1506,6 @@
             this.tablaPrima.TabIndex = 1;
             this.tablaPrima.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaPrima_CellContentClick);
             // 
-            // button26
-            // 
-            this.button26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(188, 267);
-            this.button26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(127, 31);
-            this.button26.TabIndex = 25;
-            this.button26.Text = "Eliminar";
-            this.button26.UseVisualStyleBackColor = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
@@ -1535,6 +1545,86 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
+            // 
+            // surtirPrima
+            // 
+            this.surtirPrima.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.surtirPrima.Controls.Add(this.label30);
+            this.surtirPrima.Controls.Add(this.button30);
+            this.surtirPrima.Controls.Add(this.button31);
+            this.surtirPrima.Controls.Add(this.label39);
+            this.surtirPrima.Controls.Add(this.nuevaPrima);
+            this.surtirPrima.Controls.Add(this.label40);
+            this.surtirPrima.Location = new System.Drawing.Point(321, 0);
+            this.surtirPrima.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.surtirPrima.Name = "surtirPrima";
+            this.surtirPrima.Size = new System.Drawing.Size(297, 448);
+            this.surtirPrima.TabIndex = 30;
+            this.surtirPrima.Visible = false;
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(158, 198);
+            this.button30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(121, 31);
+            this.button30.TabIndex = 28;
+            this.button30.Text = "Cancelar";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(27, 197);
+            this.button31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(125, 34);
+            this.button31.TabIndex = 27;
+            this.button31.Text = "Guardar";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(14, 99);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(64, 17);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "Cantidad";
+            // 
+            // nuevaPrima
+            // 
+            this.nuevaPrima.DecimalPlaces = 3;
+            this.nuevaPrima.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nuevaPrima.Location = new System.Drawing.Point(17, 118);
+            this.nuevaPrima.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nuevaPrima.Name = "nuevaPrima";
+            this.nuevaPrima.Size = new System.Drawing.Size(241, 22);
+            this.nuevaPrima.TabIndex = 20;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(117, 11);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(42, 17);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Surtir";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(260, 124);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(30, 17);
+            this.label30.TabIndex = 29;
+            this.label30.Text = "Mts";
             // 
             // AgregarProductos
             // 
@@ -1597,13 +1687,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.detallesPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesCantMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesCantMin)).EndInit();
-            this.panelPrima.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).EndInit();
             this.panelSurtir.ResumeLayout(false);
             this.panelSurtir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadSurtir)).EndInit();
+            this.panelPrima.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).EndInit();
+            this.surtirPrima.ResumeLayout(false);
+            this.surtirPrima.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1741,5 +1834,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Panel surtirPrima;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.NumericUpDown nuevaPrima;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label30;
     }
 }

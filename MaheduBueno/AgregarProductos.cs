@@ -420,6 +420,23 @@ namespace MaheduBueno
                 i++;
             }
         }
+
+        private void recuperarEleccionPrima()
+        {
+            int elegido = int.Parse(tablaPrima.CurrentCell.Value.ToString());
+
+            int i = 0;
+
+            while (i < Productos.Count)
+            {
+                if (Productos[i].Id == elegido)
+                {
+                    
+
+                }
+                i++;
+            }
+        }
           /*
         private void agregaMedidas_Click(object sender, EventArgs e)
         {
@@ -791,7 +808,7 @@ namespace MaheduBueno
 
         private void button25_Click(object sender, EventArgs e)
         {
-
+            surtirPrima.Visible = true;
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -835,6 +852,42 @@ namespace MaheduBueno
         private void button24_Click(object sender, EventArgs e)
         {
             panelPrima.Visible = false;
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            cerrar_ventanas();
+            panel1.Visible = false;
+            surtirPrima.Visible = false;
+            nuevaPrima.Value = 0;
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                recuperarEleccion();
+                int agregado = (int)cantidadSurtir.Value;
+                Productos[productoEditando].Cantidad += agregado;
+
+                String sql = "Update mahedu.producto SET cantidad=" + Productos[productoEditando].Cantidad + " WHERE idProducto=" + Productos[productoEditando].Id;
+                Console.WriteLine(sql);
+
+                SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                command.ExecuteNonQuery();
+                command.Connection.Close();
+
+                PanelAgregado.Visible = true;
+                panelEdicion.Visible = false;
+                panelSurtir.Visible = false;
+
+                actualizar();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ayuda dios mio: " + ex);
+            }
+
         }
     }
     }
