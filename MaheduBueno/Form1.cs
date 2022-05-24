@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaheduBueno.clases2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,6 +64,15 @@ namespace MaheduBueno
             {
                 if (dt.Rows[0][0].ToString() != null)
                 {
+                    usuario.idUser = int.Parse(dt.Rows[0][0].ToString());
+                    usuario.username = dt.Rows[0][4].ToString();
+                    usuario.tipoUser = int.Parse(dt.Rows[0][6].ToString());
+                    usuario.contraMov = dt.Rows[0][7].ToString();
+
+                    Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
+
+
+
                     id_user = dt.Rows[0][0].ToString();
                     Console.WriteLine("h"+id_user);
                     MenuPrincipal menuP = new MenuPrincipal(id_user);

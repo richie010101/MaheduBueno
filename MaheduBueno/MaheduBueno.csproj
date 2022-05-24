@@ -140,7 +140,9 @@
     <Compile Include="Camposllenos.Designer.cs">
       <DependentUpon>Camposllenos.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases2\materiaPrima.cs" />
     <Compile Include="clases2\Producto.cs" />
+    <Compile Include="clases2\usuario.cs" />
     <Compile Include="Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>

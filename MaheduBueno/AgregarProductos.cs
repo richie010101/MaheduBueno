@@ -21,10 +21,12 @@ namespace MaheduBueno
         List<int> idMaterias;
         List<float> cantidades;
         List<Producto> Productos;
+        List<materiaPrima> materiasPrimasLista;
         SqlCommand cmd;
         DataTable dt;
         DataTable medidas;
         DataTable productosN;
+        int materiaElegida;
 
         public AgregarProductos()
         {
@@ -35,6 +37,7 @@ namespace MaheduBueno
             
 
             Productos = new List<Producto>();
+            materiasPrimasLista = new List<materiaPrima>();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -84,6 +87,7 @@ namespace MaheduBueno
         {
 
             actualizar();
+            Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
 
 
 
@@ -423,16 +427,18 @@ namespace MaheduBueno
 
         private void recuperarEleccionPrima()
         {
-            int elegido = int.Parse(tablaPrima.CurrentCell.Value.ToString());
+           int  id= int.Parse(tablaPrima.CurrentCell.Value.ToString());
 
             int i = 0;
 
-            while (i < Productos.Count)
+            while (i < materiasPrimasLista.Count)
             {
-                if (Productos[i].Id == elegido)
+                if (materiasPrimasLista[i].IdMateria == id)
                 {
-                    
 
+                    materiaElegida = i;
+                    Console.WriteLine(materiaElegida);
+                    break;
                 }
                 i++;
             }
@@ -585,6 +591,7 @@ namespace MaheduBueno
             panelSurtir.Visible = false;
             addPanel3.Visible = false;
             InfoProducto.Visible = false;
+            panelBorrarPrima.Visible = false;
 
         }
 
@@ -808,40 +815,17 @@ namespace MaheduBueno
 
         private void button25_Click(object sender, EventArgs e)
         {
+            recuperarEleccionPrima();
             surtirPrima.Visible = true;
+
+
+            
         }
 
         private void button23_Click(object sender, EventArgs e)
         {
-            String consulta = "SELECT * FROM mahedu.materiaprima";
-            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-            DataTable r = new DataTable();
-
-            adapter.Fill(r);
-
-            try
-            {
-                int i;
-                for (i = 0; i < r.Rows.Count; i++)
-                {
-                    tablaPrima.Rows.Add();
-                    tablaPrima[0, i].Value = r.Rows[i][0].ToString();
-                    tablaPrima[1, i].Value = r.Rows[i][1].ToString();
-                    tablaPrima[2, i].Value = r.Rows[i][2].ToString();
-                    tablaPrima[3, i].Value = r.Rows[i][3].ToString();
-                    tablaPrima[4, i].Value = r.Rows[i][4].ToString();
-                }
-
-                panel1.Visible = true;
-
-            }
-            catch (Exception R)
-            {
-                Console.WriteLine("error inesparado" + R);
-
-            }
+            actualizarPrima();
+            panel1.Visible = true;
         }
 
         private void tablaPrima_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -852,12 +836,13 @@ namespace MaheduBueno
         private void button24_Click(object sender, EventArgs e)
         {
             panelPrima.Visible = false;
+            panel1.Visible = false;
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
             cerrar_ventanas();
-            panel1.Visible = false;
+            
             surtirPrima.Visible = false;
             nuevaPrima.Value = 0;
         }
@@ -866,11 +851,12 @@ namespace MaheduBueno
         {
             try
             {
-                recuperarEleccion();
-                int agregado = (int)cantidadSurtir.Value;
-                Productos[productoEditando].Cantidad += agregado;
+                float cantidad = (float)nuevaPrima.Value;
+                materiasPrimasLista[materiaElegida].Cantidad = materiasPrimasLista[materiaElegida].Cantidad + cantidad;
 
-                String sql = "Update mahedu.producto SET cantidad=" + Productos[productoEditando].Cantidad + " WHERE idProducto=" + Productos[productoEditando].Id;
+
+
+                String sql = "Update mahedu.materiaPrima SET cantidad=" + materiasPrimasLista[materiaElegida].Cantidad + " WHERE idMateria=" + materiasPrimasLista[materiaElegida].IdMateria;
                 Console.WriteLine(sql);
 
                 SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
@@ -881,13 +867,113 @@ namespace MaheduBueno
                 panelEdicion.Visible = false;
                 panelSurtir.Visible = false;
 
-                actualizar();
+                actualizarPrima();
+                cerrar_ventanas();
+                surtirPrima.Visible = false;
+                nuevaPrima.Value = 0;
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Ayuda dios mio: " + ex);
             }
 
+        }
+
+        private void panelPrima_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void actualizarPrima()
+        {
+            String consulta = "SELECT * FROM mahedu.materiaprima";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable r = new DataTable();
+
+            adapter.Fill(r);
+            tablaPrima.Rows.Clear();
+
+            try
+            {
+                int i;
+                for (i = 0; i < r.Rows.Count; i++)
+                {
+                    materiaPrima materiaNueva = new materiaPrima();
+                    tablaPrima.Rows.Add();
+                    tablaPrima[0, i].Value = r.Rows[i][0].ToString();
+                    materiaNueva.IdMateria = int.Parse(r.Rows[i][0].ToString());
+                    tablaPrima[1, i].Value = r.Rows[i][1].ToString();
+                    materiaNueva.SkuM = r.Rows[i][1].ToString();
+                    tablaPrima[2, i].Value = r.Rows[i][2].ToString();
+                    materiaNueva.NombreM = r.Rows[i][2].ToString();
+                    tablaPrima[3, i].Value = r.Rows[i][3].ToString();
+                    materiaNueva.DescripcionM = r.Rows[i][3].ToString();
+                    tablaPrima[4, i].Value = r.Rows[i][4].ToString();
+                    materiaNueva.Cantidad = float.Parse(r.Rows[i][4].ToString());
+
+                    materiasPrimasLista.Add(materiaNueva);
+                }
+
+
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+
+            recuperarEleccionPrima();
+            panelBorrarPrima.Visible = true;
+
+            
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            panelBorrarPrima.Visible = false;
+            
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            if(textBorrarPrima.Text.Equals(usuario.contraMov))
+            {
+                try
+                {
+                    String sql = "delete from mahedu.materiaPrima WHERE idMateria=" + materiasPrimasLista[materiaElegida].IdMateria;
+                    Console.WriteLine(sql);
+
+                    SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                    command.ExecuteNonQuery();
+                    command.Connection.Close();
+
+                    PanelAgregado.Visible = true;
+                    panelEdicion.Visible = false;
+                    panelSurtir.Visible = false;
+
+                    actualizarPrima();
+                    cerrar_ventanas();
+                    surtirPrima.Visible = false;
+                    nuevaPrima.Value = 0;
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ayuda dios mio: " + ex);
+                }
+            }
+            else
+            {
+                veri.Text = "contraseña incorrecta";
+            }
         }
     }
     }
