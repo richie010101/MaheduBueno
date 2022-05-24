@@ -787,11 +787,16 @@ namespace MaheduBueno
 
                 adapter.Fill(RestarMateria);
 
-                if (RestarMateria.Rows[0][0].ToString() != null)
-                {
-                    int i=0;
 
-                    while(i<RestarMateria.Rows.Count)
+                if (RestarMateria.Rows is null)
+                {
+ 
+                }
+                else
+                {
+                    int i = 0;
+
+                    while (i < RestarMateria.Rows.Count)
                     {
                         String borrar = "update mahedu.materiaprima set Cantidad= Cantidad -"
                                         + (float)(agregado * float.Parse(RestarMateria.Rows[i][3].ToString())) + " where IdMateria=" + int.Parse(RestarMateria.Rows[i][0].ToString());
@@ -803,23 +808,6 @@ namespace MaheduBueno
                         i++;
                     }
                 }
-                else
-                {
-                    //    System.Windows.Forms.MessageBox.Show("usuario o contraseña incorrectos, verifique");
-                    Console.WriteLine("no usa materias primas");
-                    //Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
-                    // MessageBox.Show("Usuario o contraseña incorrectos, verifique");
-                    
-
-                }
-
-                
-                
-                
-
-
-
-
 
                 PanelAgregado.Visible = true;
                 panelEdicion.Visible = false;

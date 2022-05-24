@@ -1338,7 +1338,7 @@
             this.panelPrima.Controls.Add(this.button22);
             this.panelPrima.Controls.Add(this.button21);
             this.panelPrima.Controls.Add(this.materia_Producto);
-            this.panelPrima.Location = new System.Drawing.Point(682, 364);
+            this.panelPrima.Location = new System.Drawing.Point(383, 211);
             this.panelPrima.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrima.Name = "panelPrima";
             this.panelPrima.Size = new System.Drawing.Size(365, 367);
@@ -1799,8 +1799,8 @@
             this.ClientSize = new System.Drawing.Size(1255, 525);
             this.Controls.Add(this.panelBorrarProducto);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button23);
             this.Controls.Add(this.panelPrima);
+            this.Controls.Add(this.button23);
             this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.PanelAgregado);
             this.Controls.Add(this.agregarPanel);
