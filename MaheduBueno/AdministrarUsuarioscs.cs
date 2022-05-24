@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaheduBueno.clases2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,6 +67,8 @@ namespace MaheduBueno
             this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
+
+            label2.Text = usuario.username;
 
         }
 
@@ -228,6 +231,31 @@ namespace MaheduBueno
             this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdministrarUsuarioscs_Paint(object sender, PaintEventArgs e)
+        {
+            // Área cliente del formulario.
+            //
+            Rectangle r = this.ClientRectangle;
+
+            // Punto intermedio del área cliente.
+            //
+            int c = r.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -227,6 +227,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(40, 45);
             this.pictureBox3.TabIndex = 57;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Estadisticas
             // 

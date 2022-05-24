@@ -89,7 +89,7 @@ namespace MaheduBueno
             actualizar();
             Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
 
-
+            label2.Text = usuario.username;
 
 
 
@@ -670,6 +670,7 @@ namespace MaheduBueno
         public void actualizar()
         {
             dataGridView1.Rows.Clear();
+            Productos.Clear();
 
 
 
@@ -895,6 +896,7 @@ namespace MaheduBueno
 
             adapter.Fill(r);
             tablaPrima.Rows.Clear();
+            materiasPrimasLista.Clear();
 
             try
             {
@@ -974,6 +976,26 @@ namespace MaheduBueno
             {
                 veri.Text = "contraseña incorrecta";
             }
+        }
+
+        private void AgregarProductos_Paint(object sender, PaintEventArgs e)
+        {
+            // Área cliente del formulario.
+            //
+            Rectangle r = this.ClientRectangle;
+
+            // Punto intermedio del área cliente.
+            //
+            int c = r.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+        }
+
+        private void BTNELIMINARSELECCION_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

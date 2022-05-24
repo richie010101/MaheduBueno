@@ -21,5 +21,13 @@ namespace MaheduBueno
         {
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+
+            menu.Show();
+            this.Close();
+        }
     }
 }

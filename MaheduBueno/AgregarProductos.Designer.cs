@@ -146,6 +146,20 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button23 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelBorrarPrima = new System.Windows.Forms.Panel();
+            this.veri = new System.Windows.Forms.Label();
+            this.textBorrarPrima = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.surtirPrima = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button31 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.nuevaPrima = new System.Windows.Forms.NumericUpDown();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.button26 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
@@ -155,20 +169,13 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.nuevaPrima = new System.Windows.Forms.NumericUpDown();
-            this.label39 = new System.Windows.Forms.Label();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.surtirPrima = new System.Windows.Forms.Panel();
-            this.panelBorrarPrima = new System.Windows.Forms.Panel();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textBorrarPrima = new System.Windows.Forms.TextBox();
-            this.veri = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button32 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).BeginInit();
@@ -202,10 +209,11 @@
             this.panelPrima.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).BeginInit();
-            this.surtirPrima.SuspendLayout();
             this.panelBorrarPrima.SuspendLayout();
+            this.surtirPrima.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -220,7 +228,7 @@
             this.Column2,
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(9, 154);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -312,7 +320,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(476, 114);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(116, 27);
             this.button2.TabIndex = 20;
@@ -323,7 +331,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(9, 115);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(458, 26);
             this.textBox1.TabIndex = 19;
@@ -333,7 +341,7 @@
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(9, 80);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 27);
             this.button1.TabIndex = 18;
@@ -371,7 +379,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
             this.pictureBox2.Location = new System.Drawing.Point(9, -10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -383,7 +391,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(476, -10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -394,7 +402,7 @@
             // 
             this.BTNAGREGAR.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNAGREGAR.Location = new System.Drawing.Point(10, 396);
-            this.BTNAGREGAR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNAGREGAR.Margin = new System.Windows.Forms.Padding(2);
             this.BTNAGREGAR.Name = "BTNAGREGAR";
             this.BTNAGREGAR.Size = new System.Drawing.Size(115, 25);
             this.BTNAGREGAR.TabIndex = 22;
@@ -406,7 +414,7 @@
             // 
             this.BTNEDITARSELECCION.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNEDITARSELECCION.Location = new System.Drawing.Point(142, 396);
-            this.BTNEDITARSELECCION.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNEDITARSELECCION.Margin = new System.Windows.Forms.Padding(2);
             this.BTNEDITARSELECCION.Name = "BTNEDITARSELECCION";
             this.BTNEDITARSELECCION.Size = new System.Drawing.Size(110, 25);
             this.BTNEDITARSELECCION.TabIndex = 23;
@@ -418,12 +426,13 @@
             // 
             this.BTNELIMINARSELECCION.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNELIMINARSELECCION.Location = new System.Drawing.Point(269, 396);
-            this.BTNELIMINARSELECCION.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNELIMINARSELECCION.Margin = new System.Windows.Forms.Padding(2);
             this.BTNELIMINARSELECCION.Name = "BTNELIMINARSELECCION";
             this.BTNELIMINARSELECCION.Size = new System.Drawing.Size(129, 25);
             this.BTNELIMINARSELECCION.TabIndex = 24;
             this.BTNELIMINARSELECCION.Text = "Eliminar selección";
             this.BTNELIMINARSELECCION.UseVisualStyleBackColor = true;
+            this.BTNELIMINARSELECCION.Click += new System.EventHandler(this.BTNELIMINARSELECCION_Click);
             // 
             // agregarPanel
             // 
@@ -435,7 +444,7 @@
             this.agregarPanel.Controls.Add(this.button4);
             this.agregarPanel.Controls.Add(this.button3);
             this.agregarPanel.Location = new System.Drawing.Point(796, 40);
-            this.agregarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregarPanel.Margin = new System.Windows.Forms.Padding(2);
             this.agregarPanel.Name = "agregarPanel";
             this.agregarPanel.Size = new System.Drawing.Size(235, 397);
             this.agregarPanel.TabIndex = 2;
@@ -456,7 +465,7 @@
             this.addPrima.Controls.Add(this.button12);
             this.addPrima.Controls.Add(this.button13);
             this.addPrima.Location = new System.Drawing.Point(4, 36);
-            this.addPrima.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPrima.Margin = new System.Windows.Forms.Padding(2);
             this.addPrima.Name = "addPrima";
             this.addPrima.Size = new System.Drawing.Size(223, 328);
             this.addPrima.TabIndex = 25;
@@ -493,7 +502,7 @@
             // textSKUPrima
             // 
             this.textSKUPrima.Location = new System.Drawing.Point(8, 80);
-            this.textSKUPrima.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textSKUPrima.Margin = new System.Windows.Forms.Padding(2);
             this.textSKUPrima.Name = "textSKUPrima";
             this.textSKUPrima.Size = new System.Drawing.Size(209, 20);
             this.textSKUPrima.TabIndex = 17;
@@ -501,7 +510,7 @@
             // textNombrePrima
             // 
             this.textNombrePrima.Location = new System.Drawing.Point(8, 33);
-            this.textNombrePrima.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombrePrima.Margin = new System.Windows.Forms.Padding(2);
             this.textNombrePrima.Name = "textNombrePrima";
             this.textNombrePrima.Size = new System.Drawing.Size(209, 20);
             this.textNombrePrima.TabIndex = 16;
@@ -535,7 +544,7 @@
             0,
             65536});
             this.CantidadPrima.Location = new System.Drawing.Point(10, 128);
-            this.CantidadPrima.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CantidadPrima.Margin = new System.Windows.Forms.Padding(2);
             this.CantidadPrima.Name = "CantidadPrima";
             this.CantidadPrima.Size = new System.Drawing.Size(181, 20);
             this.CantidadPrima.TabIndex = 19;
@@ -553,7 +562,7 @@
             // button12
             // 
             this.button12.Location = new System.Drawing.Point(125, 284);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(91, 25);
             this.button12.TabIndex = 22;
@@ -564,7 +573,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(14, 282);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(94, 28);
             this.button13.TabIndex = 21;
@@ -584,7 +593,7 @@
             this.addPanel2.Controls.Add(this.button6);
             this.addPanel2.Controls.Add(this.button9);
             this.addPanel2.Location = new System.Drawing.Point(6, 41);
-            this.addPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.addPanel2.Name = "addPanel2";
             this.addPanel2.Size = new System.Drawing.Size(223, 328);
             this.addPanel2.TabIndex = 16;
@@ -645,7 +654,7 @@
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(127, 270);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(91, 25);
             this.button6.TabIndex = 10;
@@ -656,7 +665,7 @@
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(16, 268);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(94, 28);
             this.button9.TabIndex = 9;
@@ -680,7 +689,7 @@
             this.Addpanel.Controls.Add(this.button8);
             this.Addpanel.Controls.Add(this.button7);
             this.Addpanel.Location = new System.Drawing.Point(4, 44);
-            this.Addpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Addpanel.Margin = new System.Windows.Forms.Padding(2);
             this.Addpanel.Name = "Addpanel";
             this.Addpanel.Size = new System.Drawing.Size(223, 328);
             this.Addpanel.TabIndex = 3;
@@ -690,7 +699,7 @@
             // 
             this.costo.DecimalPlaces = 2;
             this.costo.Location = new System.Drawing.Point(10, 208);
-            this.costo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.costo.Margin = new System.Windows.Forms.Padding(2);
             this.costo.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -704,7 +713,7 @@
             // 
             this.precio.DecimalPlaces = 2;
             this.precio.Location = new System.Drawing.Point(10, 160);
-            this.precio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.precio.Margin = new System.Windows.Forms.Padding(2);
             this.precio.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -728,7 +737,7 @@
             // textSKUproducto
             // 
             this.textSKUproducto.Location = new System.Drawing.Point(10, 66);
-            this.textSKUproducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textSKUproducto.Margin = new System.Windows.Forms.Padding(2);
             this.textSKUproducto.Name = "textSKUproducto";
             this.textSKUproducto.Size = new System.Drawing.Size(209, 20);
             this.textSKUproducto.TabIndex = 4;
@@ -747,7 +756,7 @@
             // textNombrePoducto
             // 
             this.textNombrePoducto.Location = new System.Drawing.Point(10, 19);
-            this.textNombrePoducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textNombrePoducto.Margin = new System.Windows.Forms.Padding(2);
             this.textNombrePoducto.Name = "textNombrePoducto";
             this.textNombrePoducto.Size = new System.Drawing.Size(209, 20);
             this.textNombrePoducto.TabIndex = 3;
@@ -775,7 +784,7 @@
             // CantidadProducto
             // 
             this.CantidadProducto.Location = new System.Drawing.Point(12, 114);
-            this.CantidadProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CantidadProducto.Margin = new System.Windows.Forms.Padding(2);
             this.CantidadProducto.Name = "CantidadProducto";
             this.CantidadProducto.Size = new System.Drawing.Size(206, 20);
             this.CantidadProducto.TabIndex = 6;
@@ -793,7 +802,7 @@
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(127, 270);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(91, 25);
             this.button8.TabIndex = 10;
@@ -804,7 +813,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(16, 268);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 28);
             this.button7.TabIndex = 9;
@@ -817,7 +826,7 @@
             this.button5.BackColor = System.Drawing.Color.Red;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(10, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(28, 30);
             this.button5.TabIndex = 2;
@@ -828,7 +837,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(58, 190);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(123, 66);
             this.button4.TabIndex = 1;
@@ -839,7 +848,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(58, 75);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 66);
             this.button3.TabIndex = 0;
@@ -861,7 +870,7 @@
             this.addPanel3.Controls.Add(this.comboBoxMateriaPrima);
             this.addPanel3.Controls.Add(this.label12);
             this.addPanel3.Location = new System.Drawing.Point(4, 44);
-            this.addPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.addPanel3.Name = "addPanel3";
             this.addPanel3.Size = new System.Drawing.Size(223, 328);
             this.addPanel3.TabIndex = 20;
@@ -879,7 +888,7 @@
             // button10
             // 
             this.button10.Location = new System.Drawing.Point(130, 270);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(91, 25);
             this.button10.TabIndex = 20;
@@ -890,7 +899,7 @@
             // buttonGuardar
             // 
             this.buttonGuardar.Location = new System.Drawing.Point(19, 268);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(107, 28);
             this.buttonGuardar.TabIndex = 19;
@@ -909,7 +918,7 @@
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(72, 137);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(94, 28);
             this.button11.TabIndex = 17;
@@ -975,8 +984,8 @@
             this.PanelAgregado.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.PanelAgregado.Controls.Add(this.label11);
             this.PanelAgregado.Controls.Add(this.button17);
-            this.PanelAgregado.Location = new System.Drawing.Point(490, 392);
-            this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PanelAgregado.Location = new System.Drawing.Point(125, 54);
+            this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2);
             this.PanelAgregado.Name = "PanelAgregado";
             this.PanelAgregado.Size = new System.Drawing.Size(407, 134);
             this.PanelAgregado.TabIndex = 26;
@@ -999,7 +1008,7 @@
             this.button17.BackColor = System.Drawing.Color.Red;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.Location = new System.Drawing.Point(10, 10);
-            this.button17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button17.Margin = new System.Windows.Forms.Padding(2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(28, 30);
             this.button17.TabIndex = 2;
@@ -1021,7 +1030,7 @@
             this.panelEdicion.Controls.Add(this.agregaMedidas);
             this.panelEdicion.Controls.Add(this.editarCantMateria);
             this.panelEdicion.Location = new System.Drawing.Point(1035, 36);
-            this.panelEdicion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEdicion.Margin = new System.Windows.Forms.Padding(2);
             this.panelEdicion.Name = "panelEdicion";
             this.panelEdicion.Size = new System.Drawing.Size(225, 401);
             this.panelEdicion.TabIndex = 27;
@@ -1037,7 +1046,7 @@
             this.panelSurtir.Controls.Add(this.cantidadSurtir);
             this.panelSurtir.Controls.Add(this.label36);
             this.panelSurtir.Location = new System.Drawing.Point(4, 32);
-            this.panelSurtir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSurtir.Margin = new System.Windows.Forms.Padding(2);
             this.panelSurtir.Name = "panelSurtir";
             this.panelSurtir.Size = new System.Drawing.Size(223, 367);
             this.panelSurtir.TabIndex = 29;
@@ -1065,7 +1074,7 @@
             this.InfoProducto.Controls.Add(this.button16);
             this.InfoProducto.Controls.Add(this.label26);
             this.InfoProducto.Location = new System.Drawing.Point(0, 1);
-            this.InfoProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InfoProducto.Margin = new System.Windows.Forms.Padding(2);
             this.InfoProducto.Name = "InfoProducto";
             this.InfoProducto.Size = new System.Drawing.Size(223, 367);
             this.InfoProducto.TabIndex = 28;
@@ -1075,7 +1084,7 @@
             // button18
             // 
             this.button18.Location = new System.Drawing.Point(9, 342);
-            this.button18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(200, 23);
             this.button18.TabIndex = 39;
@@ -1087,7 +1096,7 @@
             // 
             this.detallesCosto.DecimalPlaces = 2;
             this.detallesCosto.Location = new System.Drawing.Point(9, 201);
-            this.detallesCosto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detallesCosto.Margin = new System.Windows.Forms.Padding(2);
             this.detallesCosto.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1101,7 +1110,7 @@
             // 
             this.detallesPrecio.DecimalPlaces = 2;
             this.detallesPrecio.Location = new System.Drawing.Point(122, 201);
-            this.detallesPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detallesPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.detallesPrecio.Maximum = new decimal(new int[] {
             2000,
             0,
@@ -1114,7 +1123,7 @@
             // detallesCantMax
             // 
             this.detallesCantMax.Location = new System.Drawing.Point(6, 287);
-            this.detallesCantMax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detallesCantMax.Margin = new System.Windows.Forms.Padding(2);
             this.detallesCantMax.Name = "detallesCantMax";
             this.detallesCantMax.Size = new System.Drawing.Size(206, 20);
             this.detallesCantMax.TabIndex = 36;
@@ -1122,7 +1131,7 @@
             // detallesCantMin
             // 
             this.detallesCantMin.Location = new System.Drawing.Point(7, 242);
-            this.detallesCantMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detallesCantMin.Margin = new System.Windows.Forms.Padding(2);
             this.detallesCantMin.Name = "detallesCantMin";
             this.detallesCantMin.Size = new System.Drawing.Size(206, 20);
             this.detallesCantMin.TabIndex = 35;
@@ -1215,7 +1224,7 @@
             // button15
             // 
             this.button15.Location = new System.Drawing.Point(122, 311);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(91, 28);
             this.button15.TabIndex = 20;
@@ -1226,7 +1235,7 @@
             // button16
             // 
             this.button16.Location = new System.Drawing.Point(9, 311);
-            this.button16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button16.Margin = new System.Windows.Forms.Padding(2);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(107, 28);
             this.button16.TabIndex = 19;
@@ -1246,7 +1255,7 @@
             // button20
             // 
             this.button20.Location = new System.Drawing.Point(118, 161);
-            this.button20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(91, 25);
             this.button20.TabIndex = 28;
@@ -1257,7 +1266,7 @@
             // button19
             // 
             this.button19.Location = new System.Drawing.Point(20, 160);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(94, 28);
             this.button19.TabIndex = 27;
@@ -1278,7 +1287,7 @@
             // cantidadSurtir
             // 
             this.cantidadSurtir.Location = new System.Drawing.Point(22, 96);
-            this.cantidadSurtir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cantidadSurtir.Margin = new System.Windows.Forms.Padding(2);
             this.cantidadSurtir.Name = "cantidadSurtir";
             this.cantidadSurtir.Size = new System.Drawing.Size(181, 20);
             this.cantidadSurtir.TabIndex = 20;
@@ -1295,7 +1304,7 @@
             // EditarDetalles
             // 
             this.EditarDetalles.Location = new System.Drawing.Point(58, 63);
-            this.EditarDetalles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditarDetalles.Margin = new System.Windows.Forms.Padding(2);
             this.EditarDetalles.Name = "EditarDetalles";
             this.EditarDetalles.Size = new System.Drawing.Size(123, 66);
             this.EditarDetalles.TabIndex = 3;
@@ -1308,7 +1317,7 @@
             this.button14.BackColor = System.Drawing.Color.Red;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.Location = new System.Drawing.Point(6, 2);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(28, 30);
             this.button14.TabIndex = 2;
@@ -1319,7 +1328,7 @@
             // agregaMedidas
             // 
             this.agregaMedidas.Location = new System.Drawing.Point(58, 272);
-            this.agregaMedidas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.agregaMedidas.Margin = new System.Windows.Forms.Padding(2);
             this.agregaMedidas.Name = "agregaMedidas";
             this.agregaMedidas.Size = new System.Drawing.Size(123, 66);
             this.agregaMedidas.TabIndex = 1;
@@ -1330,7 +1339,7 @@
             // editarCantMateria
             // 
             this.editarCantMateria.Location = new System.Drawing.Point(58, 173);
-            this.editarCantMateria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editarCantMateria.Margin = new System.Windows.Forms.Padding(2);
             this.editarCantMateria.Name = "editarCantMateria";
             this.editarCantMateria.Size = new System.Drawing.Size(123, 66);
             this.editarCantMateria.TabIndex = 0;
@@ -1349,7 +1358,7 @@
             this.panelPrima.Controls.Add(this.button21);
             this.panelPrima.Controls.Add(this.materia_Producto);
             this.panelPrima.Location = new System.Drawing.Point(442, 12);
-            this.panelPrima.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPrima.Margin = new System.Windows.Forms.Padding(2);
             this.panelPrima.Name = "panelPrima";
             this.panelPrima.Size = new System.Drawing.Size(365, 367);
             this.panelPrima.TabIndex = 31;
@@ -1360,7 +1369,7 @@
             // 
             this.button22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.Location = new System.Drawing.Point(154, 217);
-            this.button22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button22.Margin = new System.Windows.Forms.Padding(2);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(93, 25);
             this.button22.TabIndex = 24;
@@ -1372,7 +1381,7 @@
             // 
             this.button21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.Location = new System.Drawing.Point(22, 217);
-            this.button21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(127, 25);
             this.button21.TabIndex = 23;
@@ -1422,7 +1431,7 @@
             // 
             this.button23.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.Location = new System.Drawing.Point(125, 442);
-            this.button23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button23.Margin = new System.Windows.Forms.Padding(2);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(145, 25);
             this.button23.TabIndex = 32;
@@ -1440,18 +1449,169 @@
             this.panel1.Controls.Add(this.button24);
             this.panel1.Controls.Add(this.button25);
             this.panel1.Controls.Add(this.tablaPrima);
-            this.panel1.Location = new System.Drawing.Point(223, 54);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(256, 35);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(466, 367);
             this.panel1.TabIndex = 32;
             this.panel1.Visible = false;
             // 
+            // panelBorrarPrima
+            // 
+            this.panelBorrarPrima.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelBorrarPrima.Controls.Add(this.veri);
+            this.panelBorrarPrima.Controls.Add(this.textBorrarPrima);
+            this.panelBorrarPrima.Controls.Add(this.label31);
+            this.panelBorrarPrima.Controls.Add(this.button27);
+            this.panelBorrarPrima.Controls.Add(this.button28);
+            this.panelBorrarPrima.Location = new System.Drawing.Point(121, 43);
+            this.panelBorrarPrima.Margin = new System.Windows.Forms.Padding(2);
+            this.panelBorrarPrima.Name = "panelBorrarPrima";
+            this.panelBorrarPrima.Size = new System.Drawing.Size(223, 182);
+            this.panelBorrarPrima.TabIndex = 32;
+            this.panelBorrarPrima.Visible = false;
+            // 
+            // veri
+            // 
+            this.veri.AutoSize = true;
+            this.veri.Location = new System.Drawing.Point(80, 101);
+            this.veri.Name = "veri";
+            this.veri.Size = new System.Drawing.Size(0, 13);
+            this.veri.TabIndex = 31;
+            // 
+            // textBorrarPrima
+            // 
+            this.textBorrarPrima.Location = new System.Drawing.Point(20, 60);
+            this.textBorrarPrima.Name = "textBorrarPrima";
+            this.textBorrarPrima.Size = new System.Drawing.Size(189, 20);
+            this.textBorrarPrima.TabIndex = 30;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(80, 15);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(64, 13);
+            this.label31.TabIndex = 29;
+            this.label31.Text = "Contraseña ";
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(118, 131);
+            this.button27.Margin = new System.Windows.Forms.Padding(2);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(91, 30);
+            this.button27.TabIndex = 28;
+            this.button27.Text = "Cancelar";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // button28
+            // 
+            this.button28.Location = new System.Drawing.Point(20, 133);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(94, 28);
+            this.button28.TabIndex = 27;
+            this.button28.Text = "Eliminar";
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // surtirPrima
+            // 
+            this.surtirPrima.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.surtirPrima.Controls.Add(this.label30);
+            this.surtirPrima.Controls.Add(this.button30);
+            this.surtirPrima.Controls.Add(this.button31);
+            this.surtirPrima.Controls.Add(this.label39);
+            this.surtirPrima.Controls.Add(this.nuevaPrima);
+            this.surtirPrima.Controls.Add(this.label40);
+            this.surtirPrima.Location = new System.Drawing.Point(253, 7);
+            this.surtirPrima.Margin = new System.Windows.Forms.Padding(2);
+            this.surtirPrima.Name = "surtirPrima";
+            this.surtirPrima.Size = new System.Drawing.Size(223, 364);
+            this.surtirPrima.TabIndex = 30;
+            this.surtirPrima.Visible = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(195, 101);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(24, 13);
+            this.label30.TabIndex = 29;
+            this.label30.Text = "Mts";
+            // 
+            // button30
+            // 
+            this.button30.Location = new System.Drawing.Point(118, 161);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(91, 25);
+            this.button30.TabIndex = 28;
+            this.button30.Text = "Cancelar";
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button31
+            // 
+            this.button31.Location = new System.Drawing.Point(20, 160);
+            this.button31.Margin = new System.Windows.Forms.Padding(2);
+            this.button31.Name = "button31";
+            this.button31.Size = new System.Drawing.Size(94, 28);
+            this.button31.TabIndex = 27;
+            this.button31.Text = "Guardar";
+            this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(10, 80);
+            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(49, 13);
+            this.label39.TabIndex = 26;
+            this.label39.Text = "Cantidad";
+            // 
+            // nuevaPrima
+            // 
+            this.nuevaPrima.DecimalPlaces = 3;
+            this.nuevaPrima.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nuevaPrima.Location = new System.Drawing.Point(13, 96);
+            this.nuevaPrima.Margin = new System.Windows.Forms.Padding(2);
+            this.nuevaPrima.Name = "nuevaPrima";
+            this.nuevaPrima.Size = new System.Drawing.Size(181, 20);
+            this.nuevaPrima.TabIndex = 20;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(88, 9);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(31, 13);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Surtir";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(22, 7);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(440, 26);
+            this.textBox2.TabIndex = 31;
+            // 
             // button26
             // 
             this.button26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button26.Location = new System.Drawing.Point(141, 217);
-            this.button26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button26.Margin = new System.Windows.Forms.Padding(2);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(95, 25);
             this.button26.TabIndex = 25;
@@ -1463,7 +1623,7 @@
             // 
             this.button24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.Location = new System.Drawing.Point(251, 218);
-            this.button24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(93, 25);
             this.button24.TabIndex = 24;
@@ -1475,7 +1635,7 @@
             // 
             this.button25.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.Location = new System.Drawing.Point(22, 217);
-            this.button25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button25.Margin = new System.Windows.Forms.Padding(2);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(106, 25);
             this.button25.TabIndex = 23;
@@ -1541,156 +1701,76 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 125;
             // 
-            // textBox2
+            // panel2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(22, 7);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(440, 26);
-            this.textBox2.TabIndex = 31;
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Controls.Add(this.button29);
+            this.panel2.Controls.Add(this.button32);
+            this.panel2.Location = new System.Drawing.Point(102, 140);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(223, 182);
+            this.panel2.TabIndex = 33;
+            this.panel2.Visible = false;
             // 
-            // label40
+            // label32
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(88, 9);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(31, 13);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "Surtir";
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(80, 101);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(0, 13);
+            this.label32.TabIndex = 31;
             // 
-            // nuevaPrima
+            // textBox3
             // 
-            this.nuevaPrima.DecimalPlaces = 3;
-            this.nuevaPrima.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
-            this.nuevaPrima.Location = new System.Drawing.Point(13, 96);
-            this.nuevaPrima.Margin = new System.Windows.Forms.Padding(2);
-            this.nuevaPrima.Name = "nuevaPrima";
-            this.nuevaPrima.Size = new System.Drawing.Size(181, 20);
-            this.nuevaPrima.TabIndex = 20;
+            this.textBox3.Location = new System.Drawing.Point(20, 86);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(189, 20);
+            this.textBox3.TabIndex = 30;
             // 
-            // label39
+            // label33
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(10, 80);
-            this.label39.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(49, 13);
-            this.label39.TabIndex = 26;
-            this.label39.Text = "Cantidad";
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(80, 15);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(64, 13);
+            this.label33.TabIndex = 29;
+            this.label33.Text = "Contraseña ";
             // 
-            // button31
+            // button29
             // 
-            this.button31.Location = new System.Drawing.Point(20, 160);
-            this.button31.Margin = new System.Windows.Forms.Padding(2);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(94, 28);
-            this.button31.TabIndex = 27;
-            this.button31.Text = "Guardar";
-            this.button31.UseVisualStyleBackColor = true;
-            this.button31.Click += new System.EventHandler(this.button31_Click);
+            this.button29.Location = new System.Drawing.Point(118, 131);
+            this.button29.Margin = new System.Windows.Forms.Padding(2);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(91, 30);
+            this.button29.TabIndex = 28;
+            this.button29.Text = "Cancelar";
+            this.button29.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // button32
             // 
-            this.button30.Location = new System.Drawing.Point(118, 161);
-            this.button30.Margin = new System.Windows.Forms.Padding(2);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(91, 25);
-            this.button30.TabIndex = 28;
-            this.button30.Text = "Cancelar";
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
+            this.button32.Location = new System.Drawing.Point(20, 133);
+            this.button32.Margin = new System.Windows.Forms.Padding(2);
+            this.button32.Name = "button32";
+            this.button32.Size = new System.Drawing.Size(94, 28);
+            this.button32.TabIndex = 27;
+            this.button32.Text = "Eliminar";
+            this.button32.UseVisualStyleBackColor = true;
             // 
-            // label30
+            // label34
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(195, 101);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(24, 13);
-            this.label30.TabIndex = 29;
-            this.label30.Text = "Mts";
-            // 
-            // surtirPrima
-            // 
-            this.surtirPrima.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.surtirPrima.Controls.Add(this.label30);
-            this.surtirPrima.Controls.Add(this.button30);
-            this.surtirPrima.Controls.Add(this.button31);
-            this.surtirPrima.Controls.Add(this.label39);
-            this.surtirPrima.Controls.Add(this.nuevaPrima);
-            this.surtirPrima.Controls.Add(this.label40);
-            this.surtirPrima.Location = new System.Drawing.Point(253, 7);
-            this.surtirPrima.Margin = new System.Windows.Forms.Padding(2);
-            this.surtirPrima.Name = "surtirPrima";
-            this.surtirPrima.Size = new System.Drawing.Size(223, 364);
-            this.surtirPrima.TabIndex = 30;
-            this.surtirPrima.Visible = false;
-            // 
-            // panelBorrarPrima
-            // 
-            this.panelBorrarPrima.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panelBorrarPrima.Controls.Add(this.veri);
-            this.panelBorrarPrima.Controls.Add(this.textBorrarPrima);
-            this.panelBorrarPrima.Controls.Add(this.label31);
-            this.panelBorrarPrima.Controls.Add(this.button27);
-            this.panelBorrarPrima.Controls.Add(this.button28);
-            this.panelBorrarPrima.Location = new System.Drawing.Point(121, 43);
-            this.panelBorrarPrima.Margin = new System.Windows.Forms.Padding(2);
-            this.panelBorrarPrima.Name = "panelBorrarPrima";
-            this.panelBorrarPrima.Size = new System.Drawing.Size(223, 182);
-            this.panelBorrarPrima.TabIndex = 32;
-            this.panelBorrarPrima.Visible = false;
-            // 
-            // button27
-            // 
-            this.button27.Location = new System.Drawing.Point(118, 131);
-            this.button27.Margin = new System.Windows.Forms.Padding(2);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(91, 30);
-            this.button27.TabIndex = 28;
-            this.button27.Text = "Cancelar";
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
-            // 
-            // button28
-            // 
-            this.button28.Location = new System.Drawing.Point(20, 133);
-            this.button28.Margin = new System.Windows.Forms.Padding(2);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(94, 28);
-            this.button28.TabIndex = 27;
-            this.button28.Text = "Eliminar";
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(80, 15);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(64, 13);
-            this.label31.TabIndex = 29;
-            this.label31.Text = "Contraseña ";
-            // 
-            // textBorrarPrima
-            // 
-            this.textBorrarPrima.Location = new System.Drawing.Point(20, 60);
-            this.textBorrarPrima.Name = "textBorrarPrima";
-            this.textBorrarPrima.Size = new System.Drawing.Size(189, 20);
-            this.textBorrarPrima.TabIndex = 30;
-            // 
-            // veri
-            // 
-            this.veri.AutoSize = true;
-            this.veri.Location = new System.Drawing.Point(80, 101);
-            this.veri.Name = "veri";
-            this.veri.Size = new System.Drawing.Size(0, 13);
-            this.veri.TabIndex = 31;
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.Color.Red;
+            this.label34.Location = new System.Drawing.Point(17, 42);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(195, 39);
+            this.label34.TabIndex = 32;
+            this.label34.Text = "estas apunto de borrar un producto\r\ntodas las ventas que tenga el producto \r\nsera" +
+    "n borradas, si esta seguro, continue\r\n";
             // 
             // AgregarProductos
             // 
@@ -1698,6 +1778,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(1028, 525);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.panelPrima);
@@ -1715,10 +1796,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AgregarProductos";
             this.Text = "AgregarProductos";
             this.Load += new System.EventHandler(this.AgregarProductos_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.AgregarProductos_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).EndInit();
@@ -1760,12 +1842,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.materia_Producto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).EndInit();
-            this.surtirPrima.ResumeLayout(false);
-            this.surtirPrima.PerformLayout();
             this.panelBorrarPrima.ResumeLayout(false);
             this.panelBorrarPrima.PerformLayout();
+            this.surtirPrima.ResumeLayout(false);
+            this.surtirPrima.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuevaPrima)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaPrima)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1917,5 +2001,12 @@
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Label veri;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button32;
     }
 }

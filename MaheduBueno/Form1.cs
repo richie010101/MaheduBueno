@@ -74,7 +74,7 @@ namespace MaheduBueno
 
 
                     id_user = dt.Rows[0][0].ToString();
-                    Console.WriteLine("h"+id_user);
+                    
                     MenuPrincipal menuP = new MenuPrincipal(id_user);
                     menuP.Show();
                     Program.form1.Hide();
