@@ -531,6 +531,8 @@ namespace MaheduBueno
                 textCantidadPrimaAgregada.Text = "";
             }
             actualizar();
+            idMaterias.Clear();
+            cantidades.Clear();
         }
 
         private void button14_Click(object sender, EventArgs e)
