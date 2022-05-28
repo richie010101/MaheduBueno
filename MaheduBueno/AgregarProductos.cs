@@ -938,11 +938,15 @@ namespace MaheduBueno
 
         private void button25_Click(object sender, EventArgs e)
         {
-            recuperarEleccionPrima();
-            surtirPrima.Visible = true;
-
-
-
+            if(tablaPrima.CurrentCell.Value == null)
+            {
+                MessageBox.Show("No se ha seleccionado nada aun");
+            }
+            else
+            {
+                recuperarEleccionPrima();
+                surtirPrima.Visible = true;
+            }
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -1053,11 +1057,15 @@ namespace MaheduBueno
 
         private void button26_Click(object sender, EventArgs e)
         {
-
-            recuperarEleccionPrima();
-            panelBorrarPrima.Visible = true;
-
-
+            if (tablaPrima.CurrentCell.Value == null)
+            {
+                MessageBox.Show("No se ha seleccionado aun");
+            }
+            else
+            {
+                recuperarEleccionPrima();
+                panelBorrarPrima.Visible = true;
+            }
         }
 
         private void button27_Click(object sender, EventArgs e)

@@ -177,6 +177,7 @@
             this.button32 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet12)).BeginInit();
@@ -422,7 +423,7 @@
             this.agregarPanel.Controls.Add(this.button5);
             this.agregarPanel.Controls.Add(this.button4);
             this.agregarPanel.Controls.Add(this.button3);
-            this.agregarPanel.Location = new System.Drawing.Point(1224, 51);
+            this.agregarPanel.Location = new System.Drawing.Point(1400, 69);
             this.agregarPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agregarPanel.Name = "agregarPanel";
             this.agregarPanel.Size = new System.Drawing.Size(313, 489);
@@ -1440,15 +1441,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.panelBorrarPrima);
             this.panel1.Controls.Add(this.surtirPrima);
+            this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.button26);
             this.panel1.Controls.Add(this.button24);
             this.panel1.Controls.Add(this.button25);
             this.panel1.Controls.Add(this.tablaPrima);
-            this.panel1.Location = new System.Drawing.Point(736, 112);
+            this.panel1.Location = new System.Drawing.Point(736, 123);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(621, 452);
@@ -1471,6 +1472,7 @@
             // panelBorrarPrima
             // 
             this.panelBorrarPrima.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelBorrarPrima.Controls.Add(this.label32);
             this.panelBorrarPrima.Controls.Add(this.veri);
             this.panelBorrarPrima.Controls.Add(this.textBorrarPrima);
             this.panelBorrarPrima.Controls.Add(this.label31);
@@ -1494,7 +1496,7 @@
             // 
             // textBorrarPrima
             // 
-            this.textBorrarPrima.Location = new System.Drawing.Point(27, 74);
+            this.textBorrarPrima.Location = new System.Drawing.Point(27, 113);
             this.textBorrarPrima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBorrarPrima.Name = "textBorrarPrima";
             this.textBorrarPrima.PasswordChar = '*';
@@ -1727,7 +1729,7 @@
             this.panelBorrarProducto.Controls.Add(this.label33);
             this.panelBorrarProducto.Controls.Add(this.button29);
             this.panelBorrarProducto.Controls.Add(this.button32);
-            this.panelBorrarProducto.Location = new System.Drawing.Point(832, 9);
+            this.panelBorrarProducto.Location = new System.Drawing.Point(58, 239);
             this.panelBorrarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBorrarProducto.Name = "panelBorrarProducto";
             this.panelBorrarProducto.Size = new System.Drawing.Size(297, 224);
@@ -1818,6 +1820,18 @@
             this.textBox1.Size = new System.Drawing.Size(541, 31);
             this.textBox1.TabIndex = 35;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(24, 47);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(255, 51);
+            this.label32.TabIndex = 33;
+            this.label32.Text = "Estas apunto de borrar una materia\r\nprima, se borraran todas las relaciones\r\nque " +
+    "tenga con otros productos.\r\n";
             // 
             // AgregarProductos
             // 
@@ -2056,5 +2070,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label32;
     }
 }
