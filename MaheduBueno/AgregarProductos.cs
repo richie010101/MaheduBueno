@@ -427,11 +427,15 @@ namespace MaheduBueno
 
         private void EditarDetalles_Click(object sender, EventArgs e)
         {
-            recuperarEleccion();
-
-
-            InfoProducto.Visible = true;
-
+            if (dataGridView1.CurrentCell.Value != null)
+            {
+                recuperarEleccion();
+                InfoProducto.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Ningun producto ha sido seleccionado");
+            }
 
         }
 
@@ -634,36 +638,75 @@ namespace MaheduBueno
 
         private void button16_Click(object sender, EventArgs e)
         {
+            bool encontrado = false;
+            if (detallesNombre.Text != "" && detallesSKU.Text != "")
+            {               
+                if (!encontrado)
+                {
+                    if ((float)detallesPrecio.Value > 0 && (float)detallesCosto.Value > 0)
+                    {
+                        if ((float)detallesPrecio.Value < (float)detallesCosto.Value)
+                        {
+                            MessageBox.Show("El precio no puede ser menor al costo");
+                        }
+                        else
+                        {
+                            if ((int)detallesCantMax.Value > 0 && (int)detallesCantMin.Value > 0)
+                            {
+                                if ((int)detallesCantMax.Value > (int)detallesCantMin.Value)
+                                {
+                                    Productos[productoEditando].Nombre = detallesNombre.Text;
+                                    Productos[productoEditando].Sku = detallesSKU.Text;
+                                    Productos[productoEditando].Descripcion = detallesDesc.Text;
+                                    Productos[productoEditando].Costo = (float)detallesCosto.Value;
+                                    Productos[productoEditando].Precio = (float)detallesPrecio.Value;
+                                    Productos[productoEditando].CantidadMax = (int)detallesCantMax.Value;
+                                    Productos[productoEditando].CantidadMin = (int)detallesCantMin.Value;
 
 
-            Productos[productoEditando].Nombre = detallesNombre.Text;
-            Productos[productoEditando].Sku = detallesSKU.Text;
-            Productos[productoEditando].Descripcion = detallesDesc.Text;
-            Productos[productoEditando].Costo = (float)detallesCosto.Value;
-            Productos[productoEditando].Precio = (float)detallesPrecio.Value;
-            Productos[productoEditando].CantidadMax = (int)detallesCantMax.Value;
-            Productos[productoEditando].CantidadMin = (int)detallesCantMin.Value;
+
+                                    String sql = "Update mahedu.producto SET Nombre='" + Productos[productoEditando].Nombre + "',SKU='" + Productos[productoEditando].Sku +
+                                                "',Descripcion='" + Productos[productoEditando].Descripcion + "', [Costo/unidad]=" + Productos[productoEditando].Costo + " ,[Precio]=" + Productos[productoEditando].Precio +
+                                                ",CantidadMinima= " + Productos[productoEditando].CantidadMin + ",CantidadMaxRecom=" + Productos[productoEditando].CantidadMax +
+                                                 " WHERE idProducto=" + Productos[productoEditando].Id;
+                                    Console.WriteLine(sql);
+
+                                    SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                                    command.ExecuteNonQuery();
+                                    command.Connection.Close();
 
 
+                                    InfoProducto.Visible = false;
+                                    PanelAgregado.Visible = true;
+                                    panelEdicion.Visible = false;
 
-            String sql = "Update mahedu.producto SET Nombre='" + Productos[productoEditando].Nombre + "',SKU='" + Productos[productoEditando].Sku +
-                        "',Descripcion='" + Productos[productoEditando].Descripcion + "', [Costo/unidad]=" + Productos[productoEditando].Costo + " ,[Precio]=" + Productos[productoEditando].Precio +
-                        ",CantidadMinima= " + Productos[productoEditando].CantidadMin + ",CantidadMaxRecom=" + Productos[productoEditando].CantidadMax +
-                         " WHERE idProducto=" + Productos[productoEditando].Id;
-            Console.WriteLine(sql);
-
-            SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
-            command.ExecuteNonQuery();
-            command.Connection.Close();
-
-
-            InfoProducto.Visible = false;
-            PanelAgregado.Visible = true;
-            panelEdicion.Visible = false;
-
-            actualizar();
-
-
+                                    actualizar();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("La cantidad maxima no puede ser menor o igual \n a la cantidad minima.");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Las cantidades no pueden ser 0");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El precio y costo no pueden ser 0");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ya hay un producto con este SKU");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El nombre y SKU del producto no pueden ser vacios");
+            }
         }
 
         private void button15_Click_1(object sender, EventArgs e)
@@ -795,57 +838,64 @@ namespace MaheduBueno
         {
             try
             {
-                recuperarEleccion();
-                int agregado = (int)cantidadSurtir.Value;
-                Productos[productoEditando].Cantidad += agregado;
-
-                String sql = "Update mahedu.producto SET cantidad=" + Productos[productoEditando].Cantidad + " WHERE idProducto=" + Productos[productoEditando].Id;
-                Console.WriteLine(sql);
-
-                SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
-                command.ExecuteNonQuery();
-                command.Connection.Close();
-
-
-                String Busca= "select A.IdMateria, A.Nombre,A.Cantidad, b.cantidadUtilizada, c.idProducto , C.Nombre  from mahedu.materiaprima A inner join mahedu.producto_has_materiaprima B  " +
-                    "on A.IdMateria = B.MateriaPrima_IdMateria inner join mahedu.producto C on c.idProducto = b.Producto_idProducto where C.idProducto = "+ Productos[productoEditando].Id;
-
-                cmd = new SqlCommand(Busca, ManejadorBD.Conectar());
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable  RestarMateria = new DataTable();
-                
-
-
-
-                adapter.Fill(RestarMateria);
-
-
-                if (RestarMateria.Rows is null)
+                if (dataGridView1.CurrentCell.Value == null)
                 {
- 
+                    MessageBox.Show("Ningun producto ha sido seleccionado");
                 }
                 else
                 {
-                    int i = 0;
+                    recuperarEleccion();
+                    int agregado = (int)cantidadSurtir.Value;
+                    Productos[productoEditando].Cantidad += agregado;
 
-                    while (i < RestarMateria.Rows.Count)
+                    String sql = "Update mahedu.producto SET cantidad=" + Productos[productoEditando].Cantidad + " WHERE idProducto=" + Productos[productoEditando].Id;
+                    Console.WriteLine(sql);
+
+                    SqlCommand command = new SqlCommand(sql, ManejadorBD.Conectar());
+                    command.ExecuteNonQuery();
+                    command.Connection.Close();
+
+
+                    String Busca = "select A.IdMateria, A.Nombre,A.Cantidad, b.cantidadUtilizada, c.idProducto , C.Nombre  from mahedu.materiaprima A inner join mahedu.producto_has_materiaprima B  " +
+                        "on A.IdMateria = B.MateriaPrima_IdMateria inner join mahedu.producto C on c.idProducto = b.Producto_idProducto where C.idProducto = " + Productos[productoEditando].Id;
+
+                    cmd = new SqlCommand(Busca, ManejadorBD.Conectar());
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable RestarMateria = new DataTable();
+
+
+
+
+                    adapter.Fill(RestarMateria);
+
+
+                    if (RestarMateria.Rows is null)
                     {
-                        String borrar = "update mahedu.materiaprima set Cantidad= Cantidad -"
-                                        + (float)(agregado * float.Parse(RestarMateria.Rows[i][3].ToString())) + " where IdMateria=" + int.Parse(RestarMateria.Rows[i][0].ToString());
 
-                        SqlCommand command2 = new SqlCommand(borrar, ManejadorBD.Conectar());
-                        command2.ExecuteNonQuery();
-                        command2.Connection.Close();
-
-                        i++;
                     }
+                    else
+                    {
+                        int i = 0;
+
+                        while (i < RestarMateria.Rows.Count)
+                        {
+                            String borrar = "update mahedu.materiaprima set Cantidad= Cantidad -"
+                                            + (float)(agregado * float.Parse(RestarMateria.Rows[i][3].ToString())) + " where IdMateria=" + int.Parse(RestarMateria.Rows[i][0].ToString());
+
+                            SqlCommand command2 = new SqlCommand(borrar, ManejadorBD.Conectar());
+                            command2.ExecuteNonQuery();
+                            command2.Connection.Close();
+
+                            i++;
+                        }
+                    }
+
+                    PanelAgregado.Visible = true;
+                    panelEdicion.Visible = false;
+                    panelSurtir.Visible = false;
+
+                    actualizar();
                 }
-
-                PanelAgregado.Visible = true;
-                panelEdicion.Visible = false;
-                panelSurtir.Visible = false;
-
-                actualizar();
             }
             catch (Exception ex)
             {
@@ -1078,7 +1128,11 @@ namespace MaheduBueno
 
         private void button32_Click(object sender, EventArgs e)
         {
-            if (textConfirmarContraBorrar.Text.Equals(usuario.contraMov))
+            if(dataGridView1.CurrentCell.Value == null)
+            {
+                MessageBox.Show("Ningun producto seleccionado");
+            }
+            else if (textConfirmarContraBorrar.Text.Equals(usuario.contraMov))
             {
                 try
                 {
@@ -1102,14 +1156,10 @@ namespace MaheduBueno
                     Console.WriteLine("Ayuda dios mio: " + ex);
                 }
             }
-
             else
+            {
                 labelContra.Text = "contraseña incorrecta, verifique";
-
-
-
-
-
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

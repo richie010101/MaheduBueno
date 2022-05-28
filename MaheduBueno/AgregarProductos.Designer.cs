@@ -422,7 +422,7 @@
             this.agregarPanel.Controls.Add(this.button5);
             this.agregarPanel.Controls.Add(this.button4);
             this.agregarPanel.Controls.Add(this.button3);
-            this.agregarPanel.Location = new System.Drawing.Point(40, 181);
+            this.agregarPanel.Location = new System.Drawing.Point(1224, 51);
             this.agregarPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.agregarPanel.Name = "agregarPanel";
             this.agregarPanel.Size = new System.Drawing.Size(313, 489);
@@ -1016,7 +1016,7 @@
             this.panelEdicion.Controls.Add(this.button14);
             this.panelEdicion.Controls.Add(this.agregaMedidas);
             this.panelEdicion.Controls.Add(this.editarCantMateria);
-            this.panelEdicion.Location = new System.Drawing.Point(1380, 44);
+            this.panelEdicion.Location = new System.Drawing.Point(129, 200);
             this.panelEdicion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelEdicion.Name = "panelEdicion";
             this.panelEdicion.Size = new System.Drawing.Size(300, 494);
@@ -1497,6 +1497,7 @@
             this.textBorrarPrima.Location = new System.Drawing.Point(27, 74);
             this.textBorrarPrima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBorrarPrima.Name = "textBorrarPrima";
+            this.textBorrarPrima.PasswordChar = '*';
             this.textBorrarPrima.Size = new System.Drawing.Size(251, 22);
             this.textBorrarPrima.TabIndex = 30;
             // 
@@ -1759,6 +1760,7 @@
             this.textConfirmarContraBorrar.Location = new System.Drawing.Point(27, 105);
             this.textConfirmarContraBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textConfirmarContraBorrar.Name = "textConfirmarContraBorrar";
+            this.textConfirmarContraBorrar.PasswordChar = '*';
             this.textConfirmarContraBorrar.Size = new System.Drawing.Size(251, 22);
             this.textConfirmarContraBorrar.TabIndex = 30;
             // 
@@ -1825,10 +1827,10 @@
             this.ClientSize = new System.Drawing.Size(1673, 646);
             this.Controls.Add(this.panelBorrarProducto);
             this.Controls.Add(this.agregarPanel);
+            this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelPrima);
             this.Controls.Add(this.button23);
-            this.Controls.Add(this.panelEdicion);
             this.Controls.Add(this.PanelAgregado);
             this.Controls.Add(this.BTNELIMINARSELECCION);
             this.Controls.Add(this.BTNEDITARSELECCION);
