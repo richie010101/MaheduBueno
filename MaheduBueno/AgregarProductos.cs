@@ -124,22 +124,61 @@ namespace MaheduBueno
 
         private void button7_Click(object sender, EventArgs e)
         {
-            nuevo.Nombre = textNombrePoducto.Text;
-            nuevo.Sku = textSKUproducto.Text;
-            nuevo.Precio = (float)precio.Value;
-            nuevo.Costo = (float)costo.Value;
-            nuevo.Cantidad = (int)CantidadProducto.Value;
+            bool encontrado = false;
+            if (textNombrePoducto.Text != "" && textSKUproducto.Text != "")
+            {
+                foreach (Producto p in Productos)
+                {
+                    //Revisar
+                    if(p.Sku == textSKUproducto.Text)
+                    {
+                        encontrado = true;
+                        break;
+                    }
+                }
 
-            textNombrePoducto.Text = "";
-            textSKUproducto.Text = "";
-            precio.Value = 0;
-            costo.Value = 0;
-            CantidadProducto.Value = 0;
+                if (!encontrado)
+                {
+                    if ((float)precio.Value > 0 && (float)costo.Value > 0)
+                    {
+                        if((float)precio.Value < (float)costo.Value)
+                        {
+                            MessageBox.Show("El precio no puede ser menor al costo");
+                        }
+                        else
+                        {
+                            nuevo.Nombre = textNombrePoducto.Text;
+                            nuevo.Sku = textSKUproducto.Text;
+                            nuevo.Precio = (float)precio.Value;
+                            nuevo.Costo = (float)costo.Value;
+                            nuevo.Cantidad = (int)CantidadProducto.Value;
 
-            addPanel2.Visible = true;
-            Addpanel.Visible = false;
+                            textNombrePoducto.Text = "";
+                            textSKUproducto.Text = "";
+                            precio.Value = 0;
+                            costo.Value = 0;
+                            CantidadProducto.Value = 0;
 
-            Console.WriteLine(nuevo.Cantidad + nuevo.Sku + nuevo.Precio + nuevo.Costo + nuevo.Nombre);
+                            addPanel2.Visible = true;
+                            Addpanel.Visible = false;
+
+                            Console.WriteLine(nuevo.Cantidad + nuevo.Sku + nuevo.Precio + nuevo.Costo + nuevo.Nombre);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El precio y costo no pueden ser 0");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ya hay un producto con este SKU");
+                }
+            }
+            else
+            {
+                MessageBox.Show("El nombre y SKU del producto no pueden ser vacios");
+            }
         }
 
         private void ProductoPanel_Paint(object sender, PaintEventArgs e)
@@ -199,57 +238,50 @@ namespace MaheduBueno
 
         private void button9_Click(object sender, EventArgs e)
         {
-            nuevo.Descripcion = textDescripcionProducto.Text;
-            nuevo.CantidadMax = (int)CantidadMaxProducto.Value;
-            nuevo.CantidadMin = (int)cantidadMinProducto.Value;
-
-            CantidadMaxProducto.Value = 0;
-            cantidadMinProducto.Value = 0;
-            textDescripcionProducto.Text = "";
-
-
-            try
+            if ((int)CantidadMaxProducto.Value > 0 && (int)cantidadMinProducto.Value > 0)
             {
+                if ((int)CantidadMaxProducto.Value > (int)cantidadMinProducto.Value)
+                {
+                    nuevo.Descripcion = textDescripcionProducto.Text;
+                    nuevo.CantidadMax = (int)CantidadMaxProducto.Value;
+                    nuevo.CantidadMin = (int)cantidadMinProducto.Value;
 
+                    CantidadMaxProducto.Value = 0;
+                    cantidadMinProducto.Value = 0;
+                    textDescripcionProducto.Text = "";
 
-                String qery = "INSERT INTO mahedu.producto VALUES('" + nuevo.Sku + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," +
-                                                                   nuevo.Costo + "," + nuevo.Cantidad + "," + nuevo.Precio + "," + nuevo.CantidadMin + "," + nuevo.CantidadMax + ")";
+                    try
+                    {
+                        String qery = "INSERT INTO mahedu.producto VALUES('" + nuevo.Sku + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," +
+                               nuevo.Costo + "," + nuevo.Cantidad + "," + nuevo.Precio + "," + nuevo.CantidadMin + "," + nuevo.CantidadMax + ")";
 
-                Console.WriteLine("Corriste");
-
-
-                Console.WriteLine(qery);
-
-
-
-                SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
-                command.ExecuteNonQuery();
-                command.Connection.Close();
-                agregarPanel.Visible = false;
-                addPrima.Visible = false;
-                PanelAgregado.Visible = true;
-
-
-
+                        SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
+                        command.ExecuteNonQuery();
+                        command.Connection.Close();
+                        agregarPanel.Visible = false;
+                        addPrima.Visible = false;
+                        PanelAgregado.Visible = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error en la conexion del servidor busque ayuda: " + ex);
+                    }
+                    /*
+                       addPanel3.Visible = true;
+                       addPanel2.Visible = false;    */
+                    PanelAgregado.Visible = true;
+                    addPanel2.Visible = false;
+                    actualizar();
+                }
+                else
+                {
+                    MessageBox.Show("La cantidad maxima no puede ser menor o igual \n a la cantidad minima.");
+                }
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                MessageBox.Show("Las cantidades no pueden ser 0");
             }
-
-
-
-
-
-
-            /*
-               addPanel3.Visible = true;
-               addPanel2.Visible = false;    */
-
-            PanelAgregado.Visible = true;
-            addPanel2.Visible = false;
-            actualizar();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -321,18 +353,18 @@ namespace MaheduBueno
                     }
                     else
                     {
-                        MessageBox.Show("no es posible poner cantidad negativas a la materia prima, verifique");
+                        MessageBox.Show("No es posible poner cantidad negativas a la materia prima, verifique");
                     }
                 }
                 else
                 {
 
-                    MessageBox.Show("agrega SKU a tu materia prima");
+                    MessageBox.Show("Agrega SKU a tu materia prima");
                 }
             }
             else
             {
-                MessageBox.Show("agrega nombre a tu materia prima");
+                MessageBox.Show("Agrega nombre a tu materia prima");
             }
 
             actualizar();
