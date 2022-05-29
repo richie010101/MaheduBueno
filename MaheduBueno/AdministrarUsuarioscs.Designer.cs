@@ -40,10 +40,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.confirmar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maheduDataSet2 = new MaheduBueno.MaheduDataSet2();
             this.button4 = new System.Windows.Forms.Button();
@@ -55,6 +51,7 @@
             this.maheduDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new MaheduBueno.MaheduDataSet2TableAdapters.usuarioTableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tipoUsuario = new System.Windows.Forms.ComboBox();
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -70,7 +67,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.tipousuarioTableAdapter = new MaheduBueno.MaheduDataSet9TableAdapters.tipousuarioTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
+            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -99,6 +100,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -155,7 +157,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(61, 109);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -170,7 +171,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.confirmar);
-            this.panel2.Location = new System.Drawing.Point(285, 2);
+            this.panel2.Location = new System.Drawing.Point(227, 89);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 200);
@@ -213,15 +214,14 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idUsuario,
-            this.nombresDataGridViewTextBoxColumn,
-            this.apellidoPDataGridViewTextBoxColumn,
-            this.apellidoMDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.usuarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 10);
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dataGridView1.Location = new System.Drawing.Point(-7, 4);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -232,42 +232,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(499, 165);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // idUsuario
-            // 
-            this.idUsuario.DataPropertyName = "idUsuario";
-            this.idUsuario.HeaderText = "idUsuario";
-            this.idUsuario.MinimumWidth = 6;
-            this.idUsuario.Name = "idUsuario";
-            this.idUsuario.ReadOnly = true;
-            this.idUsuario.Width = 125;
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombres";
-            this.nombresDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombresDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // apellidoPDataGridViewTextBoxColumn
-            // 
-            this.apellidoPDataGridViewTextBoxColumn.DataPropertyName = "ApellidoP";
-            this.apellidoPDataGridViewTextBoxColumn.HeaderText = "ApellidoP";
-            this.apellidoPDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoPDataGridViewTextBoxColumn.Name = "apellidoPDataGridViewTextBoxColumn";
-            this.apellidoPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidoPDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // apellidoMDataGridViewTextBoxColumn
-            // 
-            this.apellidoMDataGridViewTextBoxColumn.DataPropertyName = "ApellidoM";
-            this.apellidoMDataGridViewTextBoxColumn.HeaderText = "ApellidoM";
-            this.apellidoMDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.apellidoMDataGridViewTextBoxColumn.Name = "apellidoMDataGridViewTextBoxColumn";
-            this.apellidoMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.apellidoMDataGridViewTextBoxColumn.Width = 200;
             // 
             // usuarioBindingSource
             // 
@@ -357,13 +321,26 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(153, 10);
+            this.panel3.Location = new System.Drawing.Point(144, 37);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(490, 327);
             this.panel3.TabIndex = 9;
             this.panel3.Visible = false;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(250, 278);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(164, 30);
+            this.button6.TabIndex = 32;
+            this.button6.Text = "Cancelar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label9
             // 
@@ -379,15 +356,15 @@
             // 
             // tipoUsuario
             // 
-            this.tipoUsuario.DataSource = this.tipousuarioBindingSource;
-            this.tipoUsuario.DisplayMember = "tipoUsuario";
             this.tipoUsuario.FormattingEnabled = true;
+            this.tipoUsuario.Items.AddRange(new object[] {
+            "Administrador",
+            "Vendedor"});
             this.tipoUsuario.Location = new System.Drawing.Point(146, 244);
             this.tipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tipoUsuario.Name = "tipoUsuario";
             this.tipoUsuario.Size = new System.Drawing.Size(92, 21);
             this.tipoUsuario.TabIndex = 30;
-            this.tipoUsuario.ValueMember = "tipoUsuario";
             // 
             // tipousuarioBindingSource
             // 
@@ -520,18 +497,41 @@
             // 
             this.tipousuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // button6
+            // idUsuario
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(250, 278);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(164, 30);
-            this.button6.TabIndex = 32;
-            this.button6.Text = "Cancelar";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.idUsuario.DataPropertyName = "idUsuario";
+            this.idUsuario.HeaderText = "idUsuario";
+            this.idUsuario.MinimumWidth = 6;
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Width = 125;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nombre";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Apellido P";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 110;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Apellido M";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 110;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "TIPO";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // AdministrarUsuarioscs
             // 
@@ -539,6 +539,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(638, 375);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -595,10 +596,6 @@
         private MaheduDataSet2 maheduDataSet2;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
         private MaheduDataSet2TableAdapters.usuarioTableAdapter usuarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoMDataGridViewTextBoxColumn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button confirmar;
@@ -620,5 +617,10 @@
         private System.Windows.Forms.BindingSource tipousuarioBindingSource;
         private MaheduDataSet9TableAdapters.tipousuarioTableAdapter tipousuarioTableAdapter;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

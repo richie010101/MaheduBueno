@@ -30,6 +30,7 @@ namespace MaheduBueno
             masVendidos();
             cambiaDescripcion();
             cargar();
+            panel1.Visible = false;
 
             label2.Text = usuario.username;
         }
@@ -701,5 +702,52 @@ namespace MaheduBueno
                 i--;
             }
         }
+
+        private void buttonCerrar_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            recuperarProductos();
+            panel1.Visible = true;
+        }
+
+        private void recuperarProductos()
+        {
+            Productos.Rows.Clear();
+
+            String consulta = "select  a.* from mahedu.producto as A where (A.Cantidad <= A.CantidadMinima*1.25);";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable productosN = new DataTable();
+
+            adapter.Fill(productosN);
+            try
+            {
+                int i;
+                for (i = 0; i < productosN.Rows.Count; i++)
+                {
+                    Productos.Rows.Add();
+                    Productos[0, i].Value = productosN.Rows[i][2].ToString();
+                    Productos[1, i].Value = productosN.Rows[i][5].ToString();
+                    Productos[2, i].Value = productosN.Rows[i][7].ToString();
+
+                    Console.WriteLine(productosN.Rows[i][2].ToString());
+
+                }
+
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+        }
+          
     }
+
 }

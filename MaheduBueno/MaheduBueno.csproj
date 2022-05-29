@@ -276,18 +276,6 @@
       <DependentUpon>MaheduDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="ManejadorBD.cs" />
-    <Compile Include="Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MenuAgregarProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MenuAgregarProducto.Designer.cs">
-      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,12 +311,6 @@
     </Compile>
     <Compile Include="MessageBox4.Designer.cs">
       <DependentUpon>MessageBox4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MessageBox5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageBox5.Designer.cs">
-      <DependentUpon>MessageBox5.cs</DependentUpon>
     </Compile>
     <Compile Include="Nombre1cs.cs">
       <SubType>Form</SubType>
@@ -438,12 +420,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuAgregarProducto.resx">
-      <DependentUpon>MenuAgregarProducto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MenuAgregarUsuario.resx">
       <DependentUpon>MenuAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -461,9 +437,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBox4.resx">
       <DependentUpon>MessageBox4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageBox5.resx">
-      <DependentUpon>MessageBox5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nombre1cs.resx">
       <DependentUpon>Nombre1cs.cs</DependentUpon>

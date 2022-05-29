@@ -23,6 +23,7 @@ namespace MaheduBueno
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Close();
             MenuPrincipal menu = new MenuPrincipal();
 
             menu.Show();
@@ -162,9 +163,6 @@ namespace MaheduBueno
 
         private void MenuAgregarUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet6.tipousuario' Puede moverla o quitarla según sea necesario.
-            this.tipousuarioTableAdapter.Fill(this.maheduDataSet6.tipousuario);
-
 
         }
 

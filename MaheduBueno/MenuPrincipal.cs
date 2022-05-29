@@ -143,6 +143,7 @@ namespace MaheduBueno
 
         private void button7_Click(object sender, EventArgs e)
         {
+            this.Close();
             Program.form1.Show();
 
             usuario.contraMov = "";

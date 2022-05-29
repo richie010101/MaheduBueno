@@ -15,6 +15,8 @@ namespace MaheduBueno
     public partial class AdministrarUsuarioscs : Form
     {
         private ManejadorBD manejadorBD;
+
+        SqlCommand cmd;
         public AdministrarUsuarioscs()
         {
             InitializeComponent();
@@ -39,6 +41,14 @@ namespace MaheduBueno
         private void button2_Click(object sender, EventArgs e)
         {
             new MenuAgregarUsuario().Show();
+            this.Close();
+            int i;
+            /*
+            for(i=0;i<tipoUsuario.Items.Count;i++)
+            {
+                if (tipoUsuario.Items[i].ToString().Equals("SuperUsuario")) ;
+                tipoUsuario.Items.RemoveAt(i);
+            }  */
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,6 +62,14 @@ namespace MaheduBueno
         private void button3_Click(object sender, EventArgs e)
         {
             panel3.Visible = true;
+
+
+
+
+
+
+
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -63,12 +81,51 @@ namespace MaheduBueno
 
         private void AdministrarUsuarioscs_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet9.tipousuario' Puede moverla o quitarla según sea necesario.
-            this.tipousuarioTableAdapter.Fill(this.maheduDataSet9.tipousuario);
-            // TODO: esta línea de código carga datos en la tabla 'maheduDataSet2.usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.maheduDataSet2.usuario);
+            dataGridView1.Rows.Clear();
+
+            String consulta = "select * from mahedu.usuario where mahedu.usuario.tipoUsuario_idtipoUsuario!=4;";
+            cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable productosN = new DataTable();
+            
+
+             adapter.Fill(productosN);
+             try
+             {
+                int i;
+               for (i = 0; i < productosN.Rows.Count; i++)
+               {        
+                            dataGridView1.Rows.Add();
+                            dataGridView1[0, i].Value = productosN.Rows[i][0].ToString();
+                            dataGridView1[1, i].Value = productosN.Rows[i][1].ToString();
+                            dataGridView1[2, i].Value = productosN.Rows[i][2].ToString();
+                            dataGridView1[3, i].Value = productosN.Rows[i][3].ToString();
+                            
+                        if (productosN.Rows[i][6].ToString().Equals("5"))
+                          {
+                            dataGridView1[4, i].Value = "Administrador";
+                          }
+                        else
+                          {
+                            dataGridView1[4, i].Value = "Vendedor";
+                          }
+                }
+
+
+          }
+            catch (Exception R)
+          {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+
+
 
             label2.Text = usuario.username;
+
+
+
+
 
         }
 
@@ -254,6 +311,11 @@ namespace MaheduBueno
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
