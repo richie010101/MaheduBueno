@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaheduBueno.clases2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace MaheduBueno
         public BuscarProductos()
         {
             InitializeComponent();
+            label2.Text = usuario.username;
         }
 
         private void button1_Click(object sender, EventArgs e)

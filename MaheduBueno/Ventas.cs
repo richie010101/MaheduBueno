@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaheduBueno.clases2;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -74,7 +75,7 @@ namespace MaheduBueno
         {
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet11.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.maheduDataSet11.producto);
-            
+            label2.Text = usuario.username;
 
         }
 
