@@ -52,7 +52,6 @@
             this.ClientSize = new System.Drawing.Size(760, 117);
             this.Controls.Add(this.label1);
             this.Name = "ErrorRecopilar";
-            this.Text = "ErrorRecopilar";
             this.ResumeLayout(false);
 
         }

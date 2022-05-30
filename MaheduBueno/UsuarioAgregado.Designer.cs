@@ -42,7 +42,7 @@
             this.label1.ForeColor = System.Drawing.Color.Gold;
             this.label1.Location = new System.Drawing.Point(22, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 54);
+            this.label1.Size = new System.Drawing.Size(223, 56);
             this.label1.TabIndex = 0;
             this.label1.Text = "Selecciona el tipo \r\nde Usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,7 +86,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "UsuarioAgregado";
-            this.Text = "UsuarioAgregado";
             this.ResumeLayout(false);
             this.PerformLayout();
 

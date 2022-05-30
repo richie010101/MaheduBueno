@@ -51,7 +51,6 @@
             this.ClientSize = new System.Drawing.Size(754, 124);
             this.Controls.Add(this.label1);
             this.Name = "EstadisticasError";
-            this.Text = "EstadisticasError";
             this.ResumeLayout(false);
 
         }

@@ -57,11 +57,11 @@ namespace MaheduBueno
 
             DataTable dt = new DataTable();
 
-            adapter.Fill(dt);
 
 
             try
             {
+                adapter.Fill(dt);
                 if (dt.Rows[0][0].ToString() != null)
                 {
                     usuario.idUser = int.Parse(dt.Rows[0][0].ToString());

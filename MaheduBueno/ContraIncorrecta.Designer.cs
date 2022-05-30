@@ -51,7 +51,6 @@
             this.ClientSize = new System.Drawing.Size(451, 102);
             this.Controls.Add(this.label1);
             this.Name = "ContraIncorrecta";
-            this.Text = "ContraIncorrecta";
             this.ResumeLayout(false);
 
         }

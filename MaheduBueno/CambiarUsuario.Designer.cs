@@ -82,7 +82,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(235, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 32);
+            this.label1.Size = new System.Drawing.Size(354, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cambiar tipo de usuario:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -237,7 +237,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CambiarUsuario";
-            this.Text = "CambiarUsuario";
+            this.Text = "Editar usuario";
             this.Load += new System.EventHandler(this.CambiarUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

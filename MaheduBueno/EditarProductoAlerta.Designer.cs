@@ -51,7 +51,6 @@
             this.ClientSize = new System.Drawing.Size(771, 121);
             this.Controls.Add(this.label1);
             this.Name = "EditarProductoAlerta";
-            this.Text = "EditarProductoAlerta";
             this.ResumeLayout(false);
 
         }

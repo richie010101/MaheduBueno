@@ -51,7 +51,6 @@
             this.ClientSize = new System.Drawing.Size(589, 110);
             this.Controls.Add(this.label1);
             this.Name = "NoProducto";
-            this.Text = "NoProducto";
             this.ResumeLayout(false);
 
         }

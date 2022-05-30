@@ -51,7 +51,6 @@
             this.ClientSize = new System.Drawing.Size(789, 134);
             this.Controls.Add(this.label1);
             this.Name = "ErrorVentaAlerta";
-            this.Text = "ErrorVentaAlerta";
             this.ResumeLayout(false);
 
         }

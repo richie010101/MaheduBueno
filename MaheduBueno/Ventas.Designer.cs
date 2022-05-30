@@ -72,9 +72,10 @@ namespace MaheduBueno
             this.comboBox1.Items.AddRange(new object[] {
             "Nombre",
             "SKU"});
-            this.comboBox1.Location = new System.Drawing.Point(697, 264);
+            this.comboBox1.Location = new System.Drawing.Point(929, 325);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(83, 21);
+            this.comboBox1.Size = new System.Drawing.Size(109, 24);
             this.comboBox1.TabIndex = 22;
             this.comboBox1.Text = "Nombre";
             // 
@@ -92,15 +93,15 @@ namespace MaheduBueno
             this.ID,
             this.dataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.productoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(302, 305);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(403, 375);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(305, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(407, 254);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -109,38 +110,48 @@ namespace MaheduBueno
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
             this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 125;
             // 
             // sKUDataGridViewTextBoxColumn
             // 
             this.sKUDataGridViewTextBoxColumn.DataPropertyName = "SKU";
             this.sKUDataGridViewTextBoxColumn.HeaderText = "SKU";
+            this.sKUDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sKUDataGridViewTextBoxColumn.Name = "sKUDataGridViewTextBoxColumn";
             this.sKUDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sKUDataGridViewTextBoxColumn.Width = 125;
             // 
             // precioDataGridViewTextBoxColumn
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioDataGridViewTextBoxColumn.Width = 125;
             // 
             // ID
             // 
             this.ID.DataPropertyName = "idProducto";
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Visible = false;
+            this.ID.Width = 125;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Cantidad";
             this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // productoBindingSource
             // 
@@ -155,10 +166,10 @@ namespace MaheduBueno
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(355, 260);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(473, 320);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(337, 26);
+            this.textBox1.Size = new System.Drawing.Size(448, 31);
             this.textBox1.TabIndex = 20;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -168,10 +179,9 @@ namespace MaheduBueno
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(661, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(881, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(188, 28);
+            this.label2.Size = new System.Drawing.Size(238, 34);
             this.label2.TabIndex = 18;
             this.label2.Text = "Ricardo Tinoco";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -182,10 +192,9 @@ namespace MaheduBueno
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(680, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(907, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 28);
+            this.label1.Size = new System.Drawing.Size(178, 34);
             this.label1.TabIndex = 17;
             this.label1.Text = "Bienvenido";
             // 
@@ -193,10 +202,10 @@ namespace MaheduBueno
             // 
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(109, 177);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(145, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 39);
+            this.button1.Size = new System.Drawing.Size(61, 48);
             this.button1.TabIndex = 19;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -205,10 +214,10 @@ namespace MaheduBueno
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 29);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(85, 36);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 115);
+            this.pictureBox2.Size = new System.Drawing.Size(259, 142);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -217,28 +226,30 @@ namespace MaheduBueno
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(1187, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(1529, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 96);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 118);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(945, 264);
+            this.numericUpDown1.Location = new System.Drawing.Point(1260, 325);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(55, 22);
             this.numericUpDown1.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(868, 264);
+            this.label3.Location = new System.Drawing.Point(1157, 325);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 24;
             this.label3.Text = "Cantidad";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -254,15 +265,15 @@ namespace MaheduBueno
             this.Cantidad,
             this.Precio,
             this._ID});
-            this.dataGridView2.Location = new System.Drawing.Point(796, 302);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(1061, 372);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(273, 177);
+            this.dataGridView2.Size = new System.Drawing.Size(364, 218);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             this.dataGridView2.ColumnRemoved += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView2_ColumnRemoved);
@@ -273,30 +284,37 @@ namespace MaheduBueno
             this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Nombre.Frozen = true;
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 69;
+            this.Nombre.Width = 87;
             // 
             // Cantidad
             // 
             this.Cantidad.Frozen = true;
             this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 125;
             // 
             // Precio
             // 
             this.Precio.Frozen = true;
             this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
             // 
             // _ID
             // 
             this._ID.HeaderText = "ID";
+            this._ID.MinimumWidth = 6;
             this._ID.Name = "_ID";
             this._ID.ReadOnly = true;
             this._ID.Visible = false;
+            this._ID.Width = 125;
             // 
             // productoTableAdapter
             // 
@@ -304,9 +322,10 @@ namespace MaheduBueno
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(964, 484);
+            this.button2.Location = new System.Drawing.Point(1285, 596);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 43);
+            this.button2.Size = new System.Drawing.Size(120, 53);
             this.button2.TabIndex = 26;
             this.button2.Text = "Confirmar Compra";
             this.button2.UseVisualStyleBackColor = true;
@@ -314,9 +333,10 @@ namespace MaheduBueno
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(839, 484);
+            this.button3.Location = new System.Drawing.Point(1119, 596);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 43);
+            this.button3.Size = new System.Drawing.Size(120, 53);
             this.button3.TabIndex = 27;
             this.button3.Text = "Cancelar Compra";
             this.button3.UseVisualStyleBackColor = true;
@@ -328,9 +348,10 @@ namespace MaheduBueno
             this.errorcantidad.BackColor = System.Drawing.Color.Transparent;
             this.errorcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorcantidad.ForeColor = System.Drawing.Color.Red;
-            this.errorcantidad.Location = new System.Drawing.Point(802, 245);
+            this.errorcantidad.Location = new System.Drawing.Point(1069, 302);
+            this.errorcantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.errorcantidad.Name = "errorcantidad";
-            this.errorcantidad.Size = new System.Drawing.Size(251, 15);
+            this.errorcantidad.Size = new System.Drawing.Size(291, 18);
             this.errorcantidad.TabIndex = 28;
             this.errorcantidad.Text = "Ingresa una cantidad para el producto";
             this.errorcantidad.Visible = false;
@@ -339,18 +360,19 @@ namespace MaheduBueno
             // 
             this.Total.AutoSize = true;
             this.Total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(681, 458);
+            this.Total.Location = new System.Drawing.Point(908, 564);
+            this.Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(56, 21);
+            this.Total.Size = new System.Drawing.Size(70, 28);
             this.Total.TabIndex = 30;
             this.Total.Text = "Total: ";
             // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
-            this.ClientSize = new System.Drawing.Size(1320, 725);
+            this.ClientSize = new System.Drawing.Size(1760, 892);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.errorcantidad);
             this.Controls.Add(this.button3);
@@ -366,9 +388,10 @@ namespace MaheduBueno
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ventas";
+            this.Text = "Venta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
