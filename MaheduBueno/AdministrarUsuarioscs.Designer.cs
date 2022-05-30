@@ -76,6 +76,10 @@
             this.button34 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textError = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -92,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet9)).BeginInit();
             this.PanelAgregado.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,7 +104,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(506, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +117,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
             this.pictureBox2.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +157,7 @@
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(9, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 27);
             this.button1.TabIndex = 5;
@@ -164,7 +169,7 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(61, 109);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 188);
             this.panel1.TabIndex = 6;
@@ -180,7 +185,7 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(-7, 4);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -239,7 +244,7 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.confirmar);
             this.panel2.Location = new System.Drawing.Point(227, 89);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 200);
             this.panel2.TabIndex = 1;
@@ -262,7 +267,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(57, 115);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 1;
@@ -271,7 +276,7 @@
             // confirmar
             // 
             this.confirmar.Location = new System.Drawing.Point(64, 154);
-            this.confirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.confirmar.Margin = new System.Windows.Forms.Padding(2);
             this.confirmar.Name = "confirmar";
             this.confirmar.Size = new System.Drawing.Size(56, 19);
             this.confirmar.TabIndex = 0;
@@ -294,7 +299,7 @@
             this.button4.BackgroundImage = global::MaheduBueno.Properties.Resources.basura;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Location = new System.Drawing.Point(526, 318);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(36, 32);
             this.button4.TabIndex = 4;
@@ -306,7 +311,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(61, 319);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 28);
             this.button2.TabIndex = 7;
@@ -319,7 +324,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(291, 319);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 28);
             this.button3.TabIndex = 8;
@@ -368,7 +373,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Location = new System.Drawing.Point(144, 37);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(490, 327);
             this.panel3.TabIndex = 9;
@@ -380,7 +385,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(250, 278);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(164, 30);
             this.button6.TabIndex = 32;
@@ -407,7 +412,7 @@
             "Administrador",
             "Vendedor"});
             this.tipoUsuario.Location = new System.Drawing.Point(146, 244);
-            this.tipoUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipoUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tipoUsuario.Name = "tipoUsuario";
             this.tipoUsuario.Size = new System.Drawing.Size(92, 21);
             this.tipoUsuario.TabIndex = 30;
@@ -416,7 +421,7 @@
             // 
             this.ApellidoM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApellidoM.Location = new System.Drawing.Point(146, 181);
-            this.ApellidoM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoM.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoM.Name = "ApellidoM";
             this.ApellidoM.Size = new System.Drawing.Size(318, 26);
             this.ApellidoM.TabIndex = 29;
@@ -439,7 +444,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(60, 278);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(164, 30);
             this.button5.TabIndex = 27;
@@ -451,7 +456,7 @@
             // 
             this.ApellidoP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApellidoP.Location = new System.Drawing.Point(146, 137);
-            this.ApellidoP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoP.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoP.Name = "ApellidoP";
             this.ApellidoP.Size = new System.Drawing.Size(318, 26);
             this.ApellidoP.TabIndex = 26;
@@ -460,7 +465,7 @@
             // 
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre.Location = new System.Drawing.Point(146, 92);
-            this.nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(318, 26);
             this.nombre.TabIndex = 25;
@@ -522,7 +527,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox4.Location = new System.Drawing.Point(396, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(92, 67);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -553,7 +558,7 @@
             this.PanelAgregado.Location = new System.Drawing.Point(113, 81);
             this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2);
             this.PanelAgregado.Name = "PanelAgregado";
-            this.PanelAgregado.Size = new System.Drawing.Size(407, 134);
+            this.PanelAgregado.Size = new System.Drawing.Size(407, 133);
             this.PanelAgregado.TabIndex = 33;
             // 
             // button34
@@ -591,12 +596,63 @@
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel4.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.textError);
+            this.panel4.Controls.Add(this.button8);
+            this.panel4.Location = new System.Drawing.Point(111, 66);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(407, 134);
+            this.panel4.TabIndex = 34;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(50, 95);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(308, 23);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Aceptar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // textError
+            // 
+            this.textError.AutoSize = true;
+            this.textError.BackColor = System.Drawing.Color.Transparent;
+            this.textError.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textError.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.textError.Location = new System.Drawing.Point(47, 60);
+            this.textError.Name = "textError";
+            this.textError.Size = new System.Drawing.Size(313, 25);
+            this.textError.TabIndex = 3;
+            this.textError.Text = "GUARDADO CORRECTAMENTE\r\n";
+            this.textError.Paint += new System.Windows.Forms.PaintEventHandler(this.textError_Paint);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Red;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(10, 10);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(28, 30);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "X";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // AdministrarUsuarioscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(638, 375);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.PanelAgregado);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -609,7 +665,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdministrarUsuarioscs";
             this.Text = "Administrar usuarios";
             this.Load += new System.EventHandler(this.AdministrarUsuarioscs_Load);
@@ -633,6 +689,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet9)).EndInit();
             this.PanelAgregado.ResumeLayout(false);
             this.PanelAgregado.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -687,5 +745,9 @@
         private System.Windows.Forms.Button button34;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label textError;
+        private System.Windows.Forms.Button button8;
     }
 }

@@ -83,6 +83,7 @@ namespace MaheduBueno
         {
             dataGridView1.Rows.Clear();
             PanelAgregado.Visible = false;
+            panel4.Visible = false;
 
             String consulta = "select * from mahedu.usuario where mahedu.usuario.tipoUsuario_idtipoUsuario!=4;";
             cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
@@ -228,16 +229,21 @@ namespace MaheduBueno
 
                 if (nombre.Text == "")
                 {
-                    MessageBox.Show("El nombre no puede estar vacío");
+                    panel4.Visible = true;
+                    textError.Text = "El nombre no puede estar vacio";
                 }
 
-                if (ApellidoP.Text == "")
+                else if (ApellidoP.Text == "")
                 {
-                    MessageBox.Show("El apellido paterno no debe de estar vacío");
+                    
+                    panel4.Visible = true;
+                    textError.Text = "El apellido paterno no debe de estar vacío";
                 }
-                if (ApellidoM.Text == "")
+                else if (ApellidoM.Text == "")
                 {
-                    MessageBox.Show("El apellido materno no debe de estar vacío");
+                    
+                    panel4.Visible = true;
+                    textError.Text = "El apellido materno no debe de estar vacío";
                 }
                 else
                 {
@@ -283,6 +289,7 @@ namespace MaheduBueno
 
 
             panel3.Visible = false;
+            PanelAgregado.Visible = true;
 
 
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet9.tipousuario' Puede moverla o quitarla según sea necesario.
@@ -330,6 +337,30 @@ namespace MaheduBueno
         {
             PanelAgregado.Visible = false;
         
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void textError_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            int c = panel4.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            textError.Location = new Point(c - textError.Width / 2, textError.Location.Y);
         }
     }
 }

@@ -209,5 +209,14 @@ namespace MaheduBueno
         {
             panelErrores.Visible = false;
         }
+
+        private void panelErrores_Paint(object sender, PaintEventArgs e)
+        {
+            int c = panelErrores.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            textErrores.Location = new Point(c - textErrores.Width / 2, textErrores.Location.Y);
+        }
     }
 }

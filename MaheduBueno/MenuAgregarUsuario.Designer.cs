@@ -57,10 +57,10 @@
             this.tipousuarioTableAdapter = new MaheduBueno.MaheduDataSet6TableAdapters.tipousuarioTableAdapter();
             this.label11 = new System.Windows.Forms.Label();
             this.PanelAgregado = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panelErrores = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(9, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(29, 27);
             this.button1.TabIndex = 10;
@@ -117,7 +117,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
             this.pictureBox2.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(131, 77);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +129,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(476, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,7 +141,7 @@
             this.button2.BackgroundImage = global::MaheduBueno.Properties.Resources.help;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(532, 99);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(34, 27);
             this.button2.TabIndex = 11;
@@ -228,7 +228,7 @@
             // NombreU
             // 
             this.NombreU.Location = new System.Drawing.Point(180, 152);
-            this.NombreU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NombreU.Margin = new System.Windows.Forms.Padding(2);
             this.NombreU.Name = "NombreU";
             this.NombreU.Size = new System.Drawing.Size(281, 20);
             this.NombreU.TabIndex = 18;
@@ -236,7 +236,7 @@
             // ApellidoP
             // 
             this.ApellidoP.Location = new System.Drawing.Point(180, 189);
-            this.ApellidoP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoP.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoP.Name = "ApellidoP";
             this.ApellidoP.Size = new System.Drawing.Size(281, 20);
             this.ApellidoP.TabIndex = 19;
@@ -244,7 +244,7 @@
             // Contraseña
             // 
             this.Contraseña.Location = new System.Drawing.Point(180, 304);
-            this.Contraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Contraseña.Margin = new System.Windows.Forms.Padding(2);
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.Size = new System.Drawing.Size(281, 20);
             this.Contraseña.TabIndex = 20;
@@ -253,7 +253,7 @@
             // ConfirContra
             // 
             this.ConfirContra.Location = new System.Drawing.Point(180, 337);
-            this.ConfirContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ConfirContra.Margin = new System.Windows.Forms.Padding(2);
             this.ConfirContra.Name = "ConfirContra";
             this.ConfirContra.Size = new System.Drawing.Size(281, 20);
             this.ConfirContra.TabIndex = 21;
@@ -262,7 +262,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(180, 452);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 34);
             this.button3.TabIndex = 23;
@@ -286,7 +286,7 @@
             // ApellidoM
             // 
             this.ApellidoM.Location = new System.Drawing.Point(180, 225);
-            this.ApellidoM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ApellidoM.Margin = new System.Windows.Forms.Padding(2);
             this.ApellidoM.Name = "ApellidoM";
             this.ApellidoM.Size = new System.Drawing.Size(281, 20);
             this.ApellidoM.TabIndex = 25;
@@ -308,7 +308,7 @@
             // userBox
             // 
             this.userBox.Location = new System.Drawing.Point(180, 269);
-            this.userBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userBox.Margin = new System.Windows.Forms.Padding(2);
             this.userBox.Name = "userBox";
             this.userBox.Size = new System.Drawing.Size(281, 20);
             this.userBox.TabIndex = 27;
@@ -316,7 +316,7 @@
             // contraAd
             // 
             this.contraAd.Location = new System.Drawing.Point(180, 414);
-            this.contraAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.contraAd.Margin = new System.Windows.Forms.Padding(2);
             this.contraAd.Name = "contraAd";
             this.contraAd.Size = new System.Drawing.Size(281, 20);
             this.contraAd.TabIndex = 28;
@@ -329,7 +329,7 @@
             "Administrador",
             "Vendedor"});
             this.comboBox1.Location = new System.Drawing.Point(180, 373);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 29;
@@ -370,11 +370,21 @@
             this.PanelAgregado.Controls.Add(this.button34);
             this.PanelAgregado.Controls.Add(this.label12);
             this.PanelAgregado.Controls.Add(this.button17);
-            this.PanelAgregado.Location = new System.Drawing.Point(97, 181);
+            this.PanelAgregado.Location = new System.Drawing.Point(96, 158);
             this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2);
             this.PanelAgregado.Name = "PanelAgregado";
             this.PanelAgregado.Size = new System.Drawing.Size(407, 175);
             this.PanelAgregado.TabIndex = 34;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(50, 130);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(308, 23);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Regresar ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button34
             // 
@@ -410,16 +420,6 @@
             this.button17.Text = "X";
             this.button17.UseVisualStyleBackColor = false;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(50, 130);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(308, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Regresar ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(304, 452);
@@ -442,6 +442,7 @@
             this.panelErrores.Name = "panelErrores";
             this.panelErrores.Size = new System.Drawing.Size(407, 175);
             this.panelErrores.TabIndex = 35;
+            this.panelErrores.Paint += new System.Windows.Forms.PaintEventHandler(this.panelErrores_Paint);
             // 
             // button7
             // 
@@ -510,7 +511,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuAgregarUsuario";
             this.Text = "Nuevo usuario";
             this.Load += new System.EventHandler(this.MenuAgregarUsuario_Load);
