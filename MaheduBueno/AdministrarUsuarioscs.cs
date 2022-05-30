@@ -82,6 +82,7 @@ namespace MaheduBueno
         private void AdministrarUsuarioscs_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
+            PanelAgregado.Visible = false;
 
             String consulta = "select * from mahedu.usuario where mahedu.usuario.tipoUsuario_idtipoUsuario!=4;";
             cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
@@ -318,6 +319,17 @@ namespace MaheduBueno
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        
         }
     }
 }

@@ -1512,6 +1512,18 @@ namespace MaheduBueno
         {
 
         }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            panelErrores.Visible = false;
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+
+            cerrar_ventanas();
+        }
     }
     }
 

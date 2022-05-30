@@ -53,19 +53,22 @@ namespace MaheduBueno
                 {
                     if (ApellidoM.Text == "")
                     {
-                        Nombre3 nombrem = new Nombre3();
+                       // Nombre3 nombrem = new Nombre3();
 
-                        DialogResult dg = nombrem.ShowDialog();
+                        //DialogResult dg = nombrem.ShowDialog();
+                        panelErrores.Visible = true;
+                        textErrores.Text = "El apellido materno no debe de estar vacío";
                         //MessageBox.Show("El apellido materno no debe de estar vacío");
                     }
                     else
                     {
                         if (Contraseña.Text == "")
                         {
-                            Nombre4 cc = new Nombre4();
+                            //Nombre4 cc = new Nombre4();
 
-                            DialogResult dg = cc.ShowDialog();
-                            //MessageBox.Show("La contraseña no debe de estar vacía");
+                            //    DialogResult dg = cc.ShowDialog();
+                            panelErrores.Visible = true;
+                            textErrores.Text = "La contraseña no debe de estar vacía";
                         }
                         else
                         {
@@ -73,10 +76,14 @@ namespace MaheduBueno
                             {
                                 Nombre5 nc = new Nombre5();
 
-                                DialogResult dg = nc.ShowDialog();
-
-                                //MessageBox.Show("Las contraseñas no coinciden");
+                                DialogResult dg = nc.ShowDialog(); ;
+                                panelErrores.Visible = true;
+                                textErrores.Text = "La contraseña no debe de estar vacía";
+                                //MessageBox.Show("La contraseña no debe de estar vacía");
                             }
+
+                            //MessageBox.Show("Las contraseñas no coinciden");
+                        
 
                             else
                             {
@@ -128,15 +135,16 @@ namespace MaheduBueno
                                     MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
                                 }
 
-                                Felicitaciones agre = new Felicitaciones();
+                                PanelAgregado.Visible = true;
+                              //Felicitaciones agre = new Felicitaciones();
 
-                                DialogResult dg = agre.ShowDialog();
+                           //     DialogResult dg = agre.ShowDialog();
 
 
 
-                                MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+                               // MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
 
-                                this.Close();
+                              //  this.Close();
                             }
 
                        
@@ -163,12 +171,43 @@ namespace MaheduBueno
 
         private void MenuAgregarUsuario_Load(object sender, EventArgs e)
         {
-
+            PanelAgregado.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+
+            MenuAgregar.Show();
+             this.Close();
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+
+            MenuAgregar.Show();
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            panelErrores.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panelErrores.Visible = false;
         }
     }
 }
