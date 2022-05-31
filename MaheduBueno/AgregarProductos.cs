@@ -125,7 +125,8 @@ namespace MaheduBueno
                     {
                         if ((float)precio.Value < (float)costo.Value)
                         {
-                            MessageBox.Show("El precio no puede ser menor al costo");
+                            textoError.Text = "El precio no puede ser menor al costo";
+                            panelErrores.Visible = true;
                         }
                         else
                         {
@@ -149,17 +150,20 @@ namespace MaheduBueno
                     }
                     else
                     {
-                        MessageBox.Show("El precio y costo no pueden ser 0");
+                        textoError.Text = "El precio y costo no pueden ser 0";
+                        panelErrores.Visible = true;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Ya hay un producto con este SKU");
+                    textoError.Text = "Ya hay un producto con este SKU";
+                    panelErrores.Visible = true;
                 }
             }
             else
             {
-                MessageBox.Show("El nombre y SKU del producto no pueden ser vacios");
+                textoError.Text = "El nombre y SKU del producto \n no pueden ser vacios";
+                panelErrores.Visible = true;
             }
         }
 
@@ -259,12 +263,14 @@ namespace MaheduBueno
                 }
                 else
                 {
-                    MessageBox.Show("La cantidad maxima no puede ser menor o igual \n a la cantidad minima.");
+                    textoError.Text = "La cantidad maxima no puede ser \n menor o igual a la cantidad minima";
+                    panelErrores.Visible = true;
                 }
             }
             else
             {
-                MessageBox.Show("Las cantidades no pueden ser 0");
+                textoError.Text = "Las cantidades no pueden ser 0";
+                panelErrores.Visible = true;
             }
         }
 
@@ -326,7 +332,7 @@ namespace MaheduBueno
 
                     if (encontro)
                     {
-                        textoError.Text = "ya existe una materia prima con este SKU, verifique";
+                        textoError.Text = "Ya existe una materia prima\n con este SKU, verifique";
                         panelErrores.Visible = true;
                     }
                     else
@@ -374,7 +380,7 @@ namespace MaheduBueno
                         }
                         else
                         {
-                            textoError.Text = "No es posible poner cantidad negativas a la materia prima, verifique";
+                            textoError.Text = "No es posible poner cantidad \nnegativas a la materia prima, verifique";
                             panelErrores.Visible = true;
                         }
                     }
@@ -431,7 +437,8 @@ namespace MaheduBueno
                     panelEdicion.Visible = true;
                 else
                 {
-                    MessageBox.Show("Recuerde seleccionar la primer columna o toda la fila para continuar ");
+                    textoError.Text = "Recuerde seleccionar la primer columna \n o toda la fila para continuar";
+                    panelErrores.Visible = true;
                 }
             }
 
@@ -482,12 +489,15 @@ namespace MaheduBueno
                 if (proBien)
                     InfoProducto.Visible = true;
                 else
-                    MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
+                {
+                    textoError.Text = "recuerde seleccionar toda la fila \n o el espacio en la columna 'ID'";
+                    panelErrores.Visible = true;
+                }
             }
             else
             {
 
-                textoError.Text = "Ningun producto ha sido seleccionado, " +
+                textoError.Text = "Ningun producto ha sido seleccionado, \n" +
                                 "recuerde seleccionar toda la fila, al elegir el producto";
                 panelErrores.Visible = true;
             }
@@ -731,7 +741,8 @@ namespace MaheduBueno
                     {
                         if ((float)detallesPrecio.Value < (float)detallesCosto.Value)
                         {
-                            MessageBox.Show("El precio no puede ser menor al costo");
+                            textoError.Text = "El precio no puede ser menor al costo";
+                            panelErrores.Visible = true;
                         }
                         else
                         {
@@ -799,7 +810,7 @@ namespace MaheduBueno
             else
             {
 
-                textoError.Text = "El nombre y SKU del producto no pueden ser vacios";
+                textoError.Text = "El nombre y SKU del producto\n no pueden ser vacios";
                 panelErrores.Visible = true;
             }
         }
@@ -939,7 +950,8 @@ namespace MaheduBueno
             {
                 if (dataGridView1.CurrentCell.Value == null)
                 {
-                    MessageBox.Show("Ningun producto ha sido seleccionado");
+                    textoError.Text = "Ningun producto ha sido seleccionado";
+                    panelErrores.Visible = true;
                 }
                 else
                 {
@@ -999,7 +1011,10 @@ namespace MaheduBueno
                         actualizar();
                     }
                     else
-                        MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
+                    {
+                        textoError.Text = "Recuerde seleccionar toda la fila \n o el espacio en la columna 'ID'";
+                        panelErrores.Visible = true;
+                    }
 
                 }
             }
@@ -1048,11 +1063,13 @@ namespace MaheduBueno
         {
             if (tablaPrima.CurrentCell == null)
             {
-                MessageBox.Show("No se ha seleccionado nada aun");
+                textoError.Text = "No se ha seleccionado nada aun";
+                panelErrores.Visible = true;
             }
             else if (tablaPrima.CurrentCell.Value == null)
             {
-                MessageBox.Show("No se ha seleccionado nada aun");
+                textoError.Text = "No se ha seleccionado nada aun";
+                panelErrores.Visible = true;
             }
             else
             {
@@ -1061,7 +1078,10 @@ namespace MaheduBueno
                 if (mateBien)
                     surtirPrima.Visible = true;
                 else
-                    MessageBox.Show("Recuerde selecionar la primera columna o toda la fila del producto");
+                {
+                    textoError.Text = "Recuerde selecionar la primera columna\n o toda la fila del producto";
+                    panelErrores.Visible = true;
+                }
             }
         }
 
@@ -1179,11 +1199,13 @@ namespace MaheduBueno
         {
             if (tablaPrima.CurrentCell == null)
             {
-                MessageBox.Show("No se ha seleccionado aun");
+                textoError.Text = "No se ha seleccionado aun";
+                panelErrores.Visible = true;
             }
             else if (tablaPrima.CurrentCell.Value == null)
             {
-                MessageBox.Show("No se ha seleccionado aun");
+                textoError.Text = "No se ha seleccionado aun";
+                panelErrores.Visible = true;
             }
             else
             {
@@ -1195,8 +1217,10 @@ namespace MaheduBueno
                     veri.Visible = false;
                 }
                 else
-                    MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
-
+                {
+                    textoError.Text = "Recuerde seleccionar toda la fila\n o el espacio en la columna 'ID'";
+                    panelErrores.Visible = true;
+                }
             }
         }
 
@@ -1279,7 +1303,8 @@ namespace MaheduBueno
                 }
                 else
                 {
-                    MessageBox.Show("Recuerde seleccionar la primer columna o toda la fila para continuar ");
+                    textoError.Text = "Recuerde seleccionar la primer columna\n o toda la fila para continuar ";
+                    panelErrores.Visible = true;
                 }
 
             }
@@ -1330,9 +1355,10 @@ namespace MaheduBueno
                     }
 
                     else
-                        MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
-
-
+                    {
+                        textoError.Text = "Recuerde seleccionar toda la fila\n o el espacio en la columna 'ID'";
+                        panelErrores.Visible = true;
+                    }
 
                 }
                 catch (Exception ex)
