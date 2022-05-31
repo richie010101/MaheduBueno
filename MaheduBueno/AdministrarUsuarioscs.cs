@@ -158,7 +158,7 @@ namespace MaheduBueno
             {
                 if (dt.Rows[0][0].ToString() != null)
                 {
-                    MessageBox.Show("Contraseña correcta");
+                   // MessageBox.Show("Contraseña correcta");
                     try
                     {
                         ManejadorBD.Conectar();
@@ -171,9 +171,12 @@ namespace MaheduBueno
 
                         Console.WriteLine(qery);
                         //new MessageBox2().Show();
-                        MessageBox2 borrado = new MessageBox2();
+                       // MessageBox2 borrado = new MessageBox2();
 
-                        DialogResult dg = borrado.ShowDialog();
+                       // DialogResult dg = borrado.ShowDialog();
+
+                        panel4.Visible = true;
+                        textError.Text = "Usuario eliminado con exito";
 
                         SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
                         SqlDataAdapter r = new SqlDataAdapter(cmd);
@@ -192,6 +195,8 @@ namespace MaheduBueno
                 else
                 {
                     // MessageBox.Show("Contraseña incorrecta");
+                    panel4.Visible = true;
+                    textError.Text = "Contraseña Incorrecta";
                 }
             }
             catch (Exception R)

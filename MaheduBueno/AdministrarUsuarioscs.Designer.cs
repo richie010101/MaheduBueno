@@ -652,8 +652,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(638, 375);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.PanelAgregado);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button3);

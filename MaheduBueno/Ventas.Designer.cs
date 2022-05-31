@@ -57,6 +57,22 @@ namespace MaheduBueno
             this.button3 = new System.Windows.Forms.Button();
             this.errorcantidad = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
+            this.PanelAgregado = new System.Windows.Forms.Panel();
+            this.button34 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet11)).BeginInit();
@@ -64,6 +80,10 @@ namespace MaheduBueno
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.PanelAgregado.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -72,10 +92,9 @@ namespace MaheduBueno
             this.comboBox1.Items.AddRange(new object[] {
             "Nombre",
             "SKU"});
-            this.comboBox1.Location = new System.Drawing.Point(929, 325);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(697, 264);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 24);
+            this.comboBox1.Size = new System.Drawing.Size(83, 21);
             this.comboBox1.TabIndex = 22;
             this.comboBox1.Text = "Nombre";
             // 
@@ -93,15 +112,15 @@ namespace MaheduBueno
             this.ID,
             this.dataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.productoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(403, 375);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(302, 305);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(407, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(305, 206);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -166,10 +185,10 @@ namespace MaheduBueno
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(473, 320);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(355, 260);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(448, 31);
+            this.textBox1.Size = new System.Drawing.Size(337, 26);
             this.textBox1.TabIndex = 20;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -179,9 +198,10 @@ namespace MaheduBueno
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(881, 103);
+            this.label2.Location = new System.Drawing.Point(661, 84);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 34);
+            this.label2.Size = new System.Drawing.Size(188, 28);
             this.label2.TabIndex = 18;
             this.label2.Text = "Ricardo Tinoco";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -192,9 +212,10 @@ namespace MaheduBueno
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(907, 60);
+            this.label1.Location = new System.Drawing.Point(680, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 34);
+            this.label1.Size = new System.Drawing.Size(141, 28);
             this.label1.TabIndex = 17;
             this.label1.Text = "Bienvenido";
             // 
@@ -202,10 +223,10 @@ namespace MaheduBueno
             // 
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(145, 218);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(109, 177);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 48);
+            this.button1.Size = new System.Drawing.Size(46, 39);
             this.button1.TabIndex = 19;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -214,10 +235,10 @@ namespace MaheduBueno
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
-            this.pictureBox2.Location = new System.Drawing.Point(85, 36);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(64, 29);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(259, 142);
+            this.pictureBox2.Size = new System.Drawing.Size(194, 115);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -226,30 +247,28 @@ namespace MaheduBueno
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(1529, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1147, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(1260, 325);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Location = new System.Drawing.Point(945, 264);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(55, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(41, 20);
             this.numericUpDown1.TabIndex = 23;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1157, 325);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(868, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 25);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 24;
             this.label3.Text = "Cantidad";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -265,15 +284,15 @@ namespace MaheduBueno
             this.Cantidad,
             this.Precio,
             this._ID});
-            this.dataGridView2.Location = new System.Drawing.Point(1061, 372);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView2.Location = new System.Drawing.Point(796, 302);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(364, 218);
+            this.dataGridView2.Size = new System.Drawing.Size(273, 177);
             this.dataGridView2.TabIndex = 25;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             this.dataGridView2.ColumnRemoved += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView2_ColumnRemoved);
@@ -287,7 +306,7 @@ namespace MaheduBueno
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 87;
+            this.Nombre.Width = 69;
             // 
             // Cantidad
             // 
@@ -322,10 +341,9 @@ namespace MaheduBueno
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1285, 596);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(964, 484);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 53);
+            this.button2.Size = new System.Drawing.Size(90, 43);
             this.button2.TabIndex = 26;
             this.button2.Text = "Confirmar Compra";
             this.button2.UseVisualStyleBackColor = true;
@@ -333,10 +351,9 @@ namespace MaheduBueno
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1119, 596);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(839, 484);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 53);
+            this.button3.Size = new System.Drawing.Size(90, 43);
             this.button3.TabIndex = 27;
             this.button3.Text = "Cancelar Compra";
             this.button3.UseVisualStyleBackColor = true;
@@ -348,10 +365,9 @@ namespace MaheduBueno
             this.errorcantidad.BackColor = System.Drawing.Color.Transparent;
             this.errorcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorcantidad.ForeColor = System.Drawing.Color.Red;
-            this.errorcantidad.Location = new System.Drawing.Point(1069, 302);
-            this.errorcantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorcantidad.Location = new System.Drawing.Point(802, 245);
             this.errorcantidad.Name = "errorcantidad";
-            this.errorcantidad.Size = new System.Drawing.Size(291, 18);
+            this.errorcantidad.Size = new System.Drawing.Size(251, 15);
             this.errorcantidad.TabIndex = 28;
             this.errorcantidad.Text = "Ingresa una cantidad para el producto";
             this.errorcantidad.Visible = false;
@@ -360,35 +376,224 @@ namespace MaheduBueno
             // 
             this.Total.AutoSize = true;
             this.Total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(908, 564);
-            this.Total.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Total.Location = new System.Drawing.Point(681, 458);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(70, 28);
+            this.Total.Size = new System.Drawing.Size(56, 21);
             this.Total.TabIndex = 30;
             this.Total.Text = "Total: ";
             // 
+            // PanelAgregado
+            // 
+            this.PanelAgregado.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.PanelAgregado.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.PanelAgregado.Controls.Add(this.button8);
+            this.PanelAgregado.Controls.Add(this.button34);
+            this.PanelAgregado.Controls.Add(this.label11);
+            this.PanelAgregado.Location = new System.Drawing.Point(555, 290);
+            this.PanelAgregado.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelAgregado.Name = "PanelAgregado";
+            this.PanelAgregado.Size = new System.Drawing.Size(266, 133);
+            this.PanelAgregado.TabIndex = 34;
+            this.PanelAgregado.Visible = false;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(24, 95);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(99, 23);
+            this.button34.TabIndex = 5;
+            this.button34.Text = "Confirmar";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.Location = new System.Drawing.Point(62, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(170, 25);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Confirmar la venta\r\n";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel1.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Location = new System.Drawing.Point(487, 277);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(407, 133);
+            this.panel1.TabIndex = 35;
+            this.panel1.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(50, 95);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(308, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Aceptar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(56, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(313, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "GUARDADO CORRECTAMENTE\r\n";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Red;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(10, 10);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(28, 30);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "X";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel2.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel2.Controls.Add(this.button9);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(485, 286);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(407, 133);
+            this.panel2.TabIndex = 35;
+            this.panel2.Visible = false;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(50, 95);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(148, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Confirmar";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label5.Location = new System.Drawing.Point(20, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(375, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "¿Seguro que quieres cancelar la compra?";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(155, 95);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(99, 23);
+            this.button8.TabIndex = 36;
+            this.button8.Text = "Cancelar";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(214, 95);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(148, 23);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Cancelar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
+            this.panel3.Controls.Add(this.button10);
+            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Location = new System.Drawing.Point(483, 292);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(407, 133);
+            this.panel3.TabIndex = 36;
+            this.panel3.Visible = false;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(214, 95);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(148, 23);
+            this.button10.TabIndex = 6;
+            this.button10.Text = "Cancelar";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(50, 95);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(148, 23);
+            this.button11.TabIndex = 5;
+            this.button11.Text = "Eliminar";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.Location = new System.Drawing.Point(54, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(323, 25);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "¿Esta seguro que desea eliminarlo?\r\n";
+            // 
             // Ventas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
-            this.ClientSize = new System.Drawing.Size(1760, 892);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelAgregado);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.errorcantidad);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
@@ -401,6 +606,14 @@ namespace MaheduBueno
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.PanelAgregado.ResumeLayout(false);
+            this.PanelAgregado.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +648,21 @@ namespace MaheduBueno
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Panel PanelAgregado;
+        private System.Windows.Forms.Button button34;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label6;
     }
 }

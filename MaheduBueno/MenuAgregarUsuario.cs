@@ -34,9 +34,11 @@ namespace MaheduBueno
 
             if (NombreU.Text == "")
             {
-                Nombre1cs nombre = new Nombre1cs();
+               
+                panelErrores.Visible = true;
+                textErrores.Text = "El nombre no puede estar vacío";
 
-                DialogResult dg = nombre.ShowDialog();
+                
                 //MessageBox.Show("El nombre no puede estar vacío");
             }
             else
@@ -44,9 +46,8 @@ namespace MaheduBueno
 
                 if (ApellidoP.Text == "")
                 {
-                    Nombre2 nombrep = new Nombre2();
-
-                    DialogResult dg = nombrep.ShowDialog();
+                    panelErrores.Visible = true;
+                    textErrores.Text = "El apellido paterno no debe de estar vacío";
                     //MessageBox.Show("El apellido paterno no debe de estar vacío");
                 }
                 else
@@ -74,9 +75,10 @@ namespace MaheduBueno
                         {
                             if (Contraseña.Text != ConfirContra.Text)
                             {
-                                Nombre5 nc = new Nombre5();
+                             //   Nombre5 nc = new Nombre5();
 
-                                DialogResult dg = nc.ShowDialog(); ;
+                                
+                                ////DialogResult dg = nc.ShowDialog(); ;
                                 panelErrores.Visible = true;
                                 textErrores.Text = "La contraseña no debe de estar vacía";
                                 //MessageBox.Show("La contraseña no debe de estar vacía");
@@ -89,11 +91,8 @@ namespace MaheduBueno
                             {
                                 int id = 6;
 
-                                if (comboBox1.SelectedItem == "SuperUsuario")
-                                {
-                                    id = 4;
-                                }
-                                else if (comboBox1.SelectedItem == "Administrador")
+
+                                if (comboBox1.SelectedItem == "Administrador")
                                 {
                                     id = 5;
                                 }
@@ -172,6 +171,7 @@ namespace MaheduBueno
         private void MenuAgregarUsuario_Load(object sender, EventArgs e)
         {
             PanelAgregado.Visible = false;
+            panelErrores.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace MaheduBueno
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+            AdministrarUsuarioscs MenuAgregar = new AdministrarUsuarioscs();
 
             MenuAgregar.Show();
              this.Close();
@@ -194,7 +194,7 @@ namespace MaheduBueno
 
         private void button5_Click(object sender, EventArgs e)
         {
-            MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
+            AdministrarUsuarioscs MenuAgregar = new AdministrarUsuarioscs();
 
             MenuAgregar.Show();
             this.Close();

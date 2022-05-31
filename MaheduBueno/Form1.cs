@@ -34,7 +34,7 @@ namespace MaheduBueno
         
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            PanelAgregado.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,6 +87,11 @@ namespace MaheduBueno
                     // MessageBox.Show("Usuario o contraseña incorrectos, verifique");
                     new MessageBox1().Show();
 
+
+                    PanelAgregado.Visible = true;
+                    textErrores.Text = "Contraseña o Usuario incorrecto, verifique";
+
+
                 }
             }
             catch (Exception R)
@@ -94,7 +99,7 @@ namespace MaheduBueno
                 Console.WriteLine("error inesparado" + R);
                 //Respuesta.Text = "Usuario o Contraseña incorrectos, verifique";
                 //MessageBox.Show("Usuario o contraseña incorrectos, verifique");
-                new MessageBox1().Show();
+              //  new MessageBox1().Show();
 
             }
 
@@ -144,6 +149,25 @@ namespace MaheduBueno
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PanelAgregado_Paint(object sender, PaintEventArgs e)
+        {
+            int c = PanelAgregado.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            textErrores.Location = new Point(c - textErrores.Width / 2, textErrores.Location.Y);
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
         }
     }
 }

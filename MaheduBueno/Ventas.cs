@@ -81,14 +81,15 @@ namespace MaheduBueno
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            PanelAgregado.Visible = true;
             try
             {
 
-                Confirmar r = new Confirmar("Confirmar la venta", "Confirmar");
+              //  Confirmar r = new Confirmar("Confirmar la venta", "Confirmar");
 
 
-                DialogResult dg = r.ShowDialog();
-                if (dg.ToString() == "OK")
+               // DialogResult dg = r.ShowDialog();
+              /*  if (dg.ToString() == "OK")
                 {
                     ManejadorBD.Conectar();
 
@@ -143,7 +144,7 @@ namespace MaheduBueno
                         adap.Fill(dataT);
                     }
 
-                }
+                }   */
 
                
 
@@ -208,17 +209,19 @@ namespace MaheduBueno
 
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Confirmar r = new Confirmar();
-            
+           // Confirmar r = new Confirmar();
 
-            DialogResult dg = r.ShowDialog();
+
+            panel3.Visible = true;
+
+          /*  DialogResult dg = r.ShowDialog();
             if (dg.ToString() == "OK")
             {
                 
                 tota = tota - Convert.ToInt32(dataGridView2.CurrentRow.Cells[2].Value) * Convert.ToInt32(dataGridView2.CurrentRow.Cells[1].Value);
                 dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
                 Total.Text = "Total: $" + tota.ToString();
-            }
+            }   */
 
         }
 
@@ -239,15 +242,116 @@ namespace MaheduBueno
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Confirmar r = new Confirmar("Seguro que quieres cancelar la compra?", "Confirmar");
+            /* Confirmar r = new Confirmar("Seguro que quieres cancelar la compra?", "Confirmar");
 
 
-            DialogResult dg = r.ShowDialog();
-            if (dg.ToString() == "OK") {
+             DialogResult dg = r.ShowDialog();
+             if (dg.ToString() == "OK") {
 
-                dataGridView2.Rows.Clear();
-                
+                 dataGridView2.Rows.Clear();
+
+             } */
+            panel2.Visible = true;
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            ManejadorBD.Conectar();
+
+
+            //Saca el id venta actual
+            String consulta1 = "SELECT count(*) FROM mahedu.venta";
+            SqlCommand cmd1 = new SqlCommand(consulta1, ManejadorBD.Conectar());
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+
+            DataTable dt1 = new DataTable();
+
+            adapter1.Fill(dt1);
+
+            int id_venta = Convert.ToInt32(dt1.Rows[0][0]) + 2;
+            Console.WriteLine("siuuu" + id_venta);
+
+            //registra la venta con la fecha y el vendedor
+
+            ManejadorBD.Conectar();
+            String consulta = "insert into mahedu.venta values(" + user + ", '" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "');";
+            SqlCommand cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            adapter.Fill(dt);
+
+
+
+
+            //registra cada producto con su venta
+            for (int fila = 0; fila < dataGridView2.RowCount; fila++)
+            {
+                ManejadorBD.Conectar();
+                String consulta2 = "insert into mahedu.producto_has_venta values (" + Convert.ToInt32(dataGridView2.Rows[fila].Cells[3].Value) + ", " + id_venta + ", " + Convert.ToInt32(dataGridView2.Rows[fila].Cells[1].Value) + ");";
+                SqlCommand cmd2 = new SqlCommand(consulta2, ManejadorBD.Conectar());
+                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+
+                DataTable dt0 = new DataTable();
+
+                adapter2.Fill(dt0);
+
+                Console.WriteLine(consulta2);
+
+                ManejadorBD.Conectar();
+                //Le resta los productos vendidos a la tabla productos
+                String query = "UPDATE mahedu.producto SET Cantidad = mahedu.producto.Cantidad - " + Convert.ToInt32(dataGridView2.Rows[fila].Cells[1].Value) + "where idProducto = " + Convert.ToInt32(dataGridView2.Rows[fila].Cells[3].Value) + ";";
+                SqlCommand cm = new SqlCommand(query, ManejadorBD.Conectar());
+                SqlDataAdapter adap = new SqlDataAdapter(cm);
+                Console.WriteLine(query);
+                DataTable dataT = new DataTable();
+
+                adap.Fill(dataT);
             }
+
+
+            panel1.Visible = true;
+            PanelAgregado.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            PanelAgregado.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+            panel2.Visible = false;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            tota = tota - Convert.ToInt32(dataGridView2.CurrentRow.Cells[2].Value) * Convert.ToInt32(dataGridView2.CurrentRow.Cells[1].Value);
+            dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
+            Total.Text = "Total: $" + tota.ToString();
+            panel3.Visible = false;
         }
     }
 }
