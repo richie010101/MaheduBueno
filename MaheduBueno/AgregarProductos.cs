@@ -75,7 +75,7 @@ namespace MaheduBueno
             panelErrores.Visible = false;
 
 
-
+                                   
 
             addPanel3.Visible = false;
             addPanel2.Visible = false;
