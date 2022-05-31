@@ -16,7 +16,7 @@ namespace MaheduBueno
 
         public static SqlConnection Conectar()
         {
-            SqlConnection conexion = new SqlConnection("SERVER=mahedu.database.windows.net;DATABASE=mahedu;USER ID=K-Dev;PASSWORD=NEBRLURIMI.1");
+            SqlConnection conexion = new SqlConnection("SERVER=mahedu2.database.windows.net;DATABASE=mahedu;USER ID=K-Dev;PASSWORD=NEBRLURIMI.1");
             try
             {
                 
@@ -37,13 +37,5 @@ namespace MaheduBueno
             return conexion;
             
         }
-
-
-
-           
-            
-            
-
-
     }
 }

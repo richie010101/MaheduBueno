@@ -61,38 +61,13 @@ namespace MaheduBueno
             Addpanel.Visible = false;
             addPrima.Visible = false;
             panelErrores.Visible = false;
-
-            /*
-            try
-            {
-                SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1);
-                String qery = "insert SKU, Nombre, Precio, Cantidad from mahedu.producto where " + comboBox1.Text + " like '%" + textBox1.Text + "%';";
-                Console.WriteLine(qery);
-                SqlDataAdapter ada = new SqlDataAdapter(qery, con);
-
-                con.Open();
-
-                DataSet data = new DataSet();
-
-                ada.Fill(data, "producto");
-
-                dataGridView1.DataSource = data;
-                dataGridView1.DataMember = "producto";
-
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
-            }*/
         }
 
         private void AgregarProductos_Load(object sender, EventArgs e)
         {
-            
+
             actualizar();
-            
+
             dataGridView1.CurrentCell = null;
             Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
 
@@ -137,7 +112,7 @@ namespace MaheduBueno
                 foreach (Producto p in ProducLista)
                 {
                     //Revisar
-                    if(p.Sku == textSKUproducto.Text)
+                    if (p.Sku == textSKUproducto.Text)
                     {
                         encontrado = true;
                         break;
@@ -148,7 +123,7 @@ namespace MaheduBueno
                 {
                     if ((float)precio.Value > 0 && (float)costo.Value > 0)
                     {
-                        if((float)precio.Value < (float)costo.Value)
+                        if ((float)precio.Value < (float)costo.Value)
                         {
                             MessageBox.Show("El precio no puede ser menor al costo");
                         }
@@ -271,7 +246,7 @@ namespace MaheduBueno
                         addPanel2.Visible = false;
                         actualizar();
                         dataGridView1.CurrentCell = null;
-                        
+
                     }
                     catch (Exception ex)
                     {
@@ -280,7 +255,7 @@ namespace MaheduBueno
                     /*
                        addPanel3.Visible = true;
                        addPanel2.Visible = false;    */
- 
+
                 }
                 else
                 {
@@ -327,7 +302,7 @@ namespace MaheduBueno
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
                     DataTable r = new DataTable();
-                    bool encontro=false;
+                    bool encontro = false;
 
                     adapter.Fill(r);
                     try
@@ -335,7 +310,7 @@ namespace MaheduBueno
                         int i;
                         for (i = 0; i < r.Rows.Count; i++)
                         {
-                            if(r.Rows[i][1].ToString().Equals(textSKUPrima.Text))
+                            if (r.Rows[i][1].ToString().Equals(textSKUPrima.Text))
                             {
                                 encontro = true;
                                 break;
@@ -349,7 +324,7 @@ namespace MaheduBueno
 
                     }
 
-                    if(encontro)
+                    if (encontro)
                     {
                         textoError.Text = "ya existe una materia prima con este SKU, verifique";
                         panelErrores.Visible = true;
@@ -438,12 +413,12 @@ namespace MaheduBueno
 
         private void BTNEDITARSELECCION_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.CurrentCell==null)
+            if (dataGridView1.CurrentCell == null)
             {
                 textoError.Text = "seleccione un producto primero";
                 panelErrores.Visible = true;
             }
-            else  if(dataGridView1.CurrentCell.Value == null)
+            else if (dataGridView1.CurrentCell.Value == null)
             {
                 textoError.Text = "seleccione un producto primero";
                 panelErrores.Visible = true;
@@ -452,8 +427,8 @@ namespace MaheduBueno
             {
                 cerrar_ventanas();
                 recuperarEleccion();
-                if(proBien)
-                panelEdicion.Visible = true;
+                if (proBien)
+                    panelEdicion.Visible = true;
                 else
                 {
                     MessageBox.Show("Recuerde seleccionar la primer columna o toda la fila para continuar ");
@@ -466,7 +441,7 @@ namespace MaheduBueno
         {
 
 
-            
+
 
             String consulta = "SELECT * FROM mahedu.materiaprima";
             cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
@@ -476,7 +451,7 @@ namespace MaheduBueno
             dt.Rows.Clear();
 
             adapter.Fill(dt);
-            
+
             comboBoxMateriaPrima.Items.Clear();
 
 
@@ -521,7 +496,7 @@ namespace MaheduBueno
 
         private void recuperarEleccion()
         {
-            if(dataGridView1.CurrentCell.ColumnIndex==0 )
+            if (dataGridView1.CurrentCell.ColumnIndex == 0)
             {
                 int elegido = int.Parse(dataGridView1.CurrentCell.Value.ToString());
 
@@ -552,12 +527,12 @@ namespace MaheduBueno
             {
                 proBien = false;
             }
-            
+
         }
 
         private void recuperarEleccionPrima()
         {
-            if(tablaPrima.CurrentCell.ColumnIndex== 0)
+            if (tablaPrima.CurrentCell.ColumnIndex == 0)
             {
                 int id = int.Parse(tablaPrima.CurrentCell.Value.ToString());
 
@@ -659,7 +634,7 @@ namespace MaheduBueno
                 SqlCommand command = new SqlCommand(qery, ManejadorBD.Conectar());
                 command.ExecuteNonQuery();
                 command.Connection.Close();
-                
+
             }
             agregarPanel.Visible = false;
             addPrima.Visible = false;
@@ -667,11 +642,11 @@ namespace MaheduBueno
             addPanel3.Visible = false;
             panelEdicion.Visible = false;
             textCantidadPrimaAgregada.Text = "";
-            
-            
-            
+
+
+
             dataGridView1.CurrentCell = null;
-            comboBoxMateriaPrima.SelectedItem=null;
+            comboBoxMateriaPrima.SelectedItem = null;
             textCantidadPrimaAgregada.Text = "";
 
             actualizar();
@@ -749,7 +724,7 @@ namespace MaheduBueno
             bool encontrado = false;
 
             if (detallesNombre.Text != "" && detallesSKU.Text != "")
-            {               
+            {
                 if (!encontrado)
                 {
                     if ((float)detallesPrecio.Value > 0 && (float)detallesCosto.Value > 0)
@@ -793,26 +768,26 @@ namespace MaheduBueno
                                 }
                                 else
                                 {
-                                    
+
                                     textoError.Text = "La cantidad maxima no puede ser menor o igual \n a la cantidad minima.";
                                     panelErrores.Visible = true;
-                                    
-                                }   
+
+                                }
                             }
                             else
                             {
                                 textoError.Text = "Las cantidades no pueden ser 0";
                                 panelErrores.Visible = true;
-                               
+
                             }
                         }
                     }
                     else
                     {
                         textoError.Text = "El precio y costo no pueden ser 0";
-                        panelErrores.Visible= true;
-                        
-                        
+                        panelErrores.Visible = true;
+
+
                     }
                 }
                 else
@@ -823,7 +798,7 @@ namespace MaheduBueno
             }
             else
             {
-                
+
                 textoError.Text = "El nombre y SKU del producto no pueden ser vacios";
                 panelErrores.Visible = true;
             }
@@ -874,7 +849,7 @@ namespace MaheduBueno
             ProducLista.Clear();
 
 
-            
+
             String consulta = "SELECT * FROM mahedu.producto";
             cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -925,11 +900,11 @@ namespace MaheduBueno
 
                     Productos.Add(nuevoP);
                     ProducLista.Add(nuevoP);
-                    
+
 
 
                 }
-                
+
 
             }
             catch (Exception R)
@@ -1075,7 +1050,7 @@ namespace MaheduBueno
             {
                 MessageBox.Show("No se ha seleccionado nada aun");
             }
-            else if(tablaPrima.CurrentCell.Value == null)
+            else if (tablaPrima.CurrentCell.Value == null)
             {
                 MessageBox.Show("No se ha seleccionado nada aun");
             }
@@ -1162,7 +1137,7 @@ namespace MaheduBueno
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
             DataTable r = new DataTable();
-            
+
 
             adapter.Fill(r);
             tablaPrima.Rows.Clear();
@@ -1197,7 +1172,7 @@ namespace MaheduBueno
                 Console.WriteLine("error inesparado" + R);
 
             }
-            
+
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -1221,7 +1196,7 @@ namespace MaheduBueno
                 }
                 else
                     MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
-                
+
             }
         }
 
@@ -1263,7 +1238,7 @@ namespace MaheduBueno
             else
             {
                 veri.Visible = true;
-                
+
             }
         }
 
@@ -1306,9 +1281,9 @@ namespace MaheduBueno
                 {
                     MessageBox.Show("Recuerde seleccionar la primer columna o toda la fila para continuar ");
                 }
-                
+
             }
- 
+
         }
 
         private void button29_Click(object sender, EventArgs e)
@@ -1319,14 +1294,14 @@ namespace MaheduBueno
 
         private void button32_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.CurrentCell == null)
+            if (dataGridView1.CurrentCell == null)
             {
-                
+
                 textoError.Text = "Ningun producto seleccionado";
                 panelErrores.Visible = true;
                 panelBorrarProducto.Visible = false;
             }
-            else if(dataGridView1.CurrentCell.Value == null)
+            else if (dataGridView1.CurrentCell.Value == null)
             {
                 textoError.Text = "Ningun producto seleccionado";
                 panelErrores.Visible = true;
@@ -1353,12 +1328,12 @@ namespace MaheduBueno
 
                         actualizar();
                     }
-                        
+
                     else
                         MessageBox.Show("recuerde seleccionar toda la fila o el espacio en la columna 'ID'");
 
 
-                   
+
                 }
                 catch (Exception ex)
                 {
@@ -1370,7 +1345,7 @@ namespace MaheduBueno
                 labelContra.Visible = true;
             }
 
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -1427,7 +1402,7 @@ namespace MaheduBueno
                     nuevoP.CantidadMax = int.Parse(productosN.Rows[i][8].ToString());
 
                     Productos.Add(nuevoP);
-                    
+
 
                 }
 
@@ -1439,7 +1414,7 @@ namespace MaheduBueno
                 Console.WriteLine("error inesparado" + R);
 
             }
-            
+
 
 
         }
@@ -1497,7 +1472,7 @@ namespace MaheduBueno
         {
             // Área cliente del formulario.
             //
-          //  Rectangle r = this.panelErrores;
+            //  Rectangle r = this.panelErrores;
 
             // Punto intermedio del área cliente.
             //
@@ -1525,6 +1500,5 @@ namespace MaheduBueno
             cerrar_ventanas();
         }
     }
-    }
+}
 
-                                                                                                                                                
