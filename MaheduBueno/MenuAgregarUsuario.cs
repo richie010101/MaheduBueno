@@ -15,10 +15,13 @@ namespace MaheduBueno
 
     {
         private ManejadorBD manejadorBD;
+        private SqlCommand cmd;
+        private DataTable usuarios;
         public MenuAgregarUsuario()
         {
             InitializeComponent();
             manejadorBD = new ManejadorBD();
+            usuarios = new DataTable();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,70 +83,77 @@ namespace MaheduBueno
                                 
                                 ////DialogResult dg = nc.ShowDialog(); ;
                                 panelErrores.Visible = true;
-                                textErrores.Text = "La contraseña no debe de estar vacía";
+                                textErrores.Text = "Las contraseñas no coinciden";
                                 //MessageBox.Show("La contraseña no debe de estar vacía");
                             }
-
-                            //MessageBox.Show("Las contraseñas no coinciden");
-                        
-
                             else
                             {
-                                int id = 6;
-
-
-                                if (comboBox1.SelectedItem == "Administrador")
+                                if (userBox.Text == "")
                                 {
-                                    id = 5;
+                                    panelErrores.Visible = true;
+                                    textErrores.Text = "El nombre de usuario no puede ser vacio";
                                 }
-                                else if (comboBox1.SelectedItem == "Vendedor")
+                                else
                                 {
-                                    id = 6;
+                                    bool existe = false;
+
+                                    for (int i = 0; i < usuarios.Rows.Count; i++)
+                                    {
+                                        if (userBox.Text.Equals(usuarios.Rows[i][4].ToString()))
+                                        {
+                                            existe = true;
+                                            break;
+                                        }
+                                    }
+
+                                    if (existe)
+                                    {
+                                        panelErrores.Visible = true;
+                                        textErrores.Text = "Nombre de usuario ya en uso";
+                                    }
+                                    else
+                                    {
+                                        if (contraAd.Text == "")
+                                        {
+                                            panelErrores.Visible = true;
+                                            textErrores.Text = "La contraseña segura no puede ser vacia";
+                                        }
+                                        else
+                                        {
+                                            int id = 6;
+                                            if (comboBox1.SelectedItem == "Administrador")
+                                            {
+                                                id = 5;
+                                            }
+                                            else if (comboBox1.SelectedItem == "Vendedor")
+                                            {
+                                                id = 6;
+                                            }
+
+                                            try
+                                            {
+                                                ManejadorBD.Conectar();
+
+                                                String qery = "INSERT INTO mahedu.usuario VALUES('" + NombreU.Text + "','" + ApellidoP.Text + "','" + ApellidoM.Text + "','" +
+                                                    userBox.Text + "','" + Contraseña.Text + "'," + id + ", '" + contraAd.Text + "')";
+                                                Console.WriteLine(qery);
+
+                                                cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+                                                SqlDataAdapter r = new SqlDataAdapter(cmd);
+                                                DataTable s = new DataTable();
+                                                r.Fill(s);
+
+                                                PanelAgregado.Visible = true;
+                                            }
+                                            catch (Exception ex)
+                                            {
+
+                                                MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
+                                            }
+                                        }
+                                    }
                                 }
 
-
-                                try
-                                {
-                                    /* SqlConnection con = new SqlConnection(Properties.Settings.Default.conexion1); */
-                                    ManejadorBD.Conectar();
-
-                                    String qery = "INSERT INTO mahedu.usuario VALUES('" + NombreU.Text + "','" + ApellidoP.Text + "','" + ApellidoM.Text + "','" + userBox.Text + "','" + Contraseña.Text + "'," + id + ", '" + contraAd.Text + "')";
-
-                                    Console.WriteLine("Corriste");
-
-
-                                    Console.WriteLine(qery);
-                                    /*
-                                   SqlDataAdapter ada = new SqlDataAdapter(qery, con);
-
-                                    con.Open();
-
-                                    DataSet data = new DataSet();
-                                    */
-
-                                    SqlCommand cmd = new SqlCommand(qery, ManejadorBD.Conectar());
-                                    SqlDataAdapter r = new SqlDataAdapter(cmd);
-                                    DataTable s = new DataTable();
-                                    r.Fill(s);
-
-
-                                }
-                                catch (Exception ex)
-                                {
-
-                                    MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
-                                }
-
-                                PanelAgregado.Visible = true;
-                              //Felicitaciones agre = new Felicitaciones();
-
-                           //     DialogResult dg = agre.ShowDialog();
-
-
-
-                               // MenuAgregarUsuario MenuAgregar = new MenuAgregarUsuario();
-
-                              //  this.Close();
                             }
 
                        
@@ -172,6 +182,12 @@ namespace MaheduBueno
         {
             PanelAgregado.Visible = false;
             panelErrores.Visible = false;
+
+            String qery = "SELECT * FROM mahedu.usuario";
+            cmd = new SqlCommand(qery, ManejadorBD.Conectar());
+            SqlDataAdapter r = new SqlDataAdapter(cmd);
+
+            r.Fill(usuarios);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
