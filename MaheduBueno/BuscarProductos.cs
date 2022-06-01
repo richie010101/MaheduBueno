@@ -55,6 +55,8 @@ namespace MaheduBueno
                 MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
             }
 
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
+
 
         }
 
@@ -84,6 +86,20 @@ namespace MaheduBueno
 
                 MessageBox.Show("Error en la conexion del servidor busque ayuda" + ex);
             }
+        }
+
+        private void BuscarProductos_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle r = this.ClientRectangle;
+
+            // Punto intermedio del área cliente.
+            //
+            int c = r.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+            label1.Location = new Point(c - label1.Width / 2, label1.Location.Y);
         }
     }
 }

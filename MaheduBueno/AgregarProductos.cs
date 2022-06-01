@@ -71,7 +71,7 @@ namespace MaheduBueno
             dataGridView1.CurrentCell = null;
             Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
 
-            label2.Text = usuario.username;
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
             panelErrores.Visible = false;
 
 
@@ -460,6 +460,8 @@ namespace MaheduBueno
             adapter.Fill(dt);
 
             comboBoxMateriaPrima.Items.Clear();
+
+            
 
 
 
@@ -1279,6 +1281,7 @@ namespace MaheduBueno
             // Establecemos la nueva posición del control Label.
             //
             label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+            label1.Location = new Point(c - label1.Width / 2, label1.Location.Y);
         }
 
         private void BTNELIMINARSELECCION_Click(object sender, EventArgs e)

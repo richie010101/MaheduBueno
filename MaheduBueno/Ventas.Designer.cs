@@ -58,6 +58,7 @@ namespace MaheduBueno
             this.errorcantidad = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
             this.PanelAgregado = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -65,14 +66,19 @@ namespace MaheduBueno
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonCerrar = new System.Windows.Forms.Button();
+            this.Productos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet11)).BeginInit();
@@ -84,6 +90,8 @@ namespace MaheduBueno
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Productos)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -113,7 +121,7 @@ namespace MaheduBueno
             this.dataGridViewTextBoxColumn1});
             this.dataGridView1.DataSource = this.productoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(302, 305);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -186,7 +194,7 @@ namespace MaheduBueno
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(355, 260);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(337, 26);
             this.textBox1.TabIndex = 20;
@@ -224,7 +232,7 @@ namespace MaheduBueno
             this.button1.BackgroundImage = global::MaheduBueno.Properties.Resources.casita;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(109, 177);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 39);
             this.button1.TabIndex = 19;
@@ -236,7 +244,7 @@ namespace MaheduBueno
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::MaheduBueno.Properties.Resources.potencializa;
             this.pictureBox2.Location = new System.Drawing.Point(64, 29);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(194, 115);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,7 +256,7 @@ namespace MaheduBueno
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MaheduBueno.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(1147, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,7 +293,7 @@ namespace MaheduBueno
             this.Precio,
             this._ID});
             this.dataGridView2.Location = new System.Drawing.Point(796, 302);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
@@ -396,6 +404,16 @@ namespace MaheduBueno
             this.PanelAgregado.TabIndex = 34;
             this.PanelAgregado.Visible = false;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(155, 95);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(99, 23);
+            this.button8.TabIndex = 36;
+            this.button8.Text = "Cancelar";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // button34
             // 
             this.button34.Location = new System.Drawing.Point(24, 95);
@@ -474,12 +492,22 @@ namespace MaheduBueno
             this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(485, 286);
+            this.panel2.Location = new System.Drawing.Point(483, 286);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(407, 133);
             this.panel2.TabIndex = 35;
             this.panel2.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(214, 95);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(148, 23);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "Cancelar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button6
             // 
@@ -502,26 +530,6 @@ namespace MaheduBueno
             this.label5.Size = new System.Drawing.Size(375, 25);
             this.label5.TabIndex = 3;
             this.label5.Text = "¿Seguro que quieres cancelar la compra?";
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(155, 95);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(99, 23);
-            this.button8.TabIndex = 36;
-            this.button8.Text = "Cancelar";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(214, 95);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(148, 23);
-            this.button9.TabIndex = 6;
-            this.button9.Text = "Cancelar";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel3
             // 
@@ -569,12 +577,68 @@ namespace MaheduBueno
             this.label6.TabIndex = 3;
             this.label6.Text = "¿Esta seguro que desea eliminarlo?\r\n";
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo22;
+            this.panel4.Controls.Add(this.buttonCerrar);
+            this.panel4.Controls.Add(this.Productos);
+            this.panel4.Location = new System.Drawing.Point(496, 226);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(391, 270);
+            this.panel4.TabIndex = 71;
+            this.panel4.Visible = false;
+            // 
+            // buttonCerrar
+            // 
+            this.buttonCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.buttonCerrar.Location = new System.Drawing.Point(-3, 234);
+            this.buttonCerrar.Name = "buttonCerrar";
+            this.buttonCerrar.Size = new System.Drawing.Size(404, 23);
+            this.buttonCerrar.TabIndex = 70;
+            this.buttonCerrar.Text = "Cerrar";
+            this.buttonCerrar.UseVisualStyleBackColor = false;
+            this.buttonCerrar.Click += new System.EventHandler(this.buttonCerrar_Click);
+            // 
+            // Productos
+            // 
+            this.Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.Column3,
+            this.Column4});
+            this.Productos.Location = new System.Drawing.Point(-3, 3);
+            this.Productos.Name = "Productos";
+            this.Productos.RowHeadersVisible = false;
+            this.Productos.Size = new System.Drawing.Size(394, 213);
+            this.Productos.TabIndex = 69;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 191;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Cantidad Actual";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Cantidad minima preferente";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MaheduBueno.Properties.Resources.fondo2;
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelAgregado);
             this.Controls.Add(this.panel1);
@@ -599,6 +663,7 @@ namespace MaheduBueno
             this.Text = "Venta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Ventas_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Ventas_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maheduDataSet11)).EndInit();
@@ -614,6 +679,8 @@ namespace MaheduBueno
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Productos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,5 +731,11 @@ namespace MaheduBueno
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button buttonCerrar;
+        private System.Windows.Forms.DataGridView Productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

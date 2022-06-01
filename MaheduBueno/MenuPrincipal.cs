@@ -78,7 +78,7 @@ namespace MaheduBueno
             configPanel.Visible = false;
 
 
-            label2.Text = usuario.username;
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
 
         }
 
@@ -165,6 +165,7 @@ namespace MaheduBueno
             // Establecemos la nueva posición del control Label.
             //
             label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+            label1.Location = new Point(c - label1.Width / 2, label1.Location.Y);
         }
     }
 }

@@ -75,7 +75,7 @@ namespace MaheduBueno
         {
             // TODO: esta línea de código carga datos en la tabla 'maheduDataSet11.producto' Puede moverla o quitarla según sea necesario.
             this.productoTableAdapter.Fill(this.maheduDataSet11.producto);
-            label2.Text = usuario.username;
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
 
         }
 
@@ -310,6 +310,48 @@ namespace MaheduBueno
             }
 
 
+            Productos.Rows.Clear();
+
+            String consulta3 = "select  a.* from mahedu.producto as A where (A.Cantidad <= A.CantidadMinima*1.25);";
+
+            SqlCommand cmd3= new SqlCommand(consulta3, ManejadorBD.Conectar());
+            SqlDataAdapter adapter3 = new SqlDataAdapter(cmd3);
+            DataTable productosN = new DataTable();
+
+            adapter3.Fill(productosN);
+            try
+            {
+                int i;
+                if(productosN.Rows.Count==0)
+                {
+
+                }
+                else
+                {
+                    for (i = 0; i < productosN.Rows.Count; i++)
+                    {
+                        Productos.Rows.Add();
+                        Productos[0, i].Value = productosN.Rows[i][2].ToString();
+                        Productos[1, i].Value = productosN.Rows[i][5].ToString();
+                        Productos[2, i].Value = productosN.Rows[i][7].ToString();
+
+                        Console.WriteLine(productosN.Rows[i][2].ToString());
+
+                    }
+                    panel4.Visible = true;
+                }
+               
+
+
+            }
+            catch (Exception R)
+            {
+                Console.WriteLine("error inesparado" + R);
+
+            }
+
+
+
             panel1.Visible = true;
             PanelAgregado.Visible = false;
         }
@@ -352,6 +394,25 @@ namespace MaheduBueno
             dataGridView2.Rows.Remove(dataGridView2.CurrentRow);
             Total.Text = "Total: $" + tota.ToString();
             panel3.Visible = false;
+        }
+
+        private void buttonCerrar_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+        }
+
+        private void Ventas_Paint(object sender, PaintEventArgs e)
+        {
+            Rectangle r = this.ClientRectangle;
+
+            // Punto intermedio del área cliente.
+            //
+            int c = r.Width / 2;
+
+            // Establecemos la nueva posición del control Label.
+            //
+            label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+            label1.Location = new Point(c - label1.Width / 2, label1.Location.Y);
         }
     }
 }

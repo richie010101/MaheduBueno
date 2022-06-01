@@ -32,7 +32,7 @@ namespace MaheduBueno
             cargar();
             panel1.Visible = false;
 
-            label2.Text = usuario.username;
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -143,12 +143,15 @@ namespace MaheduBueno
             ventas[0] = float.Parse(estadistica.Rows[0][2].ToString());
             int mesactual = int.Parse(estadistica.Rows[0][1].ToString());
 
+           
+
 
 
             int j;
             int R = 1;
             for (j = 1; j < 7; j++)
             {
+
                 dia--;
 
                 if (dia == 0)
@@ -185,45 +188,66 @@ namespace MaheduBueno
                       Meses con 28 días: Febrero (Menos cuando es bisiesto que tiene 29 días).
                  * 
                  * */
-
-
-                for (R = 1; R < 7; R++)
-                {
-
-                    Console.WriteLine("Dia del int: " + dia);
-                    Console.WriteLine("dia a comparar " + estadistica.Rows[R][0].ToString());
-
-                    if (int.Parse(estadistica.Rows[R][0].ToString()) == dia & int.Parse(estadistica.Rows[R][1].ToString()) == mesactual)
-                    {
-                        dias[j] = int.Parse(estadistica.Rows[R][0].ToString());
-                        ventas[j] = float.Parse(estadistica.Rows[R][2].ToString());
-                        mes[j] = mesactual;
-
-
-                        break;
-                    }
-                    else if (R == 6)
+          
+                    for (R = 1; R <= i; R++)
                     {
 
-                        dias[j] = dia;
-                        ventas[j] = 0;
-                        mes[j] = mesactual;
-                        break;
+
+                        Console.WriteLine("Dia del int: " + dia);
+
+
+
+                        Console.WriteLine(R);
+
+                        if (int.Parse(estadistica.Rows[R][0].ToString()) == dia && int.Parse(estadistica.Rows[R][1].ToString()) == mesactual) 
+                        {
+                            dias[j] = int.Parse(estadistica.Rows[R][0].ToString());
+                            ventas[j] = float.Parse(estadistica.Rows[R][2].ToString());
+                            mes[j] = mesactual;
+
+
+                            break;
+                        }
+                        else  if(R==i)
+                        {
+
+                            dias[j] = dia;
+                            ventas[j] = 0;
+                            mes[j] = mesactual;
+                            break;
+
+                        }
+
+
+
+
+
+
+
 
                     }
+         
+                
 
-                }
+
+              
             }
 
 
             float total = 0;
+            int k = 6;
+            int agregados=0;
 
-            while (i >= 0)
+            while (k >= 0)
             {
-                total += ventas[i];
-                chart1.Series["Series1"].Points.AddXY(mes[i] + "/" + dias[i], ventas[i]);
-                chart2.Series["Series1"].Points.AddXY(mes[i] + "/" + dias[i], total);
-                i--;
+       
+                
+                total += ventas[k];
+                chart1.Series["Series1"].Points.AddXY(mes[k] + "/" + dias[k], ventas[k]);
+                chart2.Series["Series1"].Points.AddXY(mes[k] + "/" + dias[k], total);
+
+                k--;
+                
             }
 
         }

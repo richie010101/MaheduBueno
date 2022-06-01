@@ -68,6 +68,8 @@ namespace MaheduBueno
                     usuario.username = dt.Rows[0][4].ToString();
                     usuario.tipoUser = int.Parse(dt.Rows[0][6].ToString());
                     usuario.contraMov = dt.Rows[0][7].ToString();
+                    usuario.Nombre = dt.Rows[0][1].ToString();
+                    usuario.apellidoP = dt.Rows[0][2].ToString();
 
                     Console.WriteLine(usuario.contraMov + usuario.idUser + usuario.username + usuario.tipoUser);
 

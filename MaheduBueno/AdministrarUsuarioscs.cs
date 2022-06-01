@@ -81,11 +81,26 @@ namespace MaheduBueno
 
         private void AdministrarUsuarioscs_Load(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            dataGridView1.Rows.Clear();
+            
+            
             PanelAgregado.Visible = false;
             panel4.Visible = false;
 
+          
+
+
+
+            label2.Text = usuario.Nombre + " " + usuario.apellidoP;
+
+            actualizar();
+
+
+
+        }
+
+        private void actualizar()
+        {
+            dataGridView1.Rows.Clear();
             String consulta = "select * from mahedu.usuario where mahedu.usuario.tipoUsuario_idtipoUsuario!=4;";
             cmd = new SqlCommand(consulta, ManejadorBD.Conectar());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -121,15 +136,6 @@ namespace MaheduBueno
                 Console.WriteLine("error inesparado" + R);
 
             }
-
-
-
-            label2.Text = usuario.username;
-
-
-
-
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -164,7 +170,8 @@ namespace MaheduBueno
                         ManejadorBD.Conectar();
 
 
-                        String qery = "DELETE FROM mahedu.usuario WHERE idUsuario = " + dataGridView1.CurrentCell.Value.ToString();
+                        String qery = "DELETE FROM mahedu.usuario WHERE idUsuario = " + dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
+                
 
                         Console.WriteLine(dataGridView1.CurrentCell.Value.ToString());
 
@@ -182,6 +189,11 @@ namespace MaheduBueno
                         SqlDataAdapter r = new SqlDataAdapter(cmd);
                         DataTable s = new DataTable();
                         r.Fill(s);
+
+
+                        actualizar();
+
+
 
 
                     }
@@ -322,6 +334,7 @@ namespace MaheduBueno
             // Establecemos la nueva posición del control Label.
             //
             label2.Location = new Point(c - label2.Width / 2, label2.Location.Y);
+            label1.Location = new Point(c - label1.Width / 2, label1.Location.Y);
         }
 
         private void button6_Click(object sender, EventArgs e)

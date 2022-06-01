@@ -17,7 +17,9 @@ namespace MaheduBueno.clases2
         static public int tipoUser;
 
         static public String contraMov;
- 
+        static public String Nombre;
+        static public String apellidoP;
+
 
 
 
